@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cash On Delivery</title>
+
+    <meta charset="UTF-8">
+    <meta name="facebook-domain-verification" content="40vn6qvh8yz3loczxxx6up5un6jidv">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="Assets/bootstrap/bootstrap-4/css/bootstrap.min.css">
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="ass">
+
+    <!-- JQuery/JavaScript js -->
+    <script src="Assets/jquery/jquery.min.js"></script>
+    <!-- PopupOverlay js -->
+    <script src="Assets/jquery/jquery.popupoverlay.min.js"></script>
+    <!-- Popper js -->
+    <script src="Assets/javaScript/web/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="Assets/bootstrap/bootstrap-4/js/bootstrap.min.js"></script>
+    <style>
+        .footer-list li a {
+            cursor: pointer;
+        }
+
+        .paid-heading {
+            color: white;
+            font-weight: bold;
+            padding-left: 89px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        @font-face {
+            font-family: DMSansRegular;
+            src: url('fonts/DM_Sans/DMSans-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: BalooRegular;
+            src: url('fonts/Baloo/BalooDa-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: Sunflower;
+            src: url('fonts/Sunflower/Sunflower-bold.ttf') format('truetype');
+        }
+
+        a.create-account-button:hover {
+            color: #93CE46 !important;
+            text-decoration: none;
+        }
+
+        .sunflower {
+            font-family: Sunflower;
+        }
+
+        .baloo {
+            font-family: BalooRegular;
+        }
+
+        * {
+            font-family: DMSansRegular;
+        }
+
+        .top-banner {
+            background-image: url('/Assets/images/web/cod_banner.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            /*
+                            position: relative;
+                            text-align: center;
+                            color: white;
+            */
+        }
+
+        .topbannerimage-headinggreen {
+            font-size: 90px;
+            color: #93CE46;
+            font-weight: 700;
+
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 35px;
+        }
+
+        .topbannerimage-heading {
+            margin-left: 7%;
+            font-size: 90px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .boast-headinggreen {
+            font-size: 38px;
+            color: #93CE46;
+            font-weight: bold;
+        }
+
+        .boast-heading {
+            font-size: 38px;
+            font-weight: bold;
+        }
+
+        .omnichannelarea-headinggreen {
+            font-size: 31px;
+            color: #93CE46;
+            font-weight: bold;
+        }
+
+        .omnichannelarea-heading {
+            font-size: 38px;
+            font-weight: bold;
+        }
+
+        .card-heading-green {
+            font-size: 26px;
+            color: #93CE46;
+            font-weight: bold;
+            line-height: 36px;
+        }
+
+        .card-heading {
+            font-size: 26px;
+            font-weight: bold;
+            line-height: 36px;
+        }
+
+        .empty-background {
+            background-image: url('/Assets/images/web/banner_background.html');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .create-account-button {
+            margin-left: 7%;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            padding: 5px 15px 8px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        .unitedPlatformArea {
+            padding: 5%;
+            margin: 0;
+            padding-top: 41px;
+        }
+
+        .card {
+            margin-left: 15%;
+            border-radius: 20px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .logo a {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            color: black;
+            padding-top: 29px;
+            padding-left: 10%;
+        }
+
+        .logo a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            color: #252525;
+            padding-right: 36px !important;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: #252525;
+        }
+
+        a#changeClass {
+            padding-right: 0px !important;
+        }
+
+        li.nav-item.button {
+            background: black;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        a.nav-link.button-text {
+            color: white;
+            border: none;
+            padding-right: 15px !important;
+            padding-left: 15px;
+        }
+
+        .navbar {
+            box-shadow: 0px 0px 23px #D9E4F3 !important;
+        }
+
+        .navbar-nav {
+            float: right;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding-top: 66px;
+        }
+
+        ul.footer-list>li {
+            padding-bottom: 10px;
+        }
+
+        ul.footer-list {
+            list-style: none;
+            padding: 0px;
+            color: #9CA0A0;
+        }
+
+        p.footer-heading {
+            font-weight: bold;
+            font-family: Sunflower;
+            font-size: 17px;
+        }
+
+        .footer-button {
+            /*            font-family: DM Sans;*/
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: right;
+            color: #000000;
+            background: #FFFFFF;
+            border-color: #FFFFFF;
+            /*            box-shadow: 0px 0px 8px #E2E7F4;*/
+            border-radius: 30px;
+            padding: 14px 33px;
+        }
+
+        .col-md-3.nl {
+            text-align: right;
+        }
+
+        .united-background {
+            background-image: url("/Assets/images/web/2e.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .omnichannel-background {
+            background-image: url("/Assets/images/web/3.png");
+            padding-bottom: 5% !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            background: none;
+        }
+
+        .frames {
+            margin-bottom: 10px;
+        }
+
+        .Video-background {
+            background-image: url("/Assets/images/web/video-white.html");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .black-background2 {
+            background-image: url("/Assets/images/web/purple.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cards-ui {
+            border-radius: 22px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 20px;
+            padding-right: 15px;
+            min-height: 370px;
+        }
+
+        .card-ui-heading {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        footer {
+            background-image: url("/Assets/images/web/footer.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .small-p {
+            font-size: 16px;
+            line-height: 52px;
+        }
+
+        .empty-div {
+            height: 300px;
+        }
+
+        img.icon-img {
+            margin-top: 10px;
+            background: #40405D;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 72px;
+        }
+
+        .blog-heading {
+            font-size: 17px;
+            line-height: 22px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        .blog-text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .features-list {
+            font-size: 20px;
+            line-height: 28px;
+            padding-left: 15px;
+        }
+
+        .growth-background {
+            background-image: url("/Assets/images/web/background-withoutpic.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            padding-bottom: 50px;
+        }
+
+        li.nav-item::marker {
+            content: none;
+        }
+
+        .pricing-background {
+            background-image: url("/Assets/images/web/pricing-back.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /*            background-position:right;*/
+            color: white;
+        }
+
+        .pricing-background .unitedPlatformArea p {
+            font-size: 16px !important;
+            line-height: 32px;
+        }
+
+        p.feature-head {
+            font-size: 22px;
+            line-height: 32px;
+            padding-top: 10px;
+            font-weight: 700;
+        }
+
+        p.feature-text {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        .features-small {
+            padding-left: 85px;
+            padding-top: 41px;
+            padding-bottom: 40px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .why-background {
+            background-image: url("/Assets/images/web/Group\ 3836.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-top: 100px;
+        }
+
+        p.prices {
+            font-size: 48px;
+            line-height: 56px;
+            color: white;
+            font-weight: 500;
+        }
+
+        .prices span {
+            font-size: 24px;
+        }
+
+        p.prices-small {
+            font-size: 18px;
+            line-height: 18px;
+            color: white;
+        }
+
+        .image-con {
+            padding-top: 70px;
+            padding-bottom: 50px;
+        }
+
+        li::marker {
+            content: url("/Assets/images/web/tick.png");
+        }
+
+        li {
+            padding-left: 15px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            p.prices {
+                text-align: center !important;
+            }
+
+            p.prices-small {
+                text-align: center;
+            }
+
+        }
+
+        .video-height {
+            height: 413px;
+            width: 743px;
+        }
+
+        ul.footer-list>li::marker {
+            content: none;
+        }
+
+        ul.footer-list>li {
+            padding-left: 0px;
+        }
+
+        ul.navbar-nav>li {
+            padding-left: 0px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .video-height {
+                width: 80%;
+            }
+        }
+
+        .tracking-text {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            border: 1px solid #93CE46;
+        }
+
+        .track-div {
+            display: flex;
+            position: relative;
+            min-width: 0;
+            background-color: #fff;
+            border: 1px solid #93CE46;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .track-order-button {
+            margin-left: 7%;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            padding: 5px 15px 8px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-button {
+            margin-left: 7%;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            color: white;
+            background-color: black;
+            line-height: 30px;
+            display: inline-block;
+        }
+
+        .bg-modal {
+            width: 70%;
+            height: auto;
+            margin-top: 75px;
+            padding-bottom: 20px;
+            background-color: white;
+            position: relative;
+            top: 10%;
+            left: 15%;
+            border-radius: 10px;
+            vertical-align: middle;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .bg-total {
+            width: 100%;
+            min-height: 100%;
+            height: 100%;
+            position: fixed;
+            vertical-align: middle;
+            justify-content: center;
+            display: none;
+            align-items: center;
+            overflow: auto;
+            z-index: 15;
+            /* Sit on top */
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Fallback color */
+            /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+        }
+
+        @media screen and (min-width: 1080px) {
+            .modal-content {
+                width: 20%;
+                height: auto;
+                margin-top: 75px;
+                background-color: whitesmoke;
+                border-radius: 15px;
+                justify-content: center;
+                float: right;
+                position: fixed;
+                right: 0;
+                display: flex;
+                display: none;
+            }
+        }
+
+        @media (min-width: 360px) and (max-width: 1080px) {
+            .modal-content {
+                width: 20%;
+                height: auto;
+                margin-top: 100px;
+                background-color: whitesmoke;
+                border-radius: 15px;
+                justify-content: center;
+                float: right;
+                position: fixed;
+                right: 0;
+                display: flex;
+                display: none;
+            }
+        }
+
+        input {
+            margin: 10px;
+            width: 90%;
+            border-radius: 10px;
+            border: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            margin-left: 10px;
+            right: 6px;
+            font-size: 35px;
+            cursor: pointer;
+            transform: rotate(45deg);
+        }
+
+        .table-close {
+            position: absolute;
+            top: 0;
+            margin-top: 30px;
+            margin-left: 10px;
+            right: 250px;
+            font-size: 55px;
+            color: black;
+            cursor: pointer;
+            transform: rotate(45deg);
+        }
+
+        li.nav-item.button {
+            background: black;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        button.nav-link.button-text {
+            color: white;
+            border: none;
+            padding-right: 15px !important;
+            padding-left: 15px;
+        }
+
+
+        .tg {
+            color: black;
+
+            border: 2px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .tg td {
+            border: 2px;
+            color: black;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+        }
+
+        .tg th {
+            border: 2px;
+            color: #93CE46;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+        }
+
+        .div-class {
+            position: absolute;
+            top: 0;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: inline-block;
+            width: 550px;
+        }
+
+        .note-p {
+            size: 10px;
+            color: black;
+        }
+
+        .logo-table {
+            top: 10;
+            left: 10;
+        }
+
+        .details-div {
+            border: 1px solid #93CE46;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        .details-label {
+            border-bottom: 3px solid #93CE46;
+            font-size: large;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .label-size {
+            font-size: smaller;
+        }
+
+        .input-size {
+            margin: 0px;
+            font-size: smaller;
+            width: 50%;
+        }
+
+        .input-cancel-button {
+            position: absolute;
+            right: 2%;
+            width: 15%;
+            margin-right: 7px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top" style="background-color: white;">
+        <div class="col-lg-3 logo">
+            <a href="#"><img src="Assets/images/web/PostBex_Logo.png" alt></a>
+        </div>
+        <div id="changedClass" class="col-lg-8 menu">
+            <ul class="navbar-nav navbar-expand-sm">
+                <li class="nav-item">
+                    <a class="nav-link" href="index-2.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cod.html">PostEx.COD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="digitalpayment.html">Paid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link featureNavItem">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contactNavItem" style="cursor:pointer;">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item button">
+                    <button href id="track-order-li" class="nav-link button-text"
+                        style="background-color: black; border-radius: 10px;">Track your order</button>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div id="modal-content" class="modal-content">
+        <div class="modal-inside-class">
+            <form action>
+                <input class="label-size" style="margin-bottom: 5px; outline: #93CE46;" type="text" id="trackingNo_text"
+                    placeholder="Tracking number">
+                <input type="button" style="line-height: 25px; font-size: medium; margin-top: 5px;" href
+                    id="track-button" class="input-button" value="Track order"></input>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div id="bg-total" class="bg-total">
+        <div id="bg-modal" class="bg-modal">
+            <div style="display:inline-flex; border-bottom: 4px solid #93CE46;" class="col-lg-12">
+
+                <div class="col-lg-3 logo">
+                    <a href="#"><img src="images/logo.png" alt></a>
+                </div>
+                <label class="col-lg-3  label-size" style="margin-top: 15px;">Details for the order number: </label>
+                <label class="col-lg-3  label-size" id="tracking_txt"
+                    style="margin-top: 15px; padding-left: 0px; "></label>
+                <div id="close" class="close">+</div>
+            </div>
+            <div id="details" class="col-lg-12"
+                style=" display: flex; margin-top: 15px; padding:20px; padding-top: 10px; padding-bottom: 0px">
+                <div class="col-lg-4 col-md-4 col-sm-12 details-div">
+                    <label class="details-label label-size"><b>Consignee Information</b></label>
+                    <div>
+                        <label class="label-size"><b>Name: </b></Label>
+                        <input class="input-size"
+                            style="width: 60%; border: none; text-align: left; background-color: #fff; "
+                            disabled="disabled" type="text" id="consignee_Name" value=" "></input>
+                    </div>
+                    <div>
+                        <label class="label-size"><b>Contact #: </b></Label>
+                        <input class="input-size"
+                            style="border: none; width: 60%; text-align: left;  background-color: #fff;"
+                            disabled="disabled" type="text" id="consignee_Contact" value=" "></input>
+                    </div>
+                    <div>
+                        <label class="label-size"><b>Address: </b></Label>
+                        <textarea class="input-size"
+                            style="border: none; resize: none; width: 70%; padding-left: 5px; padding-top: 2px; text-align: left; position: absolute; background-color: transparent;"
+                            disabled="disabled" type="text" id="consignee_Address" value=" "></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 details-div">
+                    <label class="details-label  label-size"><b>Shipper Information</b></label>
+                    <div>
+                        <label class="label-size"><b>Name: </b></Label>
+                        <input class="input-size" style="border: none; text-align: left;  background-color: #fff;"
+                            disabled="disabled" type="text" id="shipper_Name" value=" "></input>
+                    </div>
+                    <div>
+                        <label class="label-size"><b>Contact #: </b></Label>
+                        <input class="input-size" style="border: none; text-align: left;  background-color: #fff;"
+                            disabled="disabled" type="text" id="shipper_Contact" value=" "></input>
+                    </div>
+                    <div>
+                        <label class="label-size"><b>Address: </b></Label>
+                        <textarea class="input-size"
+                            style="border: none; resize: none; width: 70%; padding-left: 5px; padding-top: 2px; text-align: left; position: absolute; background-color: transparent;"
+                            disabled="disabled" type="text" id="shipper_Address" value=" "></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 details-div">
+                    <label class="details-label  label-size"><b>Order Information</b></label>
+                    <div>
+                        <label class="label-size"><b>Invoice Payment: </b></Label>
+                        <input class="input-size" style="border: none; text-align: left;  background-color: #fff;"
+                            disabled="disabled" type="text" id="order_invoicePayment" value=" "></input>
+                    </div>
+                    <div>
+                        <label class="label-size"><b>Destination: </b></Label>
+                        <input class="input-size" style="border: none; text-align: left;  background-color: #fff;"
+                            disabled="disabled" type="text" id="order_Destination" value=" "></input>
+                    </div>
+                    <div>
+                        <label class="label-size"><b>Status: </b></Label>
+                        <input class="input-size" style="border: none; text-align: left;  background-color: #fff;"
+                            disabled="disabled" type="text" id="order_status" value=" "></input>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12" id="shipment-information"
+                style="padding: 20px; padding-top: 0px; padding-bottom: 0px;">
+                <label class="details-label label-size"><b>Shipment Information</b></label>
+                <div>
+                    <label class="col-lg-2 label-size"><b>Pieces:</b></Label>
+                    <input class="col-lg-6 input-size" style="border: none; text-align: left;  background-color: #fff;"
+                        disabled="disabled" type="text" id="shipment_Pieces" value=" N/A "></input>
+                </div>
+                <div>
+                    <label class="col-lg-2 label-size"><b>Order Reference: </b></Label>
+                    <input class="col-lg-6 input-size" style="border: none; text-align: left;  background-color: #fff;"
+                        disabled="disabled" type="text" id="shipment_reference" value=" "></input>
+                </div>
+                <div>
+                    <label class="col-lg-2 label-size"><b>Origin: </b></Label>
+                    <textarea class="col-lg-6 input-size"
+                        style="border: none; resize: none; width: 70%; padding-left: 15px; padding-top: 2px; text-align: left; position: absolute; background-color: transparent;"
+                        disabled="disabled" type="text" id="shipment_Origin" value=" "></textarea>
+                </div>
+                <div>
+                    <label class="col-lg-2 label-size"><b>Booking Date: </b></Label>
+                    <input class="col-lg-6 input-size" style="border: none; text-align: left;  background-color: #fff;"
+                        disabled="disabled" type="text" id="shipment_BookingDate" value=" "></input>
+                </div>
+                <div>
+                    <label class="col-lg-2 label-size"><b>Remarks: </b></Label>
+                    <input class="col-lg-6 input-size" style="border: none; text-align: left;  background-color: #fff;"
+                        disabled="disabled" type="text" id value=" N/A"></input>
+                </div>
+                <div>
+                    <label class="col-lg-2 label-size"><b>Order Details: </b></Label>
+                    <textarea class="col-lg-6 input-size"
+                        style="border: none; resize: none; width: 70%; padding-left: 15px; padding-top: 2px; text-align: left; position: absolute; background-color: transparent;"
+                        disabled="disabled" type="text" id="order_Details" value=" N/A"></textarea>
+                    <input type="button" id="input-cancel-button" class="input-button input-cancel-button"
+                        value="Close"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-banner">
+        <h1 class="topbannerimage-heading"><span class="topbannerimage-headinggreen">Instant & Upfront</span></h1>
+        <h1 class="topbannerimage-heading">payment for COD</h1>
+        <h1 class="topbannerimage-heading">orders</h1>
+        <p style="margin-left: 7%;  margin-bottom: 0px;">Offer Cash on Delivery without worrying about delayed</p>
+        <p style="margin-left: 7%; padding-bottom: 10px; margin-bottom: 50px;">payments and uncertainty about the cash
+            flows.</p>
+        <div style="display:inline;">
+            <a href="#" class="create-account-button">Get in Touch</a>
+            <a href="#"
+                style="color: black; font-weight: bold; margin-left: 1.5%; font-size: 18px; line-height: 40px;">Contact
+                Sales ></a>
+        </div>
+    </div>
+
+
+    <div id="solutionSection" class="container" style="min-width: 100%;">
+        <div class="row growth-background" style="padding-bottom:70px;padding-top: 100px;">
+            <div class="col-lg-6 unitedPlatformArea" style="padding-bottom: 0px;">
+                <p class="small-p" style="font-weight: bold;">Solutions</p>
+                <h1 class="boast-heading" style="font-family: Sunflower; margin-bottom: 40px;"><span
+                        style="color: #93CE46;">Grow</span> with PostEx<span style="color: #93CE46;">.</span></h1>
+                <p style="font-size: 20px; line-height: 28px;">Every business is unique and have their distinctive
+                    requirements. We at PostEx value your uniqueness, and provide tailor-made service options for every
+                    shipment so we can accommodate businesses of all sizes.</p>
+                <br>
+                <ul class="features-list">
+                    <li style="padding-bottom: 18px;">Instant and Upfront Payment</li>
+                    <li style="padding-bottom: 18px;">Free of charge delivery</li>
+                    <li style="padding-bottom: 18px;">Predictable payments directly to your account</li>
+                    <li style="padding-bottom: 18px;">Fast and Reliable Delivery service</li>
+                    <li>24/7 Customer Service</li>
+                </ul>
+            </div>
+            <div class="col-lg-6" style="padding: 0px;">
+                <img src="images/front-img.png" class="img-responsive" width="100%" alt style="padding-top: 50px;">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid Video-background">
+        <div class="col-lg-12 unitedPlatformArea">
+            <p class="small-p"><span class="sunflower">PostEx<span class="baloo"
+                        style="color: #93CE46; font-size: 12px;">.</span>COD</span></p>
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center;">
+                    <h1 class="text-center omnichannelarea-heading" style="padding-bottom: 50px;">How <span
+                            class="sunflower">PostEx<span style="color: #93CE46">.</span>COD</span> works</h1>
+                    <iframe class="video-height" src="https://www.youtube.com/embed/aPI89EzyjCU" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="min-width: 100%;">
+        <div class="row why-background">
+            <div class="col-lg-12">
+                <p class="small-p paid-heading" style="padding-top: 41px; padding-bottom: 0px;">Why <span
+                        class="sunflower">PostEx<span class="baloo"
+                            style="color: #93CE46; font-size: 12px;">.</span>COD</span></p>
+            </div>
+            <div class="col-lg-4 offset-lg-1" style="text-align: center;">
+                <p class="prices"><span>PKR</span> 170M+</p>
+                <p class="prices-small">Value of upfront payments made</p>
+            </div>
+            <div class="col-lg-3" style="padding: 0px; text-align: center;">
+                <p class="prices">200+</p>
+                <p class="prices-small">Happy & Growing merchant</p>
+            </div>
+            <div class="col-lg-3" style="padding: 0px; text-align: center;">
+                <p class="prices">97%</p>
+                <p class="prices-small">Delivery Success Rate</p>
+            </div>
+            <div class="col-lg-12 text-center image-con" style="padding-bottom: 490px;">
+
+            </div>
+        </div>
+    </div>
+
+
+    <p id="featuresSection" class="features-small" style="font-weight: bold;">Features</p>
+    <div class="container" style="width: 100%;">
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="images/Frame-3.png" width="90" alt>
+                <p class="feature-head">Same Day delivery</p>
+                <p class="feature-text">Now you can get FREE OF CHARGE same day delivery and get your orders delivered
+                    safe, sound and on time hassle free.</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="images/Frame.png" width="60" alt>
+                <p class="feature-head">Confidentiality</p>
+                <p class="feature-text">Strict data protection controls are key elements of our solution in building
+                    trust with our valuable clients</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="images/Frame-1.png" width="75" alt>
+                <p class="feature-head">Dashboard</p>
+                <p class="feature-text">You will get exclusive access to an admin dashboard that lets you monitor the
+                    status of all your deliveries on a single page. </p>
+            </div>
+            <div class="col-lg-3">
+                <img src="images/Frame-2.png" width="80" alt>
+                <p class="feature-head">Convenience</p>
+                <p class="feature-text">An easygoing process with no paperwork, no data entry and an advanced user
+                    graphical interface.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="pricingSection" class="container" style="min-width: 100%;">
+        <div class="row pricing-background" style="padding-bottom:60px;">
+            <div class="col-lg-6 unitedPlatformArea" style="padding-bottom: 0px;">
+                <p class="small-p" style="font-weight: bold; padding-top: 220px; margin-bottom: 35px;">Pricing</p>
+                <p>Our objective is to help all E-commerce marketplaces and online retail shops thrive and grow in a
+                    fast-growing e-commerce market of Pakistan and take full advantage of every opportunity that comes
+                    their way.</p>
+                <p>We respect the uniqueness and individuality of your business; hence we offer tailored commission
+                    structure according to your needs and requirements.</p>
+                <p>Our distinctive services set us apart from the competition and makes us the FIRST and ONLY company in
+                    the region providing upfront payment to E-commerce companies using Cash on Delivery as their mode of
+                    payment</p>
+            </div>
+            <div class="col-lg-6" style="padding: 0px; padding-top: 220px;">
+                <img src="images/pricing-front.png" height="500px" alt>
+            </div>
+        </div>
+    </div>
+
+    <div id="blogSection" class="container-fluid"
+        style="padding-left: 7%; padding-right: 7%; background-color: #F5F9FC; padding-top: 41px; padding-bottom: 90px;">
+        <p class="small-p" style="color: black; font-weight: bold;">News &amp; blogs</p>
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="img-responsive" width="100%" height="218.016" src="images/blog.jpg" alt>
+                        <p class="blog-heading" style="margin: 0px;"><b>PostEx raises six-figure Pre-Seed round and aims
+                                to revolutionise Pakistan's E-commerce ecosystem</b></p>
+                        <a href="https://magnitt.com/news/postex-raises-six-figure-pre-seed-round-and-aims-to-revolutionise-pakistan-s-e-commerce-ecosystem-52111"
+                            style="font-size: 15px !important; color: white; background-color: black; color: white; border-color: black; border-radius: 20px; text-decoration: none; padding-left: 10px; padding-right: 10px; margin: 0px;"
+                            class="blog-text">Read More</a>
+                        <br>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="img-responsive" width="100%" height="218.016" src="images/Bitmap2.png" alt>
+                        <p class="blog-heading" style="margin: 0px;"><b>Pakistan wants mega bite of digital future</b>
+                        </p>
+                        <p class="blog-text" style="margin: 0px;"></p>
+                        <a href="https://www.khaleejtimes.com/business/global/pakistan-wants-mega-bite-of-digital-future-"
+                            style="font-size: 15px !important; color: white; background-color: black; color: white; border-color: black; border-radius: 20px; text-decoration: none; padding-left: 10px; padding-right: 10px; margin: 0px;"
+                            class="blog-text">Read More</a>
+                        <br>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="img-responsive" height="218.016" src="images/omer.jpg" alt>
+                        <p class="blog-heading" style="margin: 0px;"><b>Karavan Podcast</b></p>
+                        <a href="https://www.karavan.vc/podcast/episode/24b39657/omer-khan-of-postex"
+                            style="font-size: 15px !important; color: white; background-color: black; color: white; border-color: black; border-radius: 20px; text-decoration: none; padding-left: 10px; padding-right: 10px; margin: 0px;"
+                            class="blog-text">Read More</a>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+    <div id="contactSection" class="container-fluid"
+        style="padding-left: 7%; padding-right: 7%; padding-top: 41px; padding-bottom: 117.59px;">
+        <p class="small-p" style="color: black; font-weight: bold;">Contact us</p>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <h1 style="font-size: 38px; line-height: 49px; margin-bottom: 35px;">Let's grow together</h1>
+                        <img src="images/frame3-updated.png" alt width="100%" style="padding-right: 50px;">
+                        <br><br>
+                        <input onclick="routeToSignUp()" id="signUpBtn" type="button" value="Sign Up"
+                            style="font-size: 15px !important; margin-right: 11%; float: right; background-color: black; color: white; border-color: black; border-radius: 20px; text-decoration: none; padding-left: 10px; height: 36px; padding-right: 10px; width: 130px;" />
+                    </div>
+                    <div class="col-lg-2 d-none">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div style="display: flex; justify-content: space-evenly;">
+            <div class="logo" style="padding-top: 0.3%;">
+                <img src="images/PostEx.png" width="98%" />
+            </div>
+            <div class="companyWrap">
+                <p class="footer-heading">Company</p>
+                <ul class="footer-list">
+                    <li><a id="productsFooterItem"
+                            style="color: white; text-decoration: none; cursor: pointer;">Products</a></li>
+                    <li><a class="featureNavItem"
+                            style="color: white; text-decoration: none; cursor: pointer;">Features</a></li>
+                    <li><a id="blogFooterItem"
+                            style="color: white; text-decoration: none; cursor: pointer;">Newsroom</a></li>
+                    <li><a id="careersFooterItem"
+                            style="color: white; text-decoration: none; cursor: pointer;">Careers</a></li>
+                    <li><a href="FAQ.html" style="color: white; text-decoration: none; cursor: pointer;">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="codWrap">
+                <p class="footer-heading">PostEx<span style="font-family: serif; color: #93CE46;">.</span>COD</p>
+                <ul class="footer-list">
+                    <li><a href="cod.html#videosection" style="color: white; text-decoration: none;">How it
+                            works</a></li>
+                    <li><a href="cod.html#solutionSection" style="color: white; text-decoration: none;">Solution</a>
+                    </li>
+                    <li><a href="cod.html#featuresSection" style="color: white; text-decoration: none;">Features</a>
+                    </li>
+                    <li><a href="cod.html#priceSection" style="color: white; text-decoration: none;">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="paidWrap">
+                <p class="footer-heading">Paid</p>
+                <ul class="footer-list">
+                    <li><a href="digitalpayment.html#paymentMethodsSection"
+                            style="color: white; text-decoration: none;">Payment Methods</a></li>
+                    <li><a href="digitalpayment.html#pluginsSection"
+                            style="color: white; text-decoration: none;">Plugins</a></li>
+                    <li><a href="digitalpayment.html#featuresSection"
+                            style="color: white; text-decoration: none;">Features</a></li>
+                    <li><a href="digitalpayment.html#featuresSection"
+                            style="color: white; text-decoration: none;">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="legalWrap">
+                <p class="footer-heading">Legal</p>
+                <ul class="footer-list">
+                    <li><a href="privacy-policy.html" style="color: white; text-decoration: none;">Privacy
+                            Policy</a></li>
+                </ul>
+            </div>
+            <div class="contactWrap">
+                <p class="footer-heading">Contact Us</p>
+                <ul class="footer-list">
+                    <li><a href="tel:04232157777"
+                            style="color: white; text-decoration: none; display: flex; gap: 12px;align-items: center;"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 15 15"
+                                fill="none">
+                                <path
+                                    d="M9.58333 7.46143H11.1389C11.1389 6.43003 10.7292 5.44087 9.99986 4.71157C9.27055 3.98226 8.2814 3.57254 7.25 3.57254V5.12809C7.86884 5.12809 8.46233 5.37392 8.89992 5.81151C9.3375 6.24909 9.58333 6.84259 9.58333 7.46143ZM12.6944 7.46143H14.25C14.25 3.57254 11.1156 0.461426 7.25 0.461426V2.01698C10.2522 2.01698 12.6944 4.45143 12.6944 7.46143ZM13.4722 10.1836C12.5 10.1836 11.5667 10.0281 10.6956 9.74032C10.4233 9.65476 10.12 9.71698 9.90222 9.93476L8.19111 11.6459C5.99 10.5259 4.18556 8.72143 3.06556 6.52031L4.77667 4.8092C4.99444 4.59143 5.05667 4.28809 4.97111 4.01587C4.68333 3.14476 4.52778 2.21143 4.52778 1.2392C4.52778 1.03292 4.44583 0.835093 4.29997 0.689232C4.15411 0.54337 3.95628 0.461426 3.75 0.461426H1.02778C0.821498 0.461426 0.623667 0.54337 0.477806 0.689232C0.331944 0.835093 0.25 1.03292 0.25 1.2392C0.25 4.74595 1.64305 8.10908 4.1227 10.5887C6.60235 13.0684 9.96547 14.4614 13.4722 14.4614C13.6785 14.4614 13.8763 14.3795 14.0222 14.2336C14.1681 14.0878 14.25 13.8899 14.25 13.6836V10.9614C14.25 10.7551 14.1681 10.5573 14.0222 10.4115C13.8763 10.2656 13.6785 10.1836 13.4722 10.1836Z"
+                                    fill="white" />
+                            </svg> (042) 32157777 </a></li>
+                    <li><a href="cdn-cgi/l/email-protection.html#9eedebeeeef1eceadeeef1edeafbe6b0eef5"
+                            style="color: white; text-decoration: none;display: flex; gap: 12px;align-items: center;"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewbox="0 0 20 15"
+                                fill="none">
+                                <path
+                                    d="M19.25 2.21143C19.25 1.24893 18.395 0.461426 17.35 0.461426H2.15C1.105 0.461426 0.25 1.24893 0.25 2.21143V12.7114C0.25 13.6739 1.105 14.4614 2.15 14.4614H17.35C18.395 14.4614 19.25 13.6739 19.25 12.7114V2.21143ZM17.35 2.21143L9.75 6.58643L2.15 2.21143H17.35ZM17.35 12.7114H2.15V3.96143L9.75 8.33643L17.35 3.96143V12.7114Z"
+                                    fill="white" />
+                            </svg> <span class="__cf_email__"
+                                data-cfemail="62111712120d101622120d1116071a4c1209">[email&#160;protected]</span></a>
+                    </li>
+                </ul>
+                <div style="word-spacing: 20px;">
+                    <a href="https://www.facebook.com/PostEx.pk/" class="fa fa-facebook"
+                        style="color: white; text-decoration: none;"></a>
+                    <a class="fa fa-instagram" style="color: white; text-decoration: none;"
+                        href="https://www.instagram.com/postex.pk/"></a>
+                    <a href="https://www.linkedin.com/company/postex-pk/?originalSubdomain=pk" class="fa fa-linkedin"
+                        style="color: white; text-decoration: none;"></a>
+                    <a class="fa fa-youtube" style="color: white; text-decoration: none;"
+                        href="https://www.youtube.com/watch?v=aPI89EzyjCU"></a>
+                </div>
+            </div>
+            <div class="singupWrap">
+                <a href="#" class="footer-button">Login/SignUp</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

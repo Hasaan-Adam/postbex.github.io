@@ -1,0 +1,377 @@
+united-backgroundbody {
+    margin: 0
+}
+
+@font-face {
+    font-family: DMSansRegular;
+    /* src: url(fonts/DM_Sans/DMSans-Regular.ttf) format('truetype') */
+    src: url(/Assets/fonts/DM_Sans/DMSans-Regular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: BalooRegular;
+    /* src: url(fonts/Baloo/BalooDa-Regular.ttf) format('truetype') */
+    src: url(/Assets/fonts/Baloo/BalooDa-Regular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: Sunflower;
+    /* src: url(fonts/Sunflower/Sunflower-Light.ttf) format('truetype') */
+    src: url(/Assets/fonts/Sunflower/Sunflower-Light.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: SunflowerBold;
+    /* src: url(fonts/Sunflower/Sunflower-bold.ttf) format('truetype') */
+    src: url(/Assets/fonts/Sunflower/Sunflower-bold.ttf) format('truetype')
+}
+
+.sunflower {
+    font-family: SunflowerBold
+}
+
+.baloo {
+    font-family: BalooRegular
+}
+
+* {
+    font-family: DMSansRegular
+}
+
+.paid-heading {
+    color: #fff;
+    font-weight: 700;
+    padding-left: 89px;
+    padding-top: 190px
+}
+
+.top-banner {
+    background-image: url(/Assets/images/web/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+    padding-bottom: 100px
+}
+
+.topbannerimage-headinggreen {
+    font-size: 96px;
+    color: #93ce46;
+    font-weight: 700
+}
+
+p {
+    font-size: 24px;
+    line-height: 35px
+}
+
+.topbannerimage-heading {
+    margin-left: 7%;
+    font-size: 96px;
+    font-weight: 700;
+    color: #000
+}
+
+.boast-headinggreen {
+    font-size: 38px;
+    color: #93ce46;
+    font-weight: 700
+}
+
+.boast-heading {
+    font-size: 38px;
+    font-weight: 700
+}
+
+.omnichannelarea-headinggreen {
+    font-size: 38px;
+    color: #93ce46;
+    font-weight: 700
+}
+
+.omnichannelarea-heading {
+    font-size: 38px;
+    font-weight: 700
+}
+
+.card-heading-green {
+    font-size: 26px;
+    color: #93ce46;
+    font-weight: 700;
+    line-height: 36px
+}
+
+.card-heading {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px
+}
+
+.empty-background {
+    background-image: url(/Assets/images/web/banner_background.html);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px
+}
+
+.create-account-button {
+    margin-left: 7%;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 5px 15px 8px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px
+}
+
+.create-account-button:hover {
+    color: #93ce46 !important
+}
+
+.unitedPlatformArea {
+    padding: 5%;
+    margin: 0;
+    padding-top: 41px;
+    padding-bottom: 117.594px
+}
+
+.card {
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 100%;
+    padding-bottom: 50px
+}
+
+.logo a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    color: #000;
+    padding-top: 29px;
+    padding-left: 10%
+}
+
+.logo a:hover {
+    color: #000;
+    text-decoration: none
+}
+
+.nav-link {
+    font-size: 14px;
+    color: #252525;
+    padding-right: 36px !important;
+    cursor: pointer
+}
+
+.nav-link:hover {
+    color: #252525;
+    cursor: pointer
+}
+
+a#changeClass {
+    padding-right: 0 !important
+}
+
+li.nav-item.button {
+    background: #000;
+    border-radius: 8px;
+    margin-right: 15px
+}
+
+a.nav-link.button-text {
+    color: #fff;
+    padding-right: 15px !important;
+    padding-left: 15px
+}
+
+.navbar {
+    box-shadow: 0 0 23px #d9e4f3 !important
+}
+
+.navbar-nav {
+    float: right
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    padding-top: 66px
+}
+
+ul.footer-list>li {
+    padding-bottom: 10px
+}
+
+ul.footer-list {
+    list-style: none;
+    padding: 0;
+    color: #9ca0a0
+}
+
+p.footer-heading {
+    font-weight: 700;
+    font-family: Sunflower;
+    font-size: 17px
+}
+
+.footer-button {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: right;
+    color: #000;
+    background: #fff;
+    border-color: #fff;
+    border-radius: 30px;
+    padding: 14px 33px
+}
+
+.col-md-3.nl {
+    text-align: right
+}
+
+.united-background {
+    background-image: url("/Assets/images/web/Group\ 3837.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right
+}
+
+a#contactNavItem {
+    padding-right: 60px !important
+}
+
+.omnichannel-background {
+    background-image: url(/Assets/images/web/3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 117.594px;
+    background-size: cover
+}
+
+.card {
+    background: 0 0
+}
+
+.frames {
+    margin-bottom: 10px
+}
+
+.Video-background {
+    background-image: url(/Assets/images/web/4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.black-background {
+    background-image: url(/Assets/images/web/5.png);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.cards-ui {
+    border-radius: 22px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 15px;
+    min-height: 464px
+}
+
+.footer-button:hover {
+    color: #000
+}
+
+.card-ui-heading {
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+footer {
+    background-image: url(/Assets/images/web/footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.small-p {
+    font-size: 16px;
+    line-height: 52px
+}
+
+.video-height {
+    height: 413px;
+    width: 743px
+}
+
+.row.black-background p {
+    color: #fff
+}
+
+.empty-div {
+    height: 300px
+}
+
+img.icon-img {
+    margin-top: 10px;
+    background: #0f0f18;
+    padding: 20px;
+    border-radius: 10px
+}
+
+.blog-heading {
+    font-size: 17px;
+    line-height: 22px;
+    padding-top: 25px;
+    padding-bottom: 25px
+}
+
+.blog-text {
+    font-size: 14px;
+    line-height: 22px
+}
+
+span.badge.badge-light {
+    margin-left: 50px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #fff;
+    background: #92cf50
+}
+
+.footer-list li a {
+    cursor: pointer
+}
+
+@media only screen and (max-width:1000px) {
+    .text-mob-center {
+        text-align: center
+    }
+
+    .video-height {
+        width: 80%
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .paid-heading {
+        padding-top: 220px !important
+    }
+}
+
+@media only screen and (max-width:1600px) and (min-width:801px) {
+    .paid-heading {
+        color: #fff;
+        font-weight: 700;
+        padding-left: 89px;
+        padding-top: 130px
+    }
+}

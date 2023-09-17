@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PostBex</title>
+
+        <meta charset="UTF-8">
+        <meta name="facebook-domain-verification" content="40vn6qvh8yz3loczxxx6up5un6jidv">
+
+        <!-- Bootstrap css -->
+        <link rel="stylesheet" href="Assets/bootstrap/bootstrap-4/css/bootstrap.min.css">
+        <!-- Fontawesome css -->
+        <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
+        <!-- Custom css -->
+        <link rel="stylesheet" href="Assets/css/web/style.css">
+        
+        <!-- JQuery/JavaScript js -->
+        <script src="Assets/jquery/jquery.min.js"></script>
+        <!-- PopupOverlay js -->
+        <script src="Assets/jquery/jquery.popupoverlay.min.js"></script>
+        <!-- Popper js -->
+        <script src="Assets/javaScript/web/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="Assets/bootstrap/bootstrap-4/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+    .tracking-text {
+        display: block;
+        width: 100%;
+        padding: 20px;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        border: 1px solid #93CE46;
+    }
+
+    .track-div {
+        display: flex;
+        position: relative;
+        min-width: 0;
+        background-color: #fff;
+        border: 1px solid #93CE46;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .track-order-button {
+        margin-left: 7%;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        padding: 5px 15px 8px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-button {
+        border-radius: 10px;
+        text-decoration: none;
+        border: none;
+        font-size: 18px;
+        color: white;
+        background-color: black;
+        line-height: 30px;
+        display: inline-block;
+    }
+
+    .input-cancel-button {
+        position: absolute;
+        right: 2%;
+        width: 15%;
+        margin-right: 7px;
+
+    }
+
+    .bg-modal {
+        width: 70%;
+        height: auto;
+        margin-top: 75px;
+        padding-bottom: 20px;
+        background-color: white;
+        position: relative;
+        top: 10%;
+        left: 15%;
+        border-radius: 10px;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bg-total {
+        width: 100%;
+        min-height: 100%;
+        height: 100%;
+        position: fixed;
+        vertical-align: middle;
+        justify-content: center;
+        display: none;
+        align-items: center;
+        overflow: auto;
+        z-index: 15;
+        /* Sit on top */
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Fallback color */
+        /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+    }
+
+    @media screen and (min-width: 1080px) {
+        .modal-content {
+            width: 20%;
+            height: auto;
+            margin-top: 75px;
+            background-color: whitesmoke;
+            border-radius: 15px;
+            justify-content: center;
+            float: right;
+            position: fixed;
+            right: 0;
+            display: flex;
+            display: none;
+        }
+    }
+
+    @media (min-width: 360px) and (max-width: 1080px) {
+        .modal-content {
+            width: 20%;
+            height: auto;
+            margin-top: 100px;
+            background-color: whitesmoke;
+            border-radius: 15px;
+            justify-content: center;
+            float: right;
+            position: fixed;
+            right: 0;
+            display: flex;
+            display: none;
+        }
+    }
+
+    input {
+        margin: 10px;
+        width: 90%;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        margin-left: 10px;
+        right: 6px;
+        font-size: 35px;
+        cursor: pointer;
+        transform: rotate(45deg);
+    }
+
+    .table-close {
+        position: absolute;
+        top: 0;
+        margin-top: 30px;
+        margin-left: 10px;
+        right: 250px;
+        font-size: 55px;
+        color: black;
+        cursor: pointer;
+        transform: rotate(45deg);
+    }
+
+    li.nav-item.button {
+        background: black;
+        border-radius: 8px;
+        margin-right: 15px;
+    }
+
+    button.nav-link.button-text {
+        color: white;
+        border: none;
+        padding-right: 15px !important;
+        padding-left: 15px;
+    }
+
+
+    .tg {
+        color: black;
+
+        border: 2px;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .tg td {
+        border: 2px;
+        color: black;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+    }
+
+    .tg th {
+        border: 2px;
+        color: #93CE46;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+    }
+
+    .div-class {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: inline-block;
+        width: 550px;
+    }
+
+    .note-p {
+        size: 10px;
+        color: black;
+    }
+
+    .logo-table {
+        top: 10;
+        left: 10;
+    }
+
+    .details-div {
+        border: 1px solid #93CE46;
+        border-radius: 20px;
+        margin-right: 5px;
+    }
+
+    .details-label {
+        border-bottom: 3px solid #93CE46;
+        font-size: large;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .label-size {
+        font-size: smaller;
+    }
+
+    .input-size {
+        margin: 0px;
+        font-size: smaller;
+        width: 50%;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+    </style>
+    <body>
+        <nav id="navbar" class="navbar fixed-top" style="background: white; position:absolute">
+            <div class="col-lg-3 logo">
+                <a href="#">
+                    <img src="Assets/images/web/PostBex_Logo.png" alt>
+                </a>
+            </div>
+            <div id="changedClass" class="col-lg-8 menu">
+                <ul class="navbar-nav navbar-expand-sm">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cod.html">PostBex.COD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="digitalpayment.html">Paid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link featureNavItem">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contactNavItem">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" style="font-weight: bold;">Login</a>
+                    </li>
+                    <li class="nav-item button">
+                        <button
+                            href
+                            id="track-order-li"
+                            class="nav-link button-text"
+                            style="background-color: black; border-radius: 10px;"
+                        >Track your order</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div style="position: absolute;" id="modal-content" class="modal-content">
+            <div class="modal-inside-class">
+                <form action>
+                    <input
+                        class="label-size"
+                        style="margin-bottom: 5px; outline: #93CE46;"
+                        type="text"
+                        id="trackingNo_text"
+                        placeholder="Tracking number"
+                    >
+                    <input
+                        type="button"
+                        style="line-height: 25px; font-size: medium; margin-top: 5px;"
+                        href
+                        id="track-button"
+                        class="input-button"
+                        value="Track order"
+                    ></input>
+                </form>
+            </div>
+        </div>
+        <div id="bg-total" class="bg-total">
+            <div id="bg-modal" class="bg-modal">
+                <div style="display:inline-flex; border-bottom: 4px solid #93CE46;" class="col-lg-12">
+                    <div class="col-lg-3 logo">
+                        <a href="#">
+                            <img src="Assets/images/web/PostBex_Logo.png" alt>
+                        </a>
+                    </div>
+                    <label class="col-lg-3  label-size" style="margin-top: 15px;">Details for the order number:</label>
+                    <label class="col-lg-3  label-size" id="tracking_txt" style="margin-top: 15px; padding-left: 0px; "></label>
+                    <div id="close" class="close">+</div>
+                </div>
+                <div id="details" class="col-lg-12" style=" display: flex; margin-top: 15px; padding:20px; padding-top: 10px; padding-bottom: 0px;">
+                    <div class="col-lg-4 col-md-4 col-sm-12 details-div">
+                        <label class="details-label label-size">
+                            <b>Consignee Information</b>
+                        </label>
+                        <div>
+                            <label class="label-size">
+                                <b>Name:</b>
+                            </Label>
+                            <input
+                                class="input-size"
+                                style="width: 60%; border: none; text-align: left; background-color: #fff; "
+                                disabled="disabled"
+                                type="text"
+                                id="consignee_Name"
+                                value=" "
+                            ></input>
+                        </div>
+                        <div>
+                            <label class="label-size">
+                                <b>Contact #:</b>
+                            </Label>
+                            <input
+                                class="input-size"
+                                style="border: none; width: 60%; text-align: left;  background-color: #fff;"
+                                disabled="disabled"
+                                type="text"
+                                id="consignee_Contact"
+                                value=" "
+                            ></input>
+                        </div>
+                        <div>
+                            <label class="label-size">
+                                <b>Address:</b>
+                            </Label>
+                            <textarea
+                                class="input-size"
+                                style="border: none; resize: none; width: 70%; padding-left: 5px; padding-top: 2px; text-align: left; position: absolute; background-color: transparent;"
+                                disabled="disabled"
+                                type="text"
+                                id="consignee_Address"
+                                value=" "
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 details-div">
+                        <label class="details-label label-size">
+                            <b>Shipper Information</b>
+                        </label>
+                        <div>
+                            <label class="label-size">
+                                <b>Name:</b>
+                            </Label>
+                            <input
+                                class="input-size"
+                                style="border: none; text-align: left;  background-color: #fff;"
+                                disabled="disabled"
+                                type="text"
+                                id="shipper_Name"
+                                value=" "
+                            ></input>
+                        </div>
+                        <div>
+                            <label class="label-size">
+                                <b>Contact #:</b>
+                            </Label>
+                            <input
+                                class="input-size"
+                                style="border: none; text-align: left;  background-color: #fff;"
+                                disabled="disabled"
+                                type="text"
+                                id="shipper_Contact"
+                                value=" "
+                            ></input>
+                        </div>
+                        <div>
+                            <label class="label-size">
+                                <b>Address:</b>
+                            </Label>
+                            <textarea
+                                class="input-size"
+                                style="border: none; resize: none; width: 70%; padding-left: 5px; padding-top: 2px; text-align: left; position: absolute; background-color: transparent;"
+                                disabled="disabled"
+                                type="text"
+                                id="shipper_Address"
+                                value=" "
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 details-div">
+                        <label class="details-label label-size">
+                            <b>Order Information</b>
+                        </label>
+                        <div>
+                            <label class="label-size">
+                                <b>Invoice Payment:</b>
+                            </Label>
+                            <input
+                                class="input-size"
+                                style="border: none; text-align: left;  background-color: #fff;"
+                                disabled="disabled"
+                                type="text"
+                                id="order_invoicePayment"
+                                value=" "
+                            ></input>
+                        </div>
+                        <div>
+                            <label class="label-size">
+                                <b>Destination:</b>
+                            </Label>
+                            <input
+                                class="input-size"
+                                style="border: none; text-align: left;  background-color: #fff;"
+                                disabled="disabled"
+                                type="text"
+                                id="order_Destination"
+                                value=" "
+                            ></input>
+                        </div>
+                        <div>
+                            <label class="label-size">
+                                <b>Status:</b>
+                            </Label>
+                            <input
+                                class="input-size"
+                                style="border: none; text-align: left;  background-color: #fff;"
+                                disabled="disabled"
+                                type="text"
+                                id="order_status"
+                                value=" "
+                            ></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12" id="shipment-information" style="padding: 20px; padding-top: 0px; padding-bottom: 0px;">
+                    <label class="details-label label-size">
+                        <b>Shipment Information</b>
+                    </label>
+                    <div>
+                        <label class="col-lg-2 label-size">
+                            <b>Pieces:</b>
+                        </Label>
+                        <input
+                            class="col-lg-6 input-size"
+                            style="border: none; text-align: left;  background-color: #fff;"
+                            type="text"
+                            id="shipment_Pieces"
+                            value=" N/A "
+                        ></input>
+                    </div>
+                    <div>
+                        <label class="col-lg-2 label-size">
+                            <b>Order Reference:</b>
+                        </Label>
+                        <input
+                            class="col-lg-6 input-size"
+                            style="border: none; text-align: left;  background-color: #fff;"
+                            disabled="disabled"
+                            type="text"
+                            id="shipment_reference"
+                            value=" "
+                        ></input>
+                    </div>
+                    <div>
+                        <label class="col-lg-2 label-size">
+                            <b>Origin:</b>
+                        </Label>
+                        <textarea
+                            class="col-lg-6 input-size"
+                            style="border: none; resize: none; width: 70%; padding-left: 15px; padding-top: 2px; text-align: left; position: absolute; background-color: transparent;"
+                            disabled="disabled"
+                            type="text"
+                            id="shipment_Origin"
+                            value=" "
+                        ></textarea>
+                    </div>
+                    <div>
+                        <label class="col-lg-2 label-size">
+                            <b>Booking Date:</b>
+                        </Label>
+                        <input
+                            class="col-lg-6 input-size"
+                            style="border: none; text-align: left;  background-color: #fff;"
+                            disabled="disabled"
+                            type="text"
+                            id="shipment_BookingDate"
+                            value=" "
+                        ></input>
+                    </div>
+                    <div>
+                        <label class="col-lg-2 label-size">
+                            <b>Remarks:</b>
+                        </Label>
+                        <input
+                            class="col-lg-6 input-size"
+                            style="border: none; text-align: left;  background-color: #fff;"
+                            disabled="disabled"
+                            type="text"
+                            id
+                            value=" N/A"
+                        ></input>
+                    </div>
+                    <div>
+                        <label class="col-lg-2 label-size">
+                            <b>Order Details:</b>
+                        </Label>
+                        <textarea
+                            class="col-lg-6 input-size"
+                            style="border: none; resize: none; width: 70%; padding-left: 15px; padding-top: 2px; text-align: left; position: absolute; background-color: transparent;"
+                            disabled="disabled"
+                            type="text"
+                            id="order_Details"
+                            value=" N/A"
+                        ></textarea>
+                        <input
+                            type="button"
+                            id="input-cancel-button"
+                            class="input-button input-cancel-button"
+                            value="Close"
+                        ></input>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-banner">
+            <h1 class="topbannerimage-heading">
+                <span class="topbannerimage-headingsuccess">Everyone</span> wins
+            </h1>
+            <h1 class="topbannerimage-heading">with
+                <span class="sunflower">PostBex</span>
+                <span class="topbannerimage-headinggreen">.</span>
+            </h1>
+            <p style="margin-left: 7%;  margin-bottom: 0px;">Most reliable and secure choice for E-commerce stores</p>
+            <p style="margin-left: 7%; margin-bottom: 50px;">offering Cash on Delivery and Online Payments</p>
+            <div style="display:inline;">
+                <a href="#" class="create-account-button" style="text-decoration: none; color:white;">Create Account</a>
+                <a href="#" style="color: black; font-weight: bold; margin-left: 1.5%; font-size: 18px; line-height: 40px;">
+                    Contact
+                Sales >
+                </a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row united-background">
+                <div class="col-lg-6 unitedPlatformArea">
+                    <p class="small-p" style="font-weight: bold; color: black">Unified Platform</p>
+                    <h1 class="boast-heading">Boost your
+                        <span class="boast-headinggreen">cash flows</span>
+                    </h1>
+                    <h1 class="boast-heading" style="margin-bottom: 40px;">with
+                        <span class="sunflower">PostBex</span>
+                        <span class="boast-headinggreen">.</span>
+                    </h1>
+                    <p style="margin-bottom: 0px; font-size: 20px; line-height: 28px;">
+                        A unified payment solution that
+                    offers growth
+                    </p>
+                    <p style="font-size: 20px; line-height: 28px;">for your business. Payments made easy.</p>
+                </div>
+                <div class="col-lg-6" style="padding: 0px;"></div>
+            </div>
+        </div>
+        <div id="productsSection" class="container-fluid omnichannel-background">
+            <div class="row">
+                <div class="col-lg-12 unitedPlatformArea">
+                    <p class="small-p" style="font-weight: bold;">Solutions</p>
+                    <h1 class="omnichannelarea-heading">A true
+                        <span class="omnichannelarea-headinggreen">omni-channel</span> payment solution
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-sm-0"></div>
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <a href="cod.html" style="text-decoration: none; color: black;">
+                        <div class="card">
+                            <img
+                                class="frames"
+                                src="Assets/images/web/Frame@2x (1).png"
+                                alt
+                                width="70px"
+                                height="60px"
+                            >
+                            <img
+                                class="frames"
+                                src="Assets/images/web/postexcod_black.jpg"
+                                alt
+                                width="120px"
+                                style="margin-left: -10px;"
+                            >
+                            <p style="margin: 0px; font-size: 20px; line-height: 33px;">Instant and Upfront payment for</p>
+                            <p style="font-size: 20px; line-height: 33px;">E-commerce stores offering COD</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <a href="digitalpayment.html" style="text-decoration: none; color: black;">
+                        <div class="card">
+                            <img
+                                class="frames"
+                                src="Assets/images/web/Frame@2x-1.png"
+                                alt
+                                width="70px"
+                            >
+                            <img
+                                class="frames"
+                                src="Assets/images/web/paid_black.png"
+                                alt
+                                width="80px"
+                                style="margin-left: -10px; margin-top: 10px;"
+                            >
+                            <p style="margin: 0px; font-size: 20px; line-height: 33px;">
+                                Pakistan's most reliable and secure
+                            </p>
+                            <p style="margin: 0px; font-size: 20px; line-height: 33px;;">
+                                Payment Gateway to accept online
+                            </p>
+                            <p style="margin: 0px; font-size: 20px; line-height: 33px;">payments Globally</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-0"></div>
+            </div>
+        </div>
+        <div class="container-fluid Video-background">
+            <div class="col-lg-12 unitedPlatformArea" style="padding-bottom: 5%;">
+                <p class="small-p">
+                    <span class="sunflower">PostBex
+                        <span class="baloo" style="color: #93CE46; font-size: 12px;">.</span>COD</span>
+                </p>
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center;">
+                        <h1 class="text-center omnichannelarea-heading" style="padding-bottom: 50px; font-size: 42px;">
+                            How
+                            <span class="sunflower">PostBex
+                                <span style="color: #93CE46; font-size: 50px">.</span>COD</span>
+                            works
+                        </h1>
+                        <iframe
+                            class="video-height"
+                            src="https://www.youtube.com/embed/aPI89EzyjCU"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="max-width: 100%; background: #f5f9fc;">
+            <div class="row black-background">
+                <p class="small-p paid-heading">
+                    <img
+                        src="Assets/images/web/paid_white.jpg"
+                        height="23"
+                        alt
+                        style="margin-top: 20px;"
+                    >
+                </p>
+                <div class="container-fluid">
+                    <div class="row" style="padding-bottom: 117.594px;">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2 class="omnichannelarea-heading text-center" style="color: white; margin-bottom: 5%;">
+                                The
+                            most
+                                <span style="color: #93CE46">powerful and secure</span>payment gateway
+                            </h2>
+                            <div class="row" style="color: white;">
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-1 text-center">
+                                    <img class="icon-img" src="Assets/images/web/payment.png" alt>
+                                </div>
+                                <div class="col-lg-4 text-mob-center">
+                                    <p style="margin: 0px;">Secure payments</p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                        Non-3D and 3DS authentication
+                                    </p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                        designed to help you capture
+                                    more
+                                    </p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">revenue</p>
+                                </div>
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-1 text-center">
+                                    <img class="icon-img" src="Assets/images/web/lowest.png" alt>
+                                </div>
+                                <div class="col-lg-4 text-mob-center">
+                                    <p style="margin: 0px;">Lowest Price</p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                        Start taking online payments
+                                    at as a
+                                    </p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">low as 3%</p>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="row" style="color: white; margin-top: 0;">
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-1 text-center">
+                                    <img class="icon-img" src="Assets/images/web/global.png" alt>
+                                </div>
+                                <div class="col-lg-4 text-mob-center">
+                                    <p style="margin: 0px;">Go Global</p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                        Accept all major debit and
+                                    credit
+                                    </p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                        cards from customers around
+                                    the
+                                    </p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">world</p>
+                                </div>
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-1 text-center">
+                                    <img class="icon-img" src="Assets/images/web/lock.png" alt>
+                                </div>
+                                <div class="col-lg-4 text-mob-center">
+                                    <div>
+                                        <p style="margin: 0px;">One-click integrations</p>
+                                        <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                            With one-click prebuilt
+                                        plugin integrations for systems like Shopify, wooCommerce, Magento and more and
+                                        go live in as little as 10 minutes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="row" style="color: white; margin-top: 1.5%;">
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-1 text-center">
+                                    <img class="icon-img" src="Assets/images/web/integration.png" alt>
+                                </div>
+                                <div class="col-lg-4 text-mob-center">
+                                    <p style="margin: 0px;">No transaction fee</p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                        No more fee from any
+                                    transaction.
+                                    </p>
+                                    <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                        Grow your business with Paid
+                                    </p>
+                                </div>
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-1 text-center">
+                                    <img class="icon-img" src="Assets/images/web/zero.png" alt>
+                                </div>
+                                <div class="col-lg-4 text-mob-center">
+                                    <div>
+                                        <p style="margin: 0px;">Zero integration fee / annual fees</p>
+                                        <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                            Make your transaction to
+                                        accepting digital
+                                        </p>
+                                        <p class="small-p" style="line-height: 24px; margin: 0px;">
+                                            payments seamless at zero
+                                        charges
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="whyPostexSection" class="container-fluid" style="padding-left: 7%; padding-right: 7%; padding-bottom: 117.594px; padding-top: 41px;">
+            <p class="small-p" style="color: black; font-weight: bold;">Why
+                <span class="sunflower">PostBex
+                    <span style="color: #93CE46; font-size: 24px;">.</span>
+                </span>
+            </p>
+            <h1 style="color: black; margin-bottom: 5%; font-size: 38px; font-weight: bold;">A
+                <span style="color: #93CE46">customer-centric</span>approach to payments and logistics
+            </h1>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-4" style="color: white;">
+                            <div class="inner-row cards-ui" style="background-color: black; ">
+                                <img
+                                    src="Assets/images/web/smartphone-money-pay in-pay out-security (1).png"
+                                    alt
+                                    width="50px"
+                                    height="50px"
+                                >
+                                <p class="card-ui-heading small-p" style="margin: 0px; line-height: 37px;">
+                                    <b>
+                                        Upfront
+                                    Payment
+                                    </b>
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">Instant cash payment to</p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    E-commerce shops offering Cash
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    on Delivery to their customers.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" style="color: black;">
+                            <div class="inner-row cards-ui" style="background-color: #F5F9FC; ">
+                                <img
+                                    src="Assets/images/web/language.png"
+                                    alt
+                                    width="50px"
+                                    height="50px"
+                                >
+                                <p class="card-ui-heading small-p" style="margin: 0px; line-height: 37px;">
+                                    <b>
+                                        Global
+                                    Payments
+                                    </b>
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    We have simplified international
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    payments for small and medium
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    sized businesses with our easy,
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    secure and affordable solution.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" style=" color: white;">
+                            <div class="inner-row cards-ui" style="background-color: #93CE46; ">
+                                <img
+                                    src="Assets/images/web/customer-service.png"
+                                    alt
+                                    width="50px"
+                                    height="50px"
+                                >
+                                <p class="card-ui-heading small-p" style="line-height: 37px; margin: 0px;">
+                                    <b>
+                                        24/7 customer
+                                    care
+                                    </b>
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    From Cash on Delivery to online
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    payments, we provide a seemless
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    experience to you and to your
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">customers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-lg-4" style="color: white;">
+                            <div class="inner-row cards-ui" style="background-color: #49162A; ">
+                                <img
+                                    src="Assets/images/web/dashboard.png"
+                                    alt
+                                    width="50px"
+                                    height="50px"
+                                >
+                                <p class="card-ui-heading small-p" style="line-height: 37px; margin: 0px;">
+                                    <b>
+                                        Company
+                                    Analytics
+                                    </b>
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    Take the right business decisions
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    with the detailed insights about
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    your business on our dashboard
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" style="color: black;">
+                            <div class="inner-row cards-ui" style="background-color: #FFFFDE; ">
+                                <img src="Assets/images/web/alarm.png" style="height: 50px;">
+                                <p class="card-ui-heading small-p" style="line-height:37px; margin: 0px;">
+                                    <b>
+                                        User
+                                    Permissions
+                                    </b>
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    Control what features or data
+                                your
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    employees can access or view on
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">our customizable portal</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" style="color: white;">
+                            <div class="inner-row cards-ui" style="background-color: #111237; ">
+                                <img src="Assets/images/web/money.png" style="width: 50px;">
+                                <p class="card-ui-heading small-p" style="line-height: 37px; margin: 0px;">
+                                    <b>
+                                        Decreased
+                                    Capital Needs
+                                    </b>
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">Small and medium sized</p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    businesses can meet their cash
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">flow requirements without</p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">
+                                    looking any further for financing
+                                </p>
+                                <p class="small-p" style="margin: 0px; line-height: 37px;">options</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        <div id="blogSection" class="container-fluid" style="padding-bottom: 90px; padding-top: 41px; padding-left: 7%; padding-right: 7%; background-color: #F5F9FC; padding-top: 41px;">
+            <p class="small-p" style="color: black; font-weight: bold;">News &amp; blogs</p>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img
+                                src="Assets/images/web/blog.jpg"
+                                width="100%"
+                                height="218.016"
+                                alt
+                            >
+                            <p class="blog-heading" style="margin: 0px;">
+                                <b>
+                                    PostBex raises six-figure Pre-Seed round and
+                                aims
+                                to revolutionise Pakistan's E-commerce ecosystem
+                                </b>
+                            </p>
+                            <a href="https://magnitt.com/news/postex-raises-six-figure-pre-seed-round-and-aims-to-revolutionise-pakistan-s-e-commerce-ecosystem-52111" style="font-size: 15px !important; color: white; background-color: black; color: white; border-color: black; border-radius: 20px; text-decoration: none; padding-left: 10px; padding-right: 10px; margin: 0px;" class="blog-text">Read More</a>
+                            <br>
+                        </div>
+                        <div class="col-lg-4">
+                            <img
+                                src="Assets/images/web/Bitmap2.png"
+                                width="100%"
+                                height="218.016"
+                                alt
+                            >
+                            <p class="blog-heading" style="margin: 0px;">
+                                <b>Pakistan wants mega bite of digital future</b>
+                            </p>
+                            <p class="blog-text" style="margin: 0px;"></p>
+                            <a href="https://www.khaleejtimes.com/business/global/pakistan-wants-mega-bite-of-digital-future-" style="font-size: 15px !important; color: white; background-color: black; color: white; border-color: black; border-radius: 20px; text-decoration: none; padding-left: 10px; padding-right: 10px; margin: 0px;" class="blog-text">Read More</a>
+                            <br>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="Assets/images/web/omer.jpg" height="218.016" alt>
+                            <p class="blog-heading" style="margin: 0px;">
+                                <b>Karavan Podcast</b>
+                            </p>
+                            <a href="https://www.karavan.vc/podcast/episode/24b39657/omer-khan-of-postex" style="font-size: 15px !important; color: white; background-color: black; color: white; border-color: black; border-radius: 20px; text-decoration: none; padding-left: 10px; padding-right: 10px; margin: 0px;" class="blog-text">Read More</a>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        <div id="contactSection" class="container-fluid" style="padding-left: 7%; padding-right: 7%; padding-bottom: 117.594px; padding-top: 41px;">
+            <p class="small-p" style="color: black; font-weight: bold;">Contact us</p>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <h1 style="font-size: 38px; line-height: 49px; margin-bottom: 35px;">Let's grow together</h1>
+                            <img
+                                src="Assets/images/web/frame3-updated.png"
+                                alt
+                                width="100%"
+                                style="padding-right: 50px;"
+                            >
+                            <br>
+                            <br>
+                            <input
+                                onclick="routeToSignUp()"
+                                id="signUpBtn"
+                                type="button"
+                                value="Sign Up"
+                                style="font-size: 15px !important; margin-right: 11%; float: right; background-color: black; color: white; border-color: black; border-radius: 20px; text-decoration: none; padding-left: 10px; height: 36px; padding-right: 10px; width: 130px;"
+                            >
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        <footer>
+            <div style="display: flex; justify-content: space-evenly;">
+                <div class="logo" style="padding-top: 0.3%;">
+                    <img src="Assets/images/web/PostEx.png" width="98%">
+                </div>
+                <div class="companyWrap">
+                    <p class="footer-heading">Company</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a id="productsFooterItem" style="color: white; text-decoration: none; cursor: pointer;">Products</a>
+                        </li>
+                        <li>
+                            <a class="featureNavItem" style="color: white; text-decoration: none; cursor: pointer;">Features</a>
+                        </li>
+                        <li>
+                            <a id="blogFooterItem" style="color: white; text-decoration: none; cursor: pointer;">Newsroom</a>
+                        </li>
+                        <li>
+                            <a id="careersFooterItem" style="color: white; text-decoration: none; cursor: pointer;">Careers</a>
+                        </li>
+                        <li>
+                            <a href="FAQ.html" style="color: white; text-decoration: none; cursor: pointer;">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="codWrap">
+                    <p class="footer-heading">PostBex
+                        <span style="font-family: serif; color: #93CE46;">.</span>COD
+                    </p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="cod.html#videosection" style="color: white; text-decoration: none;">
+                                How it
+                            works
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cod.html#solutionSection" style="color: white; text-decoration: none;">Solution</a>
+                        </li>
+                        <li>
+                            <a href="cod.html#featuresSection" style="color: white; text-decoration: none;">Features</a>
+                        </li>
+                        <li>
+                            <a href="cod.html#priceSection" style="color: white; text-decoration: none;">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="paidWrap">
+                    <p class="footer-heading">Paid</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="digitalpayment.html#paymentMethodsSection" style="color: white; text-decoration: none;">Payment Methods</a>
+                        </li>
+                        <li>
+                            <a href="digitalpayment.html#pluginsSection" style="color: white; text-decoration: none;">Plugins</a>
+                        </li>
+                        <li>
+                            <a href="digitalpayment.html#featuresSection" style="color: white; text-decoration: none;">Features</a>
+                        </li>
+                        <li>
+                            <a href="digitalpayment.html#featuresSection" style="color: white; text-decoration: none;">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="legalWrap">
+                    <p class="footer-heading">Legal</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="privacy-policy.html" style="color: white; text-decoration: none;">
+                                Privacy
+                            Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contactWrap">
+                    <p class="footer-heading">Contact Us</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="tel:04232157777" style="color: white; text-decoration: none; display: flex; gap: 12px; align-items: center;">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="15"
+                                    height="15"
+                                    viewbox="0 0 15 15"
+                                    fill="none"
+                                >
+                                    <path d="M9.58333 7.46143H11.1389C11.1389 6.43003 10.7292 5.44087 9.99986 4.71157C9.27055 3.98226 8.2814 3.57254 7.25 3.57254V5.12809C7.86884 5.12809 8.46233 5.37392 8.89992 5.81151C9.3375 6.24909 9.58333 6.84259 9.58333 7.46143ZM12.6944 7.46143H14.25C14.25 3.57254 11.1156 0.461426 7.25 0.461426V2.01698C10.2522 2.01698 12.6944 4.45143 12.6944 7.46143ZM13.4722 10.1836C12.5 10.1836 11.5667 10.0281 10.6956 9.74032C10.4233 9.65476 10.12 9.71698 9.90222 9.93476L8.19111 11.6459C5.99 10.5259 4.18556 8.72143 3.06556 6.52031L4.77667 4.8092C4.99444 4.59143 5.05667 4.28809 4.97111 4.01587C4.68333 3.14476 4.52778 2.21143 4.52778 1.2392C4.52778 1.03292 4.44583 0.835093 4.29997 0.689232C4.15411 0.54337 3.95628 0.461426 3.75 0.461426H1.02778C0.821498 0.461426 0.623667 0.54337 0.477806 0.689232C0.331944 0.835093 0.25 1.03292 0.25 1.2392C0.25 4.74595 1.64305 8.10908 4.1227 10.5887C6.60235 13.0684 9.96547 14.4614 13.4722 14.4614C13.6785 14.4614 13.8763 14.3795 14.0222 14.2336C14.1681 14.0878 14.25 13.8899 14.25 13.6836V10.9614C14.25 10.7551 14.1681 10.5573 14.0222 10.4115C13.8763 10.2656 13.6785 10.1836 13.4722 10.1836Z" fill="white"/>
+                                </svg> (042) 32157777
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cdn-cgi/l/email-protection.html#592a2c2929362b2d1929362a2d3c21772932" style="color: white; text-decoration: none;display: flex; gap: 12px;align-items: center;">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="15"
+                                    viewbox="0 0 20 15"
+                                    fill="none"
+                                >
+                                    <path d="M19.25 2.21143C19.25 1.24893 18.395 0.461426 17.35 0.461426H2.15C1.105 0.461426 0.25 1.24893 0.25 2.21143V12.7114C0.25 13.6739 1.105 14.4614 2.15 14.4614H17.35C18.395 14.4614 19.25 13.6739 19.25 12.7114V2.21143ZM17.35 2.21143L9.75 6.58643L2.15 2.21143H17.35ZM17.35 12.7114H2.15V3.96143L9.75 8.33643L17.35 3.96143V12.7114Z" fill="white"/>
+                                </svg>
+                                <span class="__cf_email__" data-cfemail="96e5e3e6e6f9e4e2d6e6f9e5e2f3eeb8e6fd">[email&#160;protected]</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="word-spacing: 20px;">
+                        <a href="https://www.facebook.com/PostEx.pk/" class="fa fa-facebook" style="color: white; text-decoration: none;"></a>
+                        <a class="fa fa-instagram" style="color: white; text-decoration: none;" href="https://www.instagram.com/postex.pk/"></a>
+                        <a href="https://www.linkedin.com/company/postex-pk/?originalSubdomain=pk" class="fa fa-linkedin" style="color: white; text-decoration: none;"></a>
+                        <a class="fa fa-youtube" style="color: white; text-decoration: none;" href="https://www.youtube.com/watch?v=aPI89EzyjCU"></a>
+                    </div>
+                </div>
+                <div class="singupWrap">
+                    <a href="#" class="footer-button">Login/SignUp</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

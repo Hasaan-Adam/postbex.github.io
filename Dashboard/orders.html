@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Simple Table</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="main-body" id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="logo"><img src="PostBex Logo.png" alt=""></div>
+        <div class="header_img"> <img src="hczKIze.jpg" alt=""> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="#" class="nav_logo">
+                    <i class='bx bx-layer nav_logo-icon'></i>
+                    <h3><span class="nav_logo-name">PostBex</span><span class="nav-logo-end">.</span></h3>
+                </a>
+                <div class="nav_list">
+                    <a href="dashboard.html" class="nav_link">
+                        <i class='bx bx-grid-alt nav_icon'></i>
+                        <span class="nav_name">Dashboard</span> </a>
+                    <a href="orders.html" class="nav_link active">
+                        <i class='bx bx-user nav_icon'></i>
+                        <span class="nav_name">Users</span> </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-message-square-detail nav_icon'></i>
+                        <span class="nav_name">Messages</span> </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-bookmark nav_icon'></i>
+                        <span class="nav_name">Bookmark</span> </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-folder nav_icon'></i>
+                        <span class="nav_name">Files</span> </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
+                        <span class="nav_name">Stats</span> </a>
+                </div>
+            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
+                    class="nav_name">SignOut</span> </a>
+        </nav>
+    </div>
+    <div class="order-section" style="background-color: #ffffff; padding: 20px; margin-top: 80px; margin-right: 30px; margin-left: 30px;">
+        <!-- Cosnumer Table Start -->
+        <div class="container">
+            <div class="mt-5 table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ORDER<br>REF</th>
+                            <th>TRACKING #</th>
+                            <th>CUSTOMER</th>
+                            <th>WEIGHT</th>
+                            <th>ADDRESS</th>
+                            <th>CITY</th>
+                            <th>DETAILS</th>
+                            <th>AMOUNT</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Clark</td>
+                            <td>Kent</td>
+                            <td>clarkkent@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Peter</td>
+                            <td>Parker</td>
+                            <td>peterparker@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>John</td>
+                            <td>Carter</td>
+                            <td>johncarter@mail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Consumer Table End -->
+
+        <!-- Create Order Start -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 700px;">
+                <!-- Set the desired width using the 'style' attribute -->
+                <div class="modal-content">
+                    <div class="modal-header" style="border: none;">
+                        <!-- Add this style attribute to remove the border -->
+                        <h5 class="modal-title heading" id="exampleModalLabel">Create Order</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container">
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-md-6 first-row">
+                                        <div class="mb-3 d-inline one ">
+                                            <label for="select1">Order Type</label>
+                                            <select id="select1" class="form-select">
+                                                <option> Normal </option>
+                                                <option> Reserved </option>
+                                                <option> Replacement </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 two">
+                                                <label for="order-amount" class="col-form-label">Order Amount</label>
+                                                <input type="number" class="form-control" id="order-amount"
+                                                    placeholder="Amount">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 three">
+                                                <label for="customer-name" class="col-form-label">Customer Name</label>
+                                                <input type="text" class="form-control" id="customer-name"
+                                                    placeholder="Customer Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 four">
+                                                <label for="select2">Delivery City</label>
+                                                <select id="select2" class="form-select">
+                                                    <option value="" disabled selected hidden>Select</option>
+                                                    <option> Lahore </option>
+                                                    <option> Islamabad </option>
+                                                    <option> Rawalpindi </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 five">
+                                                <label for="airway-bill-copies" class="col-form-label">Airway Bill
+                                                    Copies</label>
+                                                <input type="number" class="form-control" id="airway-bill-copies"
+                                                    placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 six">
+                                                <label for="select3">Pickup City</label>
+                                                <select id="select3" class="form-select">
+                                                    <option value="" disabled selected hidden>Select</option>
+                                                    <option> Karachi </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 seven">
+                                                <label for="items" class="col-form-label">Booking Weight
+                                                    <sub>(kg)</sub></label>
+                                                <input type="number" class="form-control" id="items"
+                                                    placeholder="Booking Weight in kg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3 eight">
+                                            <label for="order-type" class="col-form-label">Order Reference
+                                                Number</label>
+                                            <input type="text" class="form-control" id="order-type"
+                                                placeholder="Order Ref Number">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 nine">
+                                                <label for="order-date" class="col-form-label">Order Date</label>
+                                                <input type="date" class="form-control" id="order-date">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 ten">
+                                                <label for="customer-contact" class="col-form-label">Customer
+                                                    Contact</label>
+                                                <input type="number" class="form-control" id="customer-contact"
+                                                    placeholder="03xxxxxxxxx">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 eleven">
+                                                <label for="delivery-address" class="col-form-label">Delivery
+                                                    Address</label>
+                                                <input type="text" class="form-control" id="delivery-address"
+                                                    placeholder="Customer Address">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 twelve">
+                                                <label for="items" class="col-form-label">Items</label>
+                                                <input type="number" class="form-control" id="items" placeholder="1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 thirteen">
+                                                <label for="select3">Pickup Address</label>
+                                                <select id="select3" class="form-select">
+                                                    <option value="" disabled selected hidden>Select</option>
+                                                    <option> abc </option>
+                                                    <option> xyz </option>
+                                                    <option> qrt </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="order-detail" class="col-form-label">Order Detail
+                                            <sub>optional</sub></label>
+                                        <input type="text" class="form-control" id="order-detail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="notes" class="col-form-label">Notes <sub>optional</sub></label>
+                                        <input type="text" class="form-control" id="notes">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn button1" data-bs-dismiss="modal">Save</button>
+                                        <button type="button" class="btn button2">Close</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Create Order End -->
+                </div>
+
+</body>
+
+</html>
