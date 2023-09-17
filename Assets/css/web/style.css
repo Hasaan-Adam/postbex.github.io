@@ -46,7 +46,7 @@ united-backgroundbody {
 }
 
 .top-banner {
-    background-image: url(Assets/images/web/1.png);
+    background-image: url(/Assets/images/web/1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
