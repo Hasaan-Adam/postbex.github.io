@@ -237,7 +237,7 @@ p.footer-heading {
 }
 
 .united-background {
-    background-image: url("/Assets/images/web/Group\ 3837.png");
+    background-image: url("../../images/web/Group\ 3837.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right
@@ -248,7 +248,7 @@ a#contactNavItem {
 }
 
 .omnichannel-background {
-    background-image: url(/Assets/images/web/3.png);
+    background-image: url(../../images/web/3.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -265,14 +265,14 @@ a#contactNavItem {
 }
 
 .Video-background {
-    background-image: url(/Assets/images/web/4.png);
+    background-image: url(../../images/web/4.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center
 }
 
 .black-background {
-    background-image: url(/Assets/images/web/5.png);
+    background-image: url(../../images/web/5.png);
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -296,7 +296,7 @@ a#contactNavItem {
 }
 
 footer {
-    background-image: url(/Assets/images/web/footer.png);
+    background-image: url(../../images/web/footer.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center
