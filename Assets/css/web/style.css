@@ -161,6 +161,10 @@ p {
     text-decoration: none
 }
 
+.logo img {
+    width: 150px;
+}
+
 .nav-link {
     font-size: 14px;
     color: #252525;
