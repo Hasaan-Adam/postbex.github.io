@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="row ">
+
+    <!-- Sign Up Page Left Side -->
+    <div class="col-md-7" style="background-color: rgb(0, 0, 0);">
+      <div class="left-side"></div>
+    </div>
+    <!-- Sign Up Page Left Side -->
+
+    <!-- Sign Up Page Right Side -->
+    <div class="col-md-5">
+      <div class="right-side">
+        <div class="container px-5">
+          <img src="./logo.png" alt="">
+
+          <div class="main">
+            <div class="row mb-3">
+              <div>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" aria-label="Your Name"
+                  required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div>
+                <input type="text" class="form-control" id="company" placeholder="Company" aria-label="Company">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div>
+                <input type="number" class="form-control" id="phone" placeholder="Phone" aria-label="Phone">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div>
+                <select class="form-select" id="citySelect">
+                  <option hidden value="">Select City</option>
+                  <option value="city1">Lahore</option>
+                  <option value="city2">Isalamabad</option>
+                  <option value="city3">Rawalpindi</option>
+                  <option value="city3">Karachi</option>
+                  <option value="city3">Faislabad</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div>
+                <input type="email" class="form-control" id="email" placeholder="Email" aria-label="Email">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div>
+                <input type="password" class="form-control" id="password" placeholder="Password" aria-label="Password">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div>
+                <textarea class="form-control" id="comment" rows="4" placeholder="Comment"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-3">Interested In:</label>
+              <div class="col-sm-9">
+                <label class="form-check-label" style="margin-right: 40px;">
+                  <input type="checkbox" class="form-check-input" id="interest1" value="option1">
+                  COD
+                </label>
+                <label class="form-check-label" style="margin-right: 40px;">
+                  <input type="checkbox" class="form-check-input" id="interest2" value="option2">
+                  Digital Payment
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 mb-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="singleCheckbox" name="terms">
+                  <label class="form-check-label" for="singleCheckbox">
+                    I agree to the Terms and Condition and Privacy and Policy.
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button class="btn btn-primary" type="button" onclick="create()">Create Account</button>
+            </div>
+
+            <div class="mt-3 text-center">
+              Already Have an Account? <a href="../index.html">Sign in Instead</a>
+            </div>
+
+
+            <div class="social-media-icons">
+              <a href="https://www.facebook.com/YourFacebookPage"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/YourInstagramPage"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/YourLinkedInProfile"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/YourYouTubeChannel"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <footer>
+              <a href="/privacy-policy">Privacy Policy</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+                href="/terms-and-conditions">Terms and Conditions</a>
+              <br>
+              <br>
+              <p>&copy; 2023 PostEx. All rights reserved.</p>
+            </footer>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Ajax Validation -->
+    <script>
+      $(document).ready(function () {
+        // Name Validation
+        $("#name").keyup(function () {
+          let nameInput = $(this).val();
+          let nameRegex = /^[A-Za-z\s]{3,12}$/;
+          if (!nameRegex.test(nameInput)) {
+            $(this).css({ "border": "2px solid red" });
+            $(this).next("span").show().text("Please enter a valid name").css({
+              "color": "red",
+              "margin": "2px"
+            });
+          }
+          else {
+            $(this).css({ "border": "2px solid green" });
+            $(this).next("span").hide();
+          }
+        });
+
+        // Company
+        $("#company").keyup(function () {
+
+        });
+
+        // Phone Validation
+        $("#phone").keyup(function () {
+          let phoneInput = $(this).val();
+          let phoneRegex = /^[0-9]{11,11}$/;
+          if (!phoneRegex.test(phoneInput)) {
+            $(this).css({ "border": "2px solid red" });
+            $(this).next("span").show().text("Please enter a valid phone number").css({
+              "color": "red",
+              "margin": "2px"
+            });
+          }
+          else {
+            $(this).css({ "border": "2px solid green" });
+            $(this).next("span").hide();
+          }
+        });
+
+        // City Validation
+        $("#citySelect").change(function () {
+          let selectedCity = $(this).val();
+          if (selectedCity === "") {
+            $(this).css({ "border": "2px solid red" });
+            $(this).next("span").show().text("Please select a city").css({
+              "color": "red",
+              "margin": "2px"
+            });
+          }
+          else {
+            $(this).css({ "border": "2px solid green" });
+            $(this).next("span").hide();
+          }
+        });
+
+        // Email Validation
+        $("#email").keyup(function () {
+          let emailInput = $(this).val();
+          let emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+          if (!emailRegex.test(emailInput)) {
+            $(this).css({ "border": "2px solid red" });
+            $(this).next("span").show().text("Please enter a valid email address").css({
+              "color": "red",
+              "margin": "2px"
+            });
+          }
+          else {
+            $(this).css({ "border": "2px solid green" });
+            $(this).next("span").hide();
+          }
+        });
+
+        // Password Validation (Optional)
+        $("#password").keyup(function () {
+          let p_inp = $("#p").val();
+          let p_re = /^[A-Za-z\d]{8,18}$/;
+          if (!p_re.test(p_inp)) {
+            $(this).css({ "border": "2px solid red" });
+            $(this).next("span").show().text("please add atleast eight character in your password").css({
+              "color": "red",
+              "margin": "2px"
+            });
+          } else {
+            $(this).css({ "border": "2px solid green" });
+            $(this).next("span").hide()
+          }
+        })
+
+        // Checkbox Validation
+        $("#interest1, #interest2").change(function () {
+          var interest1Checked = $("#interest1").is(":checked");
+          var interest2Checked = $("#interest2").is(":checked");
+
+          if (interest1Checked && interest2Checked) {
+            alert("At least one option must be selected.");
+            // Dusra checkbox ko deselect karein
+            $(this).prop("checked", false);
+          }
+        });
+      });
+
+    </script>
+    <script>
+      function create() {
+        let nam = document.querySelector("#name");
+        let comp = document.querySelector("#company");
+        let cise = document.querySelector("#citySelect");
+        let eml = document.querySelector("#email");
+        let pass = document.querySelector("#password");
+        let com = document.querySelector("#comment");
+        let int1 = document.querySelector("#interest1");
+        let int2 = document.querySelector("#interest2");
+
+        let obj = {
+          name: nam.value,
+          company: comp.value,
+          citySelect: cise.value,
+          email: eml.value,
+          password: pass.value,
+          comment: com.value,
+          interest1: int1.value,
+          interest1: int2.value,
+        }
+        if (localStorage.getItem("data") == null) {
+          localStorage.setItem("data", "[]")
+        }
+        let old_data = JSON.parse(localStorage.getItem("data"));
+        // console.log(old_data)
+        old_data.push(obj);
+        localStorage.setItem("data", JSON.stringify(old_data));
+        window.location.href = "login.html";
+      }
+    </script>
+</body>
+
+</html>

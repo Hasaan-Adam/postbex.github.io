@@ -2,85 +2,86 @@
 <html lang="en">
 
 <head>
-  <title>Document</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Bootstrap css -->
-  <link rel="stylesheet" href="../Assets/bootstrap/bootstrap-5/css/bootstrap.min.css" />
-  <!-- Bootstrap Icon -->
-  <link rel="stylesheet" href="../Assets/bootstrap/bootstrap_icons/bootstrap-icons-1.11.0/bootstrap-icons.min.css" />
-  <!-- Boxicons Icon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
-  <!-- Custom css -->
-  <link rel="stylesheet" href="../Assets/css/dashboard/style.css" />
+    <title>Dashboard::PostBex</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="../Assets/bootstrap/bootstrap-5/css/bootstrap.min.css" />
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="../Assets/bootstrap/bootstrap_icons/bootstrap-icons-1.11.0/bootstrap-icons.min.css" />
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="../Assets/css/dashboard/style.css" />
+    <link rel="stylesheet" href="../Assets/css/dashboard/check2.css" />
 
-  <!-- JQuery/JavaScript js -->
-  <script src="../Assets/jquery/jquery.min.js"></script>
-  <!-- Custom js -->
-  <script src="../Assets/javaScript/dashboard/script.js"></script>
-  <!-- Bootstrap js -->
-  <script src="../Assets/bootstrap/bootstrap-5/javascript/bootstrap.min.js"></script>
+    <!-- JQuery/JavaScript js -->
+    <script src="../Assets/jquery/jquery.min.js"></script>
+    <!-- Custom js -->
+    <script src="../Assets/javaScript/dashboard/script.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../Assets/bootstrap/bootstrap-5/javascript/bootstrap.min.js"></script>
 </head>
 
 <body id="body-pd">
-  <!-- Top Bar/Header Section -->
-  <header class="header" id="header">
-    <div class="header_toggle">
-      <i class="bx bx-menu" id="header-toggle"></i>
-    </div>
-    <div class="header_img">
-      <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
-    </div>
-  </header>
-  <!-- Top Bar/Header Section -->
-  <!-- Side Navbar Section -->
-  <div class="l-navbar" id="nav-bar">
-    <nav class="nav">
-      <div>
-        <a href="#" class="nav_logo">
-          <i class="bx bx-layer nav_logo-icon"></i>
-          <span class="nav_logo-name">BBBootstrap</span>
-        </a>
-        <div class="nav_list">
-          <a href="#" class="nav_link active">
-            <i class="bx bx-grid-alt nav_icon"></i>
-            <span class="nav_name">Dashboard</span>
-          </a>
-          <a href="#" class="nav_link">
-            <i class="bx bx-user nav_icon"></i>
-            <span class="nav_name">Users</span>
-          </a>
-          <a href="#" class="nav_link">
-            <i class="bx bx-message-square-detail nav_icon"></i>
-            <span class="nav_name">Messages</span>
-          </a>
-          <a href="#" class="nav_link">
-            <i class="bx bx-bookmark nav_icon"></i>
-            <span class="nav_name">Bookmark</span>
-          </a>
-          <a href="#" class="nav_link">
-            <i class="bx bx-folder nav_icon"></i>
-            <span class="nav_name">Files</span>
-          </a>
-          <a href="#" class="nav_link">
-            <i class="bx bx-bar-chart-alt-2 nav_icon"></i>
-            <span class="nav_name">Stats</span>
-          </a>
+    <!-- Top Bar/Header Section -->
+    <header class="header" id="header">
+        <div class="header_toggle">
+            <i class="bx bx-menu" id="header-toggle"></i>
         </div>
-      </div>
-      <a href="#" class="nav_link">
-        <i class="bx bx-log-out nav_icon"></i>
-        <span class="nav_name">SignOut</span>
-      </a>
-    </nav>
-  </div>
-  <!-- Side Navbar Section -->
-  <!--Container Main start-->
+        <div class="header_img">
+            <img src="../Assets/images/dashboard/hczKIze.jpg" alt="" />
+        </div>
+    </header>
+    <!-- Top Bar/Header Section -->
+    <!-- Side Navbar Section -->
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav_logo">
+                    <i class="bx bx-layer nav_logo-icon"></i>
+                    <span class="nav_logo-name">BBBootstrap</span>
+                </a>
+                <div class="nav_list">
+                    <a href="index.html" class="nav_link active">
+                        <i class="bx bx-grid-alt nav_icon"></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="orders.html" class="nav_link">
+                        <i class="bx bx-user nav_icon"></i>
+                        <span class="nav_name">Orders Log</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-message-square-detail nav_icon"></i>
+                        <span class="nav_name">Messages</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-bookmark nav_icon"></i>
+                        <span class="nav_name">Bookmark</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-folder nav_icon"></i>
+                        <span class="nav_name">Files</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-bar-chart-alt-2 nav_icon"></i>
+                        <span class="nav_name">Stats</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="nav_link">
+                <i class="bx bx-log-out nav_icon"></i>
+                <span class="nav_name">SignOut</span>
+            </a>
+        </nav>
+    </div>
+    <!-- Side Navbar Section -->
+    <!--Container Main start-->
 
-  <div class="container height-100 bg-light">
-    <h4>Main Components</h4>
-    <div class="container">
-      <!-- <div class="row">
+    <!-- <div class="container height-100 bg-light"> -->
+    <!-- <h4>Main Components</h4> -->
+    <!-- <div class="container"> -->
+    <!-- <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="card height-auto">
             <div class="card-innr">
@@ -113,412 +114,348 @@
           </div>
         </div>
       </div> -->
-      <div _ngcontent-wgm-c87="" class="row">
-        <div _ngcontent-wgm-c87="" class="col-lg-4 col-md-6">
-            <div _ngcontent-wgm-c87="" class="card height-auto">
-                <div _ngcontent-wgm-c87="" class="card-innr">
-                    <div _ngcontent-wgm-c87="" class="card-head has-aside">
-                        <h4 _ngcontent-wgm-c87="" class="card-title card-title-sm hoverCardOne"> Cash On Delivery </h4>
-                        <div _ngcontent-wgm-c87="" class="card-opt"><a _ngcontent-wgm-c87=""
-                                class="link ucap link-light toggle-tigger toggle-caret">7 Days</a>
-                            <div _ngcontent-wgm-c87="" class="toggle-class dropdown-content">
-                                <ul _ngcontent-wgm-c87="" class="dropdown-list">
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">7 Days</a></li>
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">15 Days</a></li>
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">30 Days</a></li>
+    <div _ngcontent-xip-c87="" class="page-content">
+        <div _ngcontent-xip-c87="" class="container">
+            <div _ngcontent-xip-c87="" class="row">
+                <div _ngcontent-xip-c87="" class="col-lg-4 col-md-6">
+                    <div _ngcontent-xip-c87="" class="card height-auto">
+                        <div _ngcontent-xip-c87="" class="card-innr">
+                            <div _ngcontent-xip-c87="" class="card-head has-aside">
+                                <h4 _ngcontent-xip-c87="" class="card-title card-title-sm hoverCardOne"> Cash On
+                                    Delivery </h4>
+                                <div _ngcontent-xip-c87="" class="card-opt"><a _ngcontent-xip-c87=""
+                                        class="link ucap link-light toggle-tigger toggle-caret">7 Days</a>
+                                    <div _ngcontent-xip-c87="" class="toggle-class dropdown-content">
+                                        <ul _ngcontent-xip-c87="" class="dropdown-list">
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">7 Days</a></li>
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">15 Days</a></li>
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">30 Days</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div _ngcontent-xip-c87="" class="tile-data hoverCardOne"><span _ngcontent-xip-c87=""
+                                    id="demoDataNumber" class="tile-data-number" style="cursor: default;"> 0.00
+                                </span><span _ngcontent-xip-c87="" id="demoDataPercentage" title=""
+                                    data-toggle="tooltip" data-placement="right" data-original-title="Sales %"
+                                    class="tile-data-status tile-data-active" style="cursor: default;"> 0 <span
+                                        _ngcontent-xip-c87="" style="font-size: xx-small;">orders</span></span>
+                            </div>
+                            <div _ngcontent-xip-c87="" class="tile-footer hoverCardOne">
+                                <div _ngcontent-xip-c87="" class="tile-recent" style="cursor: default;"><span
+                                        _ngcontent-xip-c87="" id="demoDataTotal" class="tile-recent-number"
+                                        style="cursor: default;"> 0 </span><span _ngcontent-xip-c87=""
+                                        class="tile-recent-text" style="cursor: default;">orders pending</span>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="tile-link hoverCardOne" style="cursor: default;"><a
+                                        _ngcontent-xip-c87="" class="link link-thin link-ucap link-dim"
+                                        style="cursor: pointer;">View</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div _ngcontent-xip-c87="" class="col-lg-4 col-md-6">
+                    <div _ngcontent-xip-c87="" class="card height-auto" style="cursor: default;">
+                        <div _ngcontent-xip-c87="" class="card-innr">
+                            <div _ngcontent-xip-c87="" class="card-head has-aside">
+                                <h4 _ngcontent-xip-c87="" class="card-title card-title-sm">Digital Payment</h4>
+                                <div _ngcontent-xip-c87="" class="card-opt"><a _ngcontent-xip-c87=""
+                                        class="link ucap link-light toggle-tigger toggle-caret">7 Days</a>
+                                    <div _ngcontent-xip-c87="" class="toggle-class dropdown-content">
+                                        <ul _ngcontent-xip-c87="" class="dropdown-list">
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">7 Days</a></li>
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">15 Days</a></li>
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">30 Days</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div _ngcontent-xip-c87="" class="tile-data hoverCardOne"><span _ngcontent-xip-c87=""
+                                    id="demoDataNumber" class="tile-data-number" style="cursor: default;"> 0.00
+                                </span><span _ngcontent-xip-c87="" id="demoDataPercentage" title=""
+                                    data-toggle="tooltip" data-placement="right" data-original-title="Sales %"
+                                    class="tile-data-status tile-data-active" style="cursor: default;"> 0 <span
+                                        _ngcontent-xip-c87="" style="font-size: xx-small;">orders</span></span>
+                            </div>
+                            <div _ngcontent-xip-c87="" class="tile-footer hoverCardOne">
+                                <div _ngcontent-xip-c87="" class="tile-recent"><span _ngcontent-xip-c87=""
+                                        id="demoDataTotal" class="tile-recent-number" style="cursor: default;">
+                                        0 </span><span _ngcontent-xip-c87="" class="tile-recent-text"
+                                        style="cursor: default;">orders Unsettled</span></div>
+                                <div _ngcontent-xip-c87="" class="tile-link"><a _ngcontent-xip-c87=""
+                                        class="link link-thin link-ucap link-dim" style="cursor: pointer;">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div _ngcontent-xip-c87="" class="col-lg-4">
+                    <div _ngcontent-xip-c87="" class="token-statistics card card-token height-auto">
+                        <div _ngcontent-xip-c87="" class="card-innr" style="min-height: 160px; padding-bottom: 0px;">
+                            <div _ngcontent-xip-c87="" id="view-dp" class="tab-pane ng-star-inserted">
+                                <div _ngcontent-xip-c87="" class="token-balance token-balance-s3">
+                                    <div _ngcontent-xip-c87="" class="token-balance-text">
+                                        <h6 _ngcontent-xip-c87="" class="card-sub-title">Today's Orders</h6>
+                                        <span _ngcontent-xip-c87="" id="totalAmountNumber" class="lead"
+                                            style="cursor: default;">0.00 <span _ngcontent-xip-c87=""
+                                                style="cursor: default;">PKR <em _ngcontent-xip-c87=""
+                                                    data-toggle="tooltip" data-placement="right" title=""
+                                                    data-original-title="Combined calculation of all transactions in base currency."
+                                                    class="fas fa-info-circle fs-11"></em></span></span>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="token-balance token-balance-s2"
+                                    style="margin-bottom: 5px;">
+                                    <ul _ngcontent-xip-c87="" class="token-balance-list hoverCardOne">
+                                        <li _ngcontent-xip-c87="" class="token-balance-sub"><span _ngcontent-xip-c87=""
+                                                id="totalAmountETH" class="lead"
+                                                style="cursor: default; color: #1babfe;"> 0.00 </span><span
+                                                _ngcontent-xip-c87="" class="sub"
+                                                style="cursor: default; font-size: xx-small;">Pending
+                                                Amount</span></li>
+                                        <li _ngcontent-xip-c87="" class="token-balance-sub"><span _ngcontent-xip-c87=""
+                                                id="totalAmountBTC" class="lead" style="color: #0abf53;"> 0 </span><span
+                                                _ngcontent-xip-c87="" class="sub" style="font-size: xx-small;">Pending
+                                                Orders</span>
+                                        </li>
+                                        <li _ngcontent-xip-c87="" class="token-balance-sub"><span _ngcontent-xip-c87=""
+                                                id="totalAmountLTC" class="lead" style="color: #ffc100;"> 0 </span><span
+                                                _ngcontent-xip-c87="" class="sub" style="font-size: xx-small;">Total
+                                                Orders</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!----><!---->
+                            <div _ngcontent-xip-c87="" class="tile-footer"
+                                style="padding-top: 0px !important; margin-top: 0px !important;">
+                                <ul _ngcontent-xip-c87="" class="tile-nav nav" style="padding-top: 5px;">
+                                    <li _ngcontent-xip-c87="" class="nav-item"><a _ngcontent-xip-c87=""
+                                            data-toggle="tab" class="nav-link active">COD</a></li>
+                                    <li _ngcontent-xip-c87="" class="nav-item"><a _ngcontent-xip-c87=""
+                                            data-toggle="tab" class="nav-link">DP</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div _ngcontent-wgm-c87="" class="tile-data hoverCardOne"><span _ngcontent-wgm-c87=""
-                            id="demoDataNumber" class="tile-data-number" style="cursor: default;"> 0.00 </span><span
-                            _ngcontent-wgm-c87="" id="demoDataPercentage" title="" data-toggle="tooltip"
-                            data-placement="right" data-original-title="Sales %" class="tile-data-status tile-data-active"
-                            style="cursor: default;"> 0 <span _ngcontent-wgm-c87=""
-                                style="font-size: xx-small;">orders</span></span></div>
-                    <div _ngcontent-wgm-c87="" class="tile-footer hoverCardOne">
-                        <div _ngcontent-wgm-c87="" class="tile-recent" style="cursor: default;"><span _ngcontent-wgm-c87=""
-                                id="demoDataTotal" class="tile-recent-number" style="cursor: default;"> 0 </span><span
-                                _ngcontent-wgm-c87="" class="tile-recent-text" style="cursor: default;">orders
-                                pending</span></div>
-                        <div _ngcontent-wgm-c87="" class="tile-link hoverCardOne" style="cursor: default;"><a
-                                _ngcontent-wgm-c87="" class="link link-thin link-ucap link-dim"
-                                style="cursor: pointer;">View</a></div>
-                    </div>
                 </div>
-            </div>
-        </div>
-        <div _ngcontent-wgm-c87="" class="col-lg-4 col-md-6">
-            <div _ngcontent-wgm-c87="" class="card height-auto" style="cursor: default;">
-                <div _ngcontent-wgm-c87="" class="card-innr">
-                    <div _ngcontent-wgm-c87="" class="card-head has-aside">
-                        <h4 _ngcontent-wgm-c87="" class="card-title card-title-sm">Digital Payment</h4>
-                        <div _ngcontent-wgm-c87="" class="card-opt"><a _ngcontent-wgm-c87=""
-                                class="link ucap link-light toggle-tigger toggle-caret">7 Days</a>
-                            <div _ngcontent-wgm-c87="" class="toggle-class dropdown-content">
-                                <ul _ngcontent-wgm-c87="" class="dropdown-list">
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">7 Days</a></li>
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">15 Days</a></li>
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">30 Days</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div _ngcontent-wgm-c87="" class="tile-data hoverCardOne"><span _ngcontent-wgm-c87=""
-                            id="demoDataNumber" class="tile-data-number" style="cursor: default;"> 0.00 </span><span
-                            _ngcontent-wgm-c87="" id="demoDataPercentage" title="" data-toggle="tooltip"
-                            data-placement="right" data-original-title="Sales %" class="tile-data-status tile-data-active"
-                            style="cursor: default;"> 0 <span _ngcontent-wgm-c87=""
-                                style="font-size: xx-small;">orders</span></span></div>
-                    <div _ngcontent-wgm-c87="" class="tile-footer hoverCardOne">
-                        <div _ngcontent-wgm-c87="" class="tile-recent"><span _ngcontent-wgm-c87="" id="demoDataTotal"
-                                class="tile-recent-number" style="cursor: default;"> 0 </span><span _ngcontent-wgm-c87=""
-                                class="tile-recent-text" style="cursor: default;">orders Unsettled</span></div>
-                        <div _ngcontent-wgm-c87="" class="tile-link"><a _ngcontent-wgm-c87=""
-                                class="link link-thin link-ucap link-dim" style="cursor: pointer;">View</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div _ngcontent-wgm-c87="" class="col-lg-4">
-            <div _ngcontent-wgm-c87="" class="token-statistics card card-token height-auto">
-                <div _ngcontent-wgm-c87="" class="card-innr" style="min-height: 160px; padding-bottom: 0px;">
-                    <div _ngcontent-wgm-c87="" id="view-dp" class="tab-pane ng-star-inserted">
-                        <div _ngcontent-wgm-c87="" class="token-balance token-balance-s3">
-                            <div _ngcontent-wgm-c87="" class="token-balance-text">
-                                <h6 _ngcontent-wgm-c87="" class="card-sub-title">Today's Orders</h6><span
-                                    _ngcontent-wgm-c87="" id="totalAmountNumber" class="lead" style="cursor: default;">0.00
-                                    <span _ngcontent-wgm-c87="" style="cursor: default;">PKR <em _ngcontent-wgm-c87=""
-                                            data-toggle="tooltip" data-placement="right" title=""
-                                            data-original-title="Combined calculation of all transactions in base currency."
-                                            class="fas fa-info-circle fs-11"></em></span></span>
-                            </div>
-                        </div>
-                        <div _ngcontent-wgm-c87="" class="token-balance token-balance-s2" style="margin-bottom: 5px;">
-                            <ul _ngcontent-wgm-c87="" class="token-balance-list hoverCardOne">
-                                <li _ngcontent-wgm-c87="" class="token-balance-sub"><span _ngcontent-wgm-c87=""
-                                        id="totalAmountETH" class="lead" style="cursor: default; color: #1babfe;"> 0.00
-                                    </span><span _ngcontent-wgm-c87="" class="sub"
-                                        style="cursor: default; font-size: xx-small;">Pending Amount</span></li>
-                                <li _ngcontent-wgm-c87="" class="token-balance-sub"><span _ngcontent-wgm-c87=""
-                                        id="totalAmountBTC" class="lead" style="color: #0abf53;"> 0 </span><span
-                                        _ngcontent-wgm-c87="" class="sub" style="font-size: xx-small;">Pending Orders</span>
-                                </li>
-                                <li _ngcontent-wgm-c87="" class="token-balance-sub"><span _ngcontent-wgm-c87=""
-                                        id="totalAmountLTC" class="lead" style="color: #ffc100;"> 0 </span><span
-                                        _ngcontent-wgm-c87="" class="sub" style="font-size: xx-small;">Total Orders</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!----><!---->
-                    <div _ngcontent-wgm-c87="" class="tile-footer"
-                        style="padding-top: 0px !important; margin-top: 0px !important;">
-                        <ul _ngcontent-wgm-c87="" class="tile-nav nav" style="padding-top: 5px;">
-                            <li _ngcontent-wgm-c87="" class="nav-item"><a _ngcontent-wgm-c87="" data-toggle="tab"
+                <div _ngcontent-xip-c87="" class="col-lg-5">
+                    <div _ngcontent-xip-c87="" class="tile-footer"
+                        style="padding-top: 0px !important; margin-top: 0px !important; right: 83px; position: relative;">
+                        <ul _ngcontent-xip-c87="" class="tile-nav nav" style="padding-top: 5px;">
+                            <li _ngcontent-xip-c87="" class="nav-item"><a _ngcontent-xip-c87="" data-toggle="tab"
                                     class="nav-link active">COD</a></li>
-                            <li _ngcontent-wgm-c87="" class="nav-item"><a _ngcontent-wgm-c87="" data-toggle="tab"
+                            <li _ngcontent-xip-c87="" class="nav-item"><a _ngcontent-xip-c87="" data-toggle="tab"
                                     class="nav-link">DP</a></li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div _ngcontent-wgm-c87="" class="col-lg-5">
-            <div _ngcontent-wgm-c87="" class="tile-footer"
-                style="padding-top: 0px !important; margin-top: 0px !important; right: 83px; position: relative;">
-                <ul _ngcontent-wgm-c87="" class="tile-nav nav" style="padding-top: 5px;">
-                    <li _ngcontent-wgm-c87="" class="nav-item"><a _ngcontent-wgm-c87="" data-toggle="tab"
-                            class="nav-link active">COD</a></li>
-                    <li _ngcontent-wgm-c87="" class="nav-item"><a _ngcontent-wgm-c87="" data-toggle="tab"
-                            class="nav-link">DP</a></li>
-                </ul>
-            </div>
-            <div _ngcontent-wgm-c87="" class="token-transaction card card-full-height">
-                <div _ngcontent-wgm-c87="" class="card-innr">
-                    <div _ngcontent-wgm-c87="" class="card-head has-aside">
-                        <h4 _ngcontent-wgm-c87="" class="card-title card-title-sm">Recent Transaction</h4>
-                        <div _ngcontent-wgm-c87="" class="card-opt"><a _ngcontent-wgm-c87="" class="link ucap"
-                                style="cursor: pointer;">View ALL <em _ngcontent-wgm-c87=""
-                                    class="fas fa-angle-right ml-2"></em></a></div>
-                    </div>
-                    <table _ngcontent-wgm-c87="" class="table tnx-table">
-                        <tbody _ngcontent-wgm-c87="" class="smaller-text">
-                            <tr _ngcontent-wgm-c87="" class="hoverCardOne ng-star-inserted">
-                                <div _ngcontent-wgm-c87="" class="hoverCardOne"
-                                    style="padding-top: 0%; padding-bottom: 0%; margin-top: 0%; margin-bottom: 0%;">
-                                    <td _ngcontent-wgm-c87="" tabindex="0" style="width: 40%;">
-                                        <h5 _ngcontent-wgm-c87="" class="lead mb-1" style="cursor: pointer; color: blue;">
-                                            20037830000007 </h5><span _ngcontent-wgm-c87="" class="sub ucap"> GP006 </span>
-                                    </td>
-                                    <td _ngcontent-wgm-c87="" style="width: 25%; pointer-events: none;">
-                                        <h5 _ngcontent-wgm-c87="" class="lead mb-1"><span _ngcontent-wgm-c87="">Rs</span>
-                                            900.00 </h5><span _ngcontent-wgm-c87="" class="sub ucap"> Aug 2, 2023, 3:43:40
-                                            AM </span>
-                                    </td>
-                                    <td _ngcontent-wgm-c87="" class="text-center" style="width: 25%; pointer-events: none;">
-                                        <!----><!----><!----><!----><!----><!----><!---->
-                                        <div _ngcontent-wgm-c87="" class="data-state data-state-approved ng-star-inserted">
-                                        </div><!----><!----><!----><!----><!---->
-                                    </td>
+                    <div _ngcontent-xip-c87="" class="token-transaction card card-full-height">
+                        <div _ngcontent-xip-c87="" class="card-innr">
+                            <div _ngcontent-xip-c87="" class="card-head has-aside">
+                                <h4 _ngcontent-xip-c87="" class="card-title card-title-sm">Recent Transaction
+                                </h4>
+                                <div _ngcontent-xip-c87="" class="card-opt"><a _ngcontent-xip-c87="" class="link ucap"
+                                        style="cursor: pointer;">View ALL <em _ngcontent-xip-c87=""
+                                            class="fas fa-angle-right ml-2"></em></a>
                                 </div>
-                            </tr>
-                            <tr _ngcontent-wgm-c87="" class="hoverCardOne ng-star-inserted">
-                                <div _ngcontent-wgm-c87="" class="hoverCardOne"
-                                    style="padding-top: 0%; padding-bottom: 0%; margin-top: 0%; margin-bottom: 0%;">
-                                    <td _ngcontent-wgm-c87="" tabindex="0" style="width: 40%;">
-                                        <h5 _ngcontent-wgm-c87="" class="lead mb-1" style="cursor: pointer; color: blue;">
-                                            20037830000006 </h5><span _ngcontent-wgm-c87="" class="sub ucap"> GP005 </span>
-                                    </td>
-                                    <td _ngcontent-wgm-c87="" style="width: 25%; pointer-events: none;">
-                                        <h5 _ngcontent-wgm-c87="" class="lead mb-1"><span _ngcontent-wgm-c87="">Rs</span>
-                                            3,000.00 </h5><span _ngcontent-wgm-c87="" class="sub ucap"> Jul 20, 2023,
-                                            4:45:46 AM </span>
-                                    </td>
-                                    <td _ngcontent-wgm-c87="" class="text-center" style="width: 25%; pointer-events: none;">
-                                        <!----><!----><!----><!----><!----><!----><!---->
-                                        <div _ngcontent-wgm-c87="" class="data-state data-state-approved ng-star-inserted">
-                                        </div><!----><!----><!----><!----><!---->
-                                    </td>
-                                </div>
-                            </tr>
-                            <tr _ngcontent-wgm-c87="" class="hoverCardOne ng-star-inserted">
-                                <div _ngcontent-wgm-c87="" class="hoverCardOne"
-                                    style="padding-top: 0%; padding-bottom: 0%; margin-top: 0%; margin-bottom: 0%;">
-                                    <td _ngcontent-wgm-c87="" tabindex="0" style="width: 40%;">
-                                        <h5 _ngcontent-wgm-c87="" class="lead mb-1" style="cursor: pointer; color: blue;">
-                                            20037830000005 </h5><span _ngcontent-wgm-c87="" class="sub ucap"> GP004 </span>
-                                    </td>
-                                    <td _ngcontent-wgm-c87="" style="width: 25%; pointer-events: none;">
-                                        <h5 _ngcontent-wgm-c87="" class="lead mb-1"><span _ngcontent-wgm-c87="">Rs</span>
-                                            900.00 </h5><span _ngcontent-wgm-c87="" class="sub ucap"> Jul 20, 2023, 4:14:37
-                                            AM </span>
-                                    </td>
-                                    <td _ngcontent-wgm-c87="" class="text-center" style="width: 25%; pointer-events: none;">
-                                        <!----><!----><!----><!----><!----><!----><!---->
-                                        <div _ngcontent-wgm-c87="" class="data-state data-state-approved ng-star-inserted">
-                                        </div><!----><!----><!----><!----><!---->
-                                    </td>
-                                </div>
-                            </tr>
-                            <tr _ngcontent-wgm-c87="" class="hoverCardOne ng-star-inserted">
-                                <div _ngcontent-wgm-c87="" class="hoverCardOne"
-                                    style="padding-top: 0%; padding-bottom: 0%; margin-top: 0%; margin-bottom: 0%;">
-                                    <td _ngcontent-wgm-c87="" tabindex="0" style="width: 40%;">
-                                        <h5 _ngcontent-wgm-c87="" class="lead mb-1" style="cursor: pointer; color: blue;">
-                                            20037830000004 </h5><span _ngcontent-wgm-c87="" class="sub ucap"> GP003 </span>
-                                    </td>
-                                    <td _ngcontent-wgm-c87="" style="width: 25%; pointer-events: none;">
-                                        <h5 _ngcontent-wgm-c87="" class="lead mb-1"><span _ngcontent-wgm-c87="">Rs</span>
-                                            900.00 </h5><span _ngcontent-wgm-c87="" class="sub ucap"> Jul 19, 2023, 7:52:14
-                                            AM </span>
-                                    </td>
-                                    <td _ngcontent-wgm-c87="" class="text-center" style="width: 25%; pointer-events: none;">
-                                        <!----><!----><!----><!----><!----><!---->
-                                        <div _ngcontent-wgm-c87="" class="data-state data-state-pending ng-star-inserted">
-                                        </div><!----><!----><!----><!----><!----><!---->
-                                    </td>
-                                </div>
-                            </tr><!---->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div _ngcontent-wgm-c87="" class="col-lg-7">
-            <div _ngcontent-wgm-c87="" class="token-sale-graph card card-full-height">
-                <div _ngcontent-wgm-c87="" class="card-innr">
-                    <div _ngcontent-wgm-c87="" class="card-head has-aside">
-                        <h4 _ngcontent-wgm-c87="" class="card-title card-title-sm">Delivered Orders</h4>
-                        <div _ngcontent-wgm-c87="" class="card-opt"><a _ngcontent-wgm-c87=""
-                                class="link ucap link-light toggle-tigger toggle-caret">7 Days</a>
-                            <div _ngcontent-wgm-c87="" class="toggle-class dropdown-content">
-                                <ul _ngcontent-wgm-c87="" class="dropdown-list">
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">7 Days</a></li>
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">15 Days</a></li>
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">30 Days</a></li>
-                                </ul>
                             </div>
+                            <table _ngcontent-xip-c87="" class="table tnx-table">
+                                <tbody _ngcontent-xip-c87="" class="smaller-text">
+                                    <tr _ngcontent-xip-c87="" class="hoverCardOne ng-star-inserted">
+                                        <div _ngcontent-xip-c87="" class="hoverCardOne"
+                                            style="padding-top: 0%; padding-bottom: 0%; margin-top: 0%; margin-bottom: 0%;">
+                                            <td _ngcontent-xip-c87="" tabindex="0" style="width: 40%;">
+                                                <h5 _ngcontent-xip-c87="" class="lead mb-1"
+                                                    style="cursor: pointer; color: blue;"> 20037830000007 </h5>
+                                                <span _ngcontent-xip-c87="" class="sub ucap"> GP006 </span>
+                                            </td>
+                                            <td _ngcontent-xip-c87="" style="width: 25%; pointer-events: none;">
+                                                <h5 _ngcontent-xip-c87="" class="lead mb-1"><span
+                                                        _ngcontent-xip-c87="">Rs</span> 900.00 </h5><span
+                                                    _ngcontent-xip-c87="" class="sub ucap"> Aug 2, 2023, 3:43:40
+                                                    AM </span>
+                                            </td>
+                                            <td _ngcontent-xip-c87="" class="text-center"
+                                                style="width: 25%; pointer-events: none;">
+                                                <!----><!----><!----><!----><!----><!----><!---->
+                                                <div _ngcontent-xip-c87=""
+                                                    class="data-state data-state-approved ng-star-inserted">
+                                                </div><!----><!----><!----><!----><!---->
+                                            </td>
+                                        </div>
+                                    </tr>
+                                    <tr _ngcontent-xip-c87="" class="hoverCardOne ng-star-inserted">
+                                        <div _ngcontent-xip-c87="" class="hoverCardOne"
+                                            style="padding-top: 0%; padding-bottom: 0%; margin-top: 0%; margin-bottom: 0%;">
+                                            <td _ngcontent-xip-c87="" tabindex="0" style="width: 40%;">
+                                                <h5 _ngcontent-xip-c87="" class="lead mb-1"
+                                                    style="cursor: pointer; color: blue;"> 20037830000006 </h5>
+                                                <span _ngcontent-xip-c87="" class="sub ucap"> GP005 </span>
+                                            </td>
+                                            <td _ngcontent-xip-c87="" style="width: 25%; pointer-events: none;">
+                                                <h5 _ngcontent-xip-c87="" class="lead mb-1"><span
+                                                        _ngcontent-xip-c87="">Rs</span> 3,000.00 </h5><span
+                                                    _ngcontent-xip-c87="" class="sub ucap"> Jul 20, 2023,
+                                                    4:45:46 AM </span>
+                                            </td>
+                                            <td _ngcontent-xip-c87="" class="text-center"
+                                                style="width: 25%; pointer-events: none;">
+                                                <!----><!----><!----><!----><!----><!----><!---->
+                                                <div _ngcontent-xip-c87=""
+                                                    class="data-state data-state-approved ng-star-inserted">
+                                                </div><!----><!----><!----><!----><!---->
+                                            </td>
+                                        </div>
+                                    </tr>
+                                    <tr _ngcontent-xip-c87="" class="hoverCardOne ng-star-inserted">
+                                        <div _ngcontent-xip-c87="" class="hoverCardOne"
+                                            style="padding-top: 0%; padding-bottom: 0%; margin-top: 0%; margin-bottom: 0%;">
+                                            <td _ngcontent-xip-c87="" tabindex="0" style="width: 40%;">
+                                                <h5 _ngcontent-xip-c87="" class="lead mb-1"
+                                                    style="cursor: pointer; color: blue;"> 20037830000005 </h5>
+                                                <span _ngcontent-xip-c87="" class="sub ucap"> GP004 </span>
+                                            </td>
+                                            <td _ngcontent-xip-c87="" style="width: 25%; pointer-events: none;">
+                                                <h5 _ngcontent-xip-c87="" class="lead mb-1"><span
+                                                        _ngcontent-xip-c87="">Rs</span> 900.00 </h5><span
+                                                    _ngcontent-xip-c87="" class="sub ucap"> Jul 20, 2023,
+                                                    4:14:37 AM </span>
+                                            </td>
+                                            <td _ngcontent-xip-c87="" class="text-center"
+                                                style="width: 25%; pointer-events: none;">
+                                                <!----><!----><!----><!----><!----><!----><!---->
+                                                <div _ngcontent-xip-c87=""
+                                                    class="data-state data-state-approved ng-star-inserted">
+                                                </div><!----><!----><!----><!----><!---->
+                                            </td>
+                                        </div>
+                                    </tr>
+                                    <tr _ngcontent-xip-c87="" class="hoverCardOne ng-star-inserted">
+                                        <div _ngcontent-xip-c87="" class="hoverCardOne"
+                                            style="padding-top: 0%; padding-bottom: 0%; margin-top: 0%; margin-bottom: 0%;">
+                                            <td _ngcontent-xip-c87="" tabindex="0" style="width: 40%;">
+                                                <h5 _ngcontent-xip-c87="" class="lead mb-1"
+                                                    style="cursor: pointer; color: blue;"> 20037830000004 </h5>
+                                                <span _ngcontent-xip-c87="" class="sub ucap"> GP003 </span>
+                                            </td>
+                                            <td _ngcontent-xip-c87="" style="width: 25%; pointer-events: none;">
+                                                <h5 _ngcontent-xip-c87="" class="lead mb-1"><span
+                                                        _ngcontent-xip-c87="">Rs</span> 900.00 </h5><span
+                                                    _ngcontent-xip-c87="" class="sub ucap"> Jul 19, 2023,
+                                                    7:52:14 AM </span>
+                                            </td>
+                                            <td _ngcontent-xip-c87="" class="text-center"
+                                                style="width: 25%; pointer-events: none;">
+                                                <!----><!----><!----><!----><!----><!---->
+                                                <div _ngcontent-xip-c87=""
+                                                    class="data-state data-state-pending ng-star-inserted">
+                                                </div><!----><!----><!----><!----><!----><!---->
+                                            </td>
+                                        </div>
+                                    </tr><!---->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div _ngcontent-wgm-c87="" id="saleGraph" class="chart-tokensale chart-tokensale-long">
-                        <div class="chartjs-size-monitor">
-                            <div class="chartjs-size-monitor-expand">
-                                <div class=""></div>
-                            </div>
-                            <div class="chartjs-size-monitor-shrink">
-                                <div class=""></div>
-                            </div>
-                        </div><iframe _ngcontent-wgm-c87="" tabindex="-1" class="chartjs-hidden-iframe"
-                            style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe><canvas
-                            _ngcontent-wgm-c87="" id="canvas" width="1170" height="484"
-                            style="display: block; height: 242px; width: 585px;" class="chartjs-render-monitor"></canvas>
-                    </div>
                 </div>
-            </div>
-        </div>
-        <div _ngcontent-wgm-c87="" class="col-lg-6">
-            <div _ngcontent-wgm-c87="" class="reg-statistic-graph card card-full-height">
-                <div _ngcontent-wgm-c87="" class="card-innr" style="background: white;">
-                    <div _ngcontent-wgm-c87="" class="card-head has-aside">
-                        <h4 _ngcontent-wgm-c87="" class="card-title card-title-sm">Total Orders</h4>
-                        <div _ngcontent-wgm-c87="" class="card-opt"><a _ngcontent-wgm-c87=""
-                                class="link ucap link-light toggle-tigger toggle-caret">7 Days</a>
-                            <div _ngcontent-wgm-c87="" class="toggle-class dropdown-content">
-                                <ul _ngcontent-wgm-c87="" class="dropdown-list">
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">7 Days</a></li>
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">15 Days</a></li>
-                                    <li _ngcontent-wgm-c87=""><a _ngcontent-wgm-c87="">30 Days</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div _ngcontent-wgm-c87="" class="flex-container">
-                        <div _ngcontent-wgm-c87="" class="one div-has-margin" style="cursor: pointer; order: 1;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Total
-                                Orders </label><label _ngcontent-wgm-c87="" class="align-center label-value"
-                                style="cursor: pointer;"> 0 </label></div>
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer; order: 2;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> UnBooked
-                            </label><label _ngcontent-wgm-c87="" class="align-center label-value" style="cursor: pointer;">
-                                0 </label></div>
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer; order: 3;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Booked
-                            </label><label _ngcontent-wgm-c87="" class="align-center label-value" style="cursor: pointer;">
-                                0 </label></div>
-                    </div>
-                    <div _ngcontent-wgm-c87="" class="flex-container">
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> PostEx
-                                Warehouse </label><label _ngcontent-wgm-c87="" class="align-center label-value"
-                                style="cursor: pointer;"> 0 </label></div>
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Out For
-                                Delivery </label><label _ngcontent-wgm-c87="" class="align-center label-value"
-                                style="cursor: pointer;"> 0 </label></div>
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Delivered
-                            </label><label _ngcontent-wgm-c87="" class="align-center label-value" style="cursor: pointer;">
-                                0 </label></div>
-                    </div>
-                    <div _ngcontent-wgm-c87="" class="flex-container">
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Attempted
-                            </label><label _ngcontent-wgm-c87="" class="align-center label-value" style="cursor: pointer;">
-                                0 </label></div>
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Out For
-                                Return </label><label _ngcontent-wgm-c87="" class="align-center label-value"
-                                style="cursor: pointer;"> 0 </label></div>
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Returned
-                            </label><label _ngcontent-wgm-c87="" class="align-center label-value" style="cursor: pointer;">
-                                0 </label></div>
-                    </div>
-                    <div _ngcontent-wgm-c87="" class="flex-container">
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Delivery
-                                Under Review </label><label _ngcontent-wgm-c87="" class="align-center label-value"
-                                style="cursor: pointer;"> 0 </label></div>
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Transferred
-                            </label><label _ngcontent-wgm-c87="" class="align-center label-value" style="cursor: pointer;">
-                                0 </label></div>
-                        <div _ngcontent-wgm-c87="" class="div-has-margin" style="cursor: pointer;"><label
-                                _ngcontent-wgm-c87="" class="align-center label-cards" style="cursor: pointer;"> Un-Assigned
-                                By Me </label><label _ngcontent-wgm-c87="" class="align-center label-value"
-                                style="cursor: pointer;"> 0 </label></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div _ngcontent-wgm-c87="" class="col-lg-6">
-            <div _ngcontent-wgm-c87="" class="card card-full-height">
-                <div _ngcontent-wgm-c87="" style="height: 20px; background-color: #EEF2F8;"></div>
-                <div _ngcontent-wgm-c87="">
-                    <div _ngcontent-wgm-c87="" class="responsive card-innr">
-                        <div _ngcontent-wgm-c87="">
-                            <div _ngcontent-wgm-c87="" class="fake-class">
-                                <div _ngcontent-wgm-c87="" class="card-head has-aside">
-                                    <h4 _ngcontent-wgm-c87="" class="card-title card-title-sm"> SUCCESSFUL ORDERS </h4>
-                                </div>
-                            </div>
-                            <div _ngcontent-wgm-c87="" class="fake-class">
-                                <div _ngcontent-wgm-c87="" class="chart-phase">
-                                    <div _ngcontent-wgm-c87="" class="chart-tokensale-s2">
-                                        <div class="chartjs-size-monitor">
-                                            <div class="chartjs-size-monitor-expand">
-                                                <div class=""></div>
-                                            </div>
-                                            <div class="chartjs-size-monitor-shrink">
-                                                <div class=""></div>
-                                            </div>
-                                        </div><iframe _ngcontent-wgm-c87="" tabindex="-1" class="chartjs-hidden-iframe"
-                                            style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe><canvas
-                                            _ngcontent-wgm-c87="" id="successfulOrders" width="190" height="190"
-                                            style="display: block; height: 190px; width: 190px;"
-                                            class="chartjs-render-monitor"></canvas>
+                <div _ngcontent-xip-c87="" class="col-lg-6">
+                    <div _ngcontent-xip-c87="" class="reg-statistic-graph card card-full-height">
+                        <div _ngcontent-xip-c87="" class="card-innr" style="background: white;">
+                            <div _ngcontent-xip-c87="" class="card-head has-aside">
+                                <h4 _ngcontent-xip-c87="" class="card-title card-title-sm">Total Orders</h4>
+                                <div _ngcontent-xip-c87="" class="card-opt"><a _ngcontent-xip-c87=""
+                                        class="link ucap link-light toggle-tigger toggle-caret">7 Days</a>
+                                    <div _ngcontent-xip-c87="" class="toggle-class dropdown-content">
+                                        <ul _ngcontent-xip-c87="" class="dropdown-list">
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">7 Days</a></li>
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">15 Days</a></li>
+                                            <li _ngcontent-xip-c87=""><a _ngcontent-xip-c87="">30 Days</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div _ngcontent-wgm-c87="" class="margin">
-                            <div _ngcontent-wgm-c87="" class="fake-class">
-                                <div _ngcontent-wgm-c87="" class="card-head has-aside">
-                                    <h4 _ngcontent-wgm-c87="" class="card-title card-title-sm"> Return ORDERS </h4>
+                            <div _ngcontent-xip-c87="" class="flex-container">
+                                <div _ngcontent-xip-c87="" class="one div-has-margin"
+                                    style="cursor: pointer; order: 1;"><label _ngcontent-xip-c87=""
+                                        class="align-center label-cards" style="cursor: pointer;"> Total Orders
+                                    </label><label _ngcontent-xip-c87="" class="align-center label-value"
+                                        style="cursor: pointer;"> 0 </label></div>
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer; order: 2;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> UnBooked
+                                    </label><label _ngcontent-xip-c87="" class="align-center label-value"
+                                        style="cursor: pointer;"> 0 </label>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer; order: 3;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Booked
+                                    </label><label _ngcontent-xip-c87="" class="align-center label-value"
+                                        style="cursor: pointer;"> 0 </label>
                                 </div>
                             </div>
-                            <div _ngcontent-wgm-c87="" class="fake-class">
-                                <div _ngcontent-wgm-c87="" class="chart-phase">
-                                    <div _ngcontent-wgm-c87="" class="chart-tokensale-s2">
-                                        <div class="chartjs-size-monitor">
-                                            <div class="chartjs-size-monitor-expand">
-                                                <div class=""></div>
-                                            </div>
-                                            <div class="chartjs-size-monitor-shrink">
-                                                <div class=""></div>
-                                            </div>
-                                        </div><iframe _ngcontent-wgm-c87="" tabindex="-1" class="chartjs-hidden-iframe"
-                                            style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe><canvas
-                                            _ngcontent-wgm-c87="" id="cancelledOrders" width="190" height="190"
-                                            style="display: block; height: 190px; width: 190px;"
-                                            class="chartjs-render-monitor"></canvas>
-                                    </div>
+                            <div _ngcontent-xip-c87="" class="flex-container">
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> PostEx Warehouse </label><label _ngcontent-xip-c87=""
+                                        class="align-center label-value" style="cursor: pointer;"> 0 </label>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Out For Delivery </label><label _ngcontent-xip-c87=""
+                                        class="align-center label-value" style="cursor: pointer;"> 0 </label>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Delivered </label><label _ngcontent-xip-c87=""
+                                        class="align-center label-value" style="cursor: pointer;"> 0 </label>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div _ngcontent-wgm-c87="" class="card-innr">
-                        <div _ngcontent-wgm-c87="" class="phase-block guttar-20px">
-                            <div _ngcontent-wgm-c87="" class="fake-class">
-                                <div _ngcontent-wgm-c87="" class="card-head has-aside">
-                                    <h4 _ngcontent-wgm-c87="" class="card-title card-title-sm">BOOKED ORDERS</h4>
+                            <div _ngcontent-xip-c87="" class="flex-container">
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Attempted </label><label _ngcontent-xip-c87=""
+                                        class="align-center label-value" style="cursor: pointer;"> 0 </label>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Out For Return </label><label _ngcontent-xip-c87=""
+                                        class="align-center label-value" style="cursor: pointer;"> 0 </label>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Returned </label><label _ngcontent-xip-c87=""
+                                        class="align-center label-value" style="cursor: pointer;"> 0 </label>
                                 </div>
                             </div>
-                            <div _ngcontent-wgm-c87="" class="fake-class">
-                                <div _ngcontent-wgm-c87="" class="chart-tokensale-s2">
-                                    <div class="chartjs-size-monitor">
-                                        <div class="chartjs-size-monitor-expand">
-                                            <div class=""></div>
-                                        </div>
-                                        <div class="chartjs-size-monitor-shrink">
-                                            <div class=""></div>
-                                        </div>
-                                    </div><iframe _ngcontent-wgm-c87="" tabindex="-1" class="chartjs-hidden-iframe"
-                                        style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe><canvas
-                                        _ngcontent-wgm-c87="" id="doughnut" width="254" height="254"
-                                        style="display: block; height: 254px; width: 254px;"
-                                        class="chartjs-render-monitor"></canvas>
+                            <div _ngcontent-xip-c87="" class="flex-container">
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Delivery Under Review </label><label
+                                        _ngcontent-xip-c87="" class="align-center label-value" style="cursor: pointer;">
+                                        0 </label>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Transferred </label><label _ngcontent-xip-c87=""
+                                        class="align-center label-value" style="cursor: pointer;"> 0 </label>
+                                </div>
+                                <div _ngcontent-xip-c87="" class="div-has-margin" style="cursor: pointer;">
+                                    <label _ngcontent-xip-c87="" class="align-center label-cards"
+                                        style="cursor: pointer;"> Un-Assigned By Me </label><label _ngcontent-xip-c87=""
+                                        class="align-center label-value" style="cursor: pointer;"> 0 </label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div _ngcontent-xip-c87="" class="copyright-text text-center pb-3"> © 2023 Merchant App v2.0.0. All
+                Rights Reserved. <br _ngcontent-xip-c87="" class="d-block d-md-none">Powered by <a _ngcontent-xip-c87=""
+                    href="https://postex.pk/" target="_blank">PostEx</a>. </div>
         </div>
     </div>
-    </div>
-  </div>
-  <!--Container Main end-->
+    <!-- </div>
+    </div> -->
+    <!--Container Main end-->
 </body>
 
 </html>

@@ -153,7 +153,7 @@ p {
     font-size: 36px;
     color: #000;
     padding-top: 29px;
-    padding-left: 10%
+    padding-left: 10%;
 }
 
 .logo a:hover {
@@ -368,6 +368,12 @@ span.badge.badge-light {
 @media only screen and (max-width:800px) {
     .paid-heading {
         padding-top: 220px !important
+    }
+    .logo img{
+        width: 100px;
+    }
+    .logo a{
+        /* padding-left: 5%; */
     }
 }
 

@@ -3,80 +3,38 @@
 
 <head>
     <title>Postex</title>
+    <link rel="icon" type="x-icon" href="Assets/images/web/PostBex_Icon.png">
 
-    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH4Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="facebook-domain-verification" content="40vn6qvh8yz3loczxxx6up5un6jidv">
 
-    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="Assets/bootstrap/bootstrap-4/css/bootstrap.min.css">
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="Assets/css/web/style.css">
 
-    <script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <script src="../maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            '../connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2986965688192610');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=2986965688192610&amp;ev=PageView&amp;noscript=1" /></noscript>
-
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XX5231XJFN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-XX5231XJFN');
-    </script>
-
-    <script type="text/javascript">
-        _linkedin_partner_id = "4443417";
-        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script>
-    <script type="text/javascript">
-        (function (l) {
-            if (!l) {
-                window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
-                window.lintrk.q = []
-            }
-            var s = document.getElementsByTagName("script")[0];
-            var b = document.createElement("script");
-            b.type = "text/javascript"; b.async = true;
-            b.src = "../snap.licdn.com/li.lms-analytics/insight.min.js";
-            s.parentNode.insertBefore(b, s);
-        })(window.lintrk);
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none;" alt=""
-            src="https://px.ads.linkedin.com/collect/?pid=4443417&amp;fmt=gif" />
-    </noscript>
+    <!-- JQuery/JavaScript js -->
+    <script src="Assets/jquery/jquery.min.js"></script>
+    <!-- PopupOverlay js -->
+    <script src="Assets/jquery/jquery.popupoverlay.min.js"></script>
+    <!-- Popper js -->
+    <script src="Assets/javaScript/web/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="Assets/bootstrap/bootstrap-4/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
     <nav class="navbar">
         <div class="col-lg-3 logo">
-            <a href="#"><img src="images/logo.png" alt></a>
+            <a href="#"><img src="Assets/images/web/PostBex_Logo.png" alt></a>
         </div>
         <div id="changedClass" class="col-lg-8 menu">
             <ul class="navbar-nav navbar-expand-sm">
                 <li class="nav-item">
-                    <a class="nav-link" href="index-2.html">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="cod.html">PostEx. COD</a>
@@ -99,7 +57,7 @@
                 <li class="nav-item d-flex">
                     <a class="nav-link ml-auto" id="changeClass" href="#searchForm" data-target="#searchForm"
                         data-toggle="collapse">
-                        <i class="fa fa-search"></i>
+                        <!-- <i class="fa fa-search"></i> -->
                     </a>
                     <div class="collapse fade" id="searchForm">
                         <input id="search" type="search" class="form-control border-0 bg-light" placeholder="search" />
@@ -266,87 +224,123 @@
     <footer>
         <div style="display: flex; justify-content: space-evenly;">
             <div class="logo" style="padding-top: 0.3%;">
-                <img src="images/PostEx.png" width="98%" />
+                <img src="Assets/images/web/PostEx.png" width="98%">
             </div>
             <div class="companyWrap">
                 <p class="footer-heading">Company</p>
                 <ul class="footer-list">
-                    <li><a id="productsFooterItem"
-                            style="color: white; text-decoration: none; cursor: pointer;">Products</a></li>
-                    <li><a class="featureNavItem"
-                            style="color: white; text-decoration: none; cursor: pointer;">Features</a></li>
-                    <li><a id="blogFooterItem"
-                            style="color: white; text-decoration: none; cursor: pointer;">Newsroom</a></li>
-                    <li><a id="careersFooterItem"
-                            style="color: white; text-decoration: none; cursor: pointer;">Careers</a></li>
-                    <li><a href="FAQ.html" style="color: white; text-decoration: none; cursor: pointer;">FAQs</a>
+                    <li>
+                        <a id="productsFooterItem"
+                            style="color: white; text-decoration: none; cursor: pointer;">Products</a>
+                    </li>
+                    <li>
+                        <a class="featureNavItem"
+                            style="color: white; text-decoration: none; cursor: pointer;">Features</a>
+                    </li>
+                    <li>
+                        <a id="blogFooterItem"
+                            style="color: white; text-decoration: none; cursor: pointer;">Newsroom</a>
+                    </li>
+                    <li>
+                        <a id="careersFooterItem"
+                            style="color: white; text-decoration: none; cursor: pointer;">Careers</a>
+                    </li>
+                    <li>
+                        <a href="FAQ.html" style="color: white; text-decoration: none; cursor: pointer;">FAQs</a>
                     </li>
                 </ul>
             </div>
             <div class="codWrap">
-                <p class="footer-heading">PostEx<span style="font-family: serif; color: #93CE46;">.</span>COD</p>
+                <p class="footer-heading">PostBex
+                    <span style="font-family: serif; color: #93CE46;">.</span>COD
+                </p>
                 <ul class="footer-list">
-                    <li><a href="cod.html#videosection" style="color: white; text-decoration: none;">How it
-                            works</a></li>
-                    <li><a href="cod.html#solutionSection" style="color: white; text-decoration: none;">Solution</a>
+                    <li>
+                        <a href="cod.html#videosection" style="color: white; text-decoration: none;">
+                            How it
+                            works
+                        </a>
                     </li>
-                    <li><a href="cod.html#featuresSection" style="color: white; text-decoration: none;">Features</a>
+                    <li>
+                        <a href="cod.html#solutionSection" style="color: white; text-decoration: none;">Solution</a>
                     </li>
-                    <li><a href="cod.html#priceSection" style="color: white; text-decoration: none;">Pricing</a>
+                    <li>
+                        <a href="cod.html#featuresSection" style="color: white; text-decoration: none;">Features</a>
+                    </li>
+                    <li>
+                        <a href="cod.html#priceSection" style="color: white; text-decoration: none;">Pricing</a>
                     </li>
                 </ul>
             </div>
             <div class="paidWrap">
                 <p class="footer-heading">Paid</p>
                 <ul class="footer-list">
-                    <li><a href="digitalpayment.html#paymentMethodsSection"
-                            style="color: white; text-decoration: none;">Payment Methods</a></li>
-                    <li><a href="digitalpayment.html#pluginsSection"
-                            style="color: white; text-decoration: none;">Plugins</a></li>
-                    <li><a href="digitalpayment.html#featuresSection"
-                            style="color: white; text-decoration: none;">Features</a></li>
-                    <li><a href="digitalpayment.html#featuresSection"
-                            style="color: white; text-decoration: none;">Pricing</a></li>
+                    <li>
+                        <a href="digitalpayment.html#paymentMethodsSection"
+                            style="color: white; text-decoration: none;">Payment Methods</a>
+                    </li>
+                    <li>
+                        <a href="digitalpayment.html#pluginsSection"
+                            style="color: white; text-decoration: none;">Plugins</a>
+                    </li>
+                    <li>
+                        <a href="digitalpayment.html#featuresSection"
+                            style="color: white; text-decoration: none;">Features</a>
+                    </li>
+                    <li>
+                        <a href="digitalpayment.html#featuresSection"
+                            style="color: white; text-decoration: none;">Pricing</a>
+                    </li>
                 </ul>
             </div>
             <div class="legalWrap">
                 <p class="footer-heading">Legal</p>
                 <ul class="footer-list">
-                    <li><a href="privacy-policy.html" style="color: white; text-decoration: none;">Privacy
-                            Policy</a></li>
+                    <li>
+                        <a href="privacy-policy.html" style="color: white; text-decoration: none;">
+                            Privacy
+                            Policy
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="contactWrap">
                 <p class="footer-heading">Contact Us</p>
                 <ul class="footer-list">
-                    <li><a href="tel:04232157777"
-                            style="color: white; text-decoration: none; display: flex; gap: 12px;align-items: center;"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 15 15"
+                    <li>
+                        <a href="tel:04232157777"
+                            style="color: white; text-decoration: none; display: flex; gap: 12px; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 15 15"
                                 fill="none">
                                 <path
                                     d="M9.58333 7.46143H11.1389C11.1389 6.43003 10.7292 5.44087 9.99986 4.71157C9.27055 3.98226 8.2814 3.57254 7.25 3.57254V5.12809C7.86884 5.12809 8.46233 5.37392 8.89992 5.81151C9.3375 6.24909 9.58333 6.84259 9.58333 7.46143ZM12.6944 7.46143H14.25C14.25 3.57254 11.1156 0.461426 7.25 0.461426V2.01698C10.2522 2.01698 12.6944 4.45143 12.6944 7.46143ZM13.4722 10.1836C12.5 10.1836 11.5667 10.0281 10.6956 9.74032C10.4233 9.65476 10.12 9.71698 9.90222 9.93476L8.19111 11.6459C5.99 10.5259 4.18556 8.72143 3.06556 6.52031L4.77667 4.8092C4.99444 4.59143 5.05667 4.28809 4.97111 4.01587C4.68333 3.14476 4.52778 2.21143 4.52778 1.2392C4.52778 1.03292 4.44583 0.835093 4.29997 0.689232C4.15411 0.54337 3.95628 0.461426 3.75 0.461426H1.02778C0.821498 0.461426 0.623667 0.54337 0.477806 0.689232C0.331944 0.835093 0.25 1.03292 0.25 1.2392C0.25 4.74595 1.64305 8.10908 4.1227 10.5887C6.60235 13.0684 9.96547 14.4614 13.4722 14.4614C13.6785 14.4614 13.8763 14.3795 14.0222 14.2336C14.1681 14.0878 14.25 13.8899 14.25 13.6836V10.9614C14.25 10.7551 14.1681 10.5573 14.0222 10.4115C13.8763 10.2656 13.6785 10.1836 13.4722 10.1836Z"
                                     fill="white" />
-                            </svg> (042) 32157777 </a></li>
-                    <li><a href="cdn-cgi/l/email-protection.html#23505653534c515763534c5057465b0d5348"
-                            style="color: white; text-decoration: none;display: flex; gap: 12px;align-items: center;"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewbox="0 0 20 15"
+                            </svg> (042) 32157777
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cdn-cgi/l/email-protection.html#592a2c2929362b2d1929362a2d3c21772932"
+                            style="color: white; text-decoration: none;display: flex; gap: 12px;align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewbox="0 0 20 15"
                                 fill="none">
                                 <path
                                     d="M19.25 2.21143C19.25 1.24893 18.395 0.461426 17.35 0.461426H2.15C1.105 0.461426 0.25 1.24893 0.25 2.21143V12.7114C0.25 13.6739 1.105 14.4614 2.15 14.4614H17.35C18.395 14.4614 19.25 13.6739 19.25 12.7114V2.21143ZM17.35 2.21143L9.75 6.58643L2.15 2.21143H17.35ZM17.35 12.7114H2.15V3.96143L9.75 8.33643L17.35 3.96143V12.7114Z"
                                     fill="white" />
-                            </svg> <span class="__cf_email__"
-                                data-cfemail="ec9f999c9c839e98ac9c839f988994c29c87">[email&#160;protected]</span></a>
+                            </svg>
+                            <span class="__cf_email__"
+                                data-cfemail="96e5e3e6e6f9e4e2d6e6f9e5e2f3eeb8e6fd">[email&#160;protected]</span>
+                        </a>
                     </li>
                 </ul>
                 <div style="word-spacing: 20px;">
-                    <a href="https://www.facebook.com/PostEx.pk/" class="fa fa-facebook"
+                    <a href="https://www.facebook.com" class="fa-brands fa-facebook-f"
                         style="color: white; text-decoration: none;"></a>
-                    <a class="fa fa-instagram" style="color: white; text-decoration: none;"
-                        href="https://www.instagram.com/postex.pk/"></a>
-                    <a href="https://www.linkedin.com/company/postex-pk/?originalSubdomain=pk" class="fa fa-linkedin"
+                    <a class="fa-brands fa-instagram" style="color: white; text-decoration: none;"
+                        href="https://www.instagram.com"></a>
+                    <a href="https://www.linkedin.com" class="fa-brands fa-linkedin"
                         style="color: white; text-decoration: none;"></a>
-                    <a class="fa fa-youtube" style="color: white; text-decoration: none;"
-                        href="https://www.youtube.com/watch?v=aPI89EzyjCU"></a>
+                    <a class="fa-brands fa-youtube" style="color: white; text-decoration: none;"
+                        href="https://www.youtube.com"></a>
                 </div>
             </div>
             <div class="singupWrap">

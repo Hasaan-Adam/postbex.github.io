@@ -4,51 +4,81 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Simple Table</title>
-    <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Orders Log::PostBex</title>
+    <<!-- Bootstrap css -->
+        <link rel="stylesheet" href="../Assets/bootstrap/bootstrap-5/css/bootstrap.min.css" />
+        <!-- Bootstrap Icon -->
+        <link rel="stylesheet"
+            href="../Assets/bootstrap/bootstrap_icons/bootstrap-icons-1.11.0/bootstrap-icons.min.css" />
+        <!-- Boxicons Icon -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+        <!-- Custom css -->
+        <link rel="stylesheet" href="../Assets/css/dashboard/style.css" />
+        <link rel="stylesheet" href="../Assets/css/dashboard/orders.css" />
+
+        <!-- JQuery/JavaScript js -->
+        <script src="../Assets/jquery/jquery.min.js"></script>
+        <!-- Custom js -->
+        <script src="../Assets/javaScript/dashboard/script.js"></script>
+        <!-- Bootstrap js -->
+        <script src="../Assets/bootstrap/bootstrap-5/javascript/bootstrap.min.js"></script>
 </head>
 
-<body class="main-body" id="body-pd">
+<body id="body-pd">
+    <!-- Top Bar/Header Section -->
     <header class="header" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="logo"><img src="PostBex Logo.png" alt=""></div>
-        <div class="header_img"> <img src="hczKIze.jpg" alt=""> </div>
+        <div class="header_toggle">
+            <i class="bx bx-menu" id="header-toggle"></i>
+        </div>
+        <div class="header_img">
+            <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
+        </div>
     </header>
+    <!-- Top Bar/Header Section -->
+    <!-- Side Navbar Section -->
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
-            <div> <a href="#" class="nav_logo">
-                    <i class='bx bx-layer nav_logo-icon'></i>
-                    <h3><span class="nav_logo-name">PostBex</span><span class="nav-logo-end">.</span></h3>
+            <div>
+                <a href="#" class="nav_logo">
+                    <i class="bx bx-layer nav_logo-icon"></i>
+                    <span class="nav_logo-name">BBBootstrap</span>
                 </a>
                 <div class="nav_list">
-                    <a href="dashboard.html" class="nav_link">
-                        <i class='bx bx-grid-alt nav_icon'></i>
-                        <span class="nav_name">Dashboard</span> </a>
-                    <a href="orders.html" class="nav_link active">
-                        <i class='bx bx-user nav_icon'></i>
-                        <span class="nav_name">Users</span> </a>
+                    <a href="index.html" class="nav_link active">
+                        <i class="bx bx-grid-alt nav_icon"></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="orders.html" class="nav_link">
+                        <i class="bx bx-user nav_icon"></i>
+                        <span class="nav_name">Users</span>
+                    </a>
                     <a href="#" class="nav_link">
-                        <i class='bx bx-message-square-detail nav_icon'></i>
-                        <span class="nav_name">Messages</span> </a>
+                        <i class="bx bx-message-square-detail nav_icon"></i>
+                        <span class="nav_name">Messages</span>
+                    </a>
                     <a href="#" class="nav_link">
-                        <i class='bx bx-bookmark nav_icon'></i>
-                        <span class="nav_name">Bookmark</span> </a>
+                        <i class="bx bx-bookmark nav_icon"></i>
+                        <span class="nav_name">Bookmark</span>
+                    </a>
                     <a href="#" class="nav_link">
-                        <i class='bx bx-folder nav_icon'></i>
-                        <span class="nav_name">Files</span> </a>
+                        <i class="bx bx-folder nav_icon"></i>
+                        <span class="nav_name">Files</span>
+                    </a>
                     <a href="#" class="nav_link">
-                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-                        <span class="nav_name">Stats</span> </a>
+                        <i class="bx bx-bar-chart-alt-2 nav_icon"></i>
+                        <span class="nav_name">Stats</span>
+                    </a>
                 </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
-                    class="nav_name">SignOut</span> </a>
+            </div>
+            <a href="#" class="nav_link">
+                <i class="bx bx-log-out nav_icon"></i>
+                <span class="nav_name">SignOut</span>
+            </a>
         </nav>
     </div>
-    <div class="order-section" style="background-color: #ffffff; padding: 20px; margin-top: 80px; margin-right: 30px; margin-left: 30px;">
-        <!-- Cosnumer Table Start -->
+    <!-- <div class="order-section"
+        style="background-color: #ffffff; padding: 20px; margin-top: 80px; margin-right: 30px; margin-left: 30px;">
+        Cosnumer Table Start
         <div class="container">
             <div class="mt-5 table-responsive">
                 <table class="table">
@@ -89,18 +119,18 @@
                 </table>
             </div>
         </div>
-        <!-- Consumer Table End -->
+        Consumer Table End
 
-        <!-- Create Order Start -->
+        Create Order Start
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
             data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" style="max-width: 700px;">
-                <!-- Set the desired width using the 'style' attribute -->
+                Set the desired width using the 'style' attribute
                 <div class="modal-content">
                     <div class="modal-header" style="border: none;">
-                        <!-- Add this style attribute to remove the border -->
+                        Add this style attribute to remove the border
                         <h5 class="modal-title heading" id="exampleModalLabel">Create Order</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -232,9 +262,1597 @@
                             </form>
                         </div>
                     </div>
-                    <!-- Create Order End -->
-                </div>
+                    Create Order End
+                </div> -->
 
+    <body _ngcontent-xip-c91="" data-new-gr-c-s-check-loaded="14.980.0" data-gr-ext-installed=""
+        class="admin-dashboard page-user no-touch">
+        <div _ngcontent-xip-c91="" class="page-content">
+            <div _ngcontent-xip-c91="" class="container">
+                <div _ngcontent-xip-c91="" class="card content-area content-area-mh">
+                    <div _ngcontent-xip-c91="" class="card-innr">
+                        <div _ngcontent-xip-c91="" class="card-head has-aside">
+                            <h4 _ngcontent-xip-c91="" class="card-title">Order Logs</h4>
+                            <div _ngcontent-xip-c91="" class="card-opt data-action-list d-md-inline-flex">
+                                <ul _ngcontent-xip-c91="" class="btn-grp btn-grp-block guttar-20px">
+                                    <li _ngcontent-xip-c91="">
+                                        <button _ngcontent-xip-c91="" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"
+                                            class="btn btn-auto btn-sm btn-primary1" style="color: white;">
+                                            <em _ngcontent-xip-c91="" class="fas fa-plus-circle"></em>
+                                            <span _ngcontent-xip-c91="" style="color: white;">Create Order</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div _ngcontent-xip-c91="" class="page-nav-wrap">
+                            <div _ngcontent-xip-c91="" class="page-nav-bar justify-content-between bg-lighter">
+                                <div _ngcontent-xip-c91="" class="page-nav w-100 w-lg-auto">
+                                    <ul _ngcontent-xip-c91="" class="nav">
+                                        <li _ngcontent-xip-c91="" class="nav-item" style="cursor: pointer;"><a
+                                                _ngcontent-xip-c91="" class="nav-link" style="pointer-events: none;">All
+                                                () </a></li>
+                                        <li _ngcontent-xip-c91="" class="nav-item" style="cursor: pointer;"><a
+                                                _ngcontent-xip-c91="" class="nav-link">Booked () </a></li>
+                                        <li _ngcontent-xip-c91="" class="nav-item" style="cursor: pointer;"><a
+                                                _ngcontent-xip-c91="" class="nav-link">Unbooked () </a></li>
+                                        <li _ngcontent-xip-c91="" class="nav-item" style="cursor: pointer;"><a
+                                                _ngcontent-xip-c91="" class="nav-link">InTransit () </a></li>
+                                        <li _ngcontent-xip-c91="" class="nav-item" style="cursor: pointer;"><a
+                                                _ngcontent-xip-c91="" class="nav-link">Delivered () </a></li>
+                                        <li _ngcontent-xip-c91="" class="nav-item" style="cursor: pointer;"><a
+                                                _ngcontent-xip-c91="" class="nav-link">Returned () </a></li>
+                                    </ul>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="tools w-100 w-sm-auto">
+                                    <ul _ngcontent-xip-c91="" class="btn-grp guttar-8px">
+                                        <li _ngcontent-xip-c91=""><a _ngcontent-xip-c91=""
+                                                class="btn btn-light btn-sm btn-icon btn-outline bg-white advsearch-opt"><em
+                                                    _ngcontent-xip-c91="" class="ti ti-reload"></em></a></li>
+                                        <li _ngcontent-xip-c91=""><a _ngcontent-xip-c91=""
+                                                class="btn btn-light btn-sm btn-icon btn-outline bg-white advsearch-opt"><em
+                                                    _ngcontent-xip-c91="" class="ti ti-panel"></em></a></li>
+                                        <li _ngcontent-xip-c91="">
+                                            <div _ngcontent-xip-c91="" class="relative"><a _ngcontent-xip-c91=""
+                                                    class="btn btn-light bg-white btn-sm btn-icon toggle-tigger btn-outline"><em
+                                                        _ngcontent-xip-c91="" class="ti ti-import"></em></a>
+                                                <div _ngcontent-xip-c91=""
+                                                    class="toggle-class dropdown-content dropdown-content-sm dropdown-content-center shadow-soft">
+                                                    <ul _ngcontent-xip-c91="" class="dropdown-list"
+                                                        style="cursor: pointer;">
+                                                        <li _ngcontent-xip-c91="">
+                                                            <h6 _ngcontent-xip-c91="" class="dropdown-title">Export</h6>
+                                                        </li>
+                                                        <li _ngcontent-xip-c91=""><a _ngcontent-xip-c91="">Excel</a>
+                                                        </li>
+                                                        <li _ngcontent-xip-c91=""><a _ngcontent-xip-c91="">Pdf</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li _ngcontent-xip-c91="">
+                                            <div _ngcontent-xip-c91="" class="relative"><a _ngcontent-xip-c91=""
+                                                    class="btn btn-light bg-white btn-sm btn-icon toggle-tigger btn-outline"><em
+                                                        _ngcontent-xip-c91="" class="ti ti-settings"></em></a>
+                                                <div _ngcontent-xip-c91=""
+                                                    class="toggle-class dropdown-content dropdown-content-sm dropdown-content-center shadow-soft">
+                                                    <form _ngcontent-xip-c91="" novalidate="" action="#"
+                                                        data-type="user_page_meta"
+                                                        class="update-meta ng-untouched ng-pristine ng-valid">
+                                                        <ul _ngcontent-xip-c91="" class="dropdown-list"
+                                                            style="cursor: pointer; margin-bottom: 0%;">
+                                                            <li _ngcontent-xip-c91="">
+                                                                <h6 _ngcontent-xip-c91="" class="dropdown-title">Show
+                                                                </h6>
+                                                            </li>
+                                                            <li _ngcontent-xip-c91="" style="cursor: pointer;"
+                                                                class="active"><a _ngcontent-xip-c91=""
+                                                                    data-meta="perpage=25">25</a></li>
+                                                            <li _ngcontent-xip-c91="" style="cursor: pointer;"><a
+                                                                    _ngcontent-xip-c91="" data-meta="perpage=50">50</a>
+                                                            </li>
+                                                            <li _ngcontent-xip-c91="" style="cursor: pointer;"><a
+                                                                    _ngcontent-xip-c91=""
+                                                                    data-meta="perpage=100">100</a></li>
+                                                            <li _ngcontent-xip-c91="" style="cursor: pointer;"><a
+                                                                    _ngcontent-xip-c91=""
+                                                                    data-meta="perpage=200">200</a></li>
+                                                            <li _ngcontent-xip-c91="" style="cursor: pointer;"><a
+                                                                    _ngcontent-xip-c91=""
+                                                                    data-meta="perpage=300">300</a></li>
+                                                            <li _ngcontent-xip-c91="" style="cursor: pointer;"><a
+                                                                    _ngcontent-xip-c91="" data-meta="perpage=-1">All</a>
+                                                            </li>
+                                                        </ul>
+                                                        <ul _ngcontent-xip-c91="" class="dropdown-list">
+                                                            <li _ngcontent-xip-c91="">
+                                                                <h6 _ngcontent-xip-c91="" class="dropdown-title">Sort By
+                                                                    Order Date</h6>
+                                                            </li>
+                                                            <li _ngcontent-xip-c91="" style="cursor: pointer;"><a
+                                                                    _ngcontent-xip-c91="">ASC</a></li>
+                                                            <li _ngcontent-xip-c91="" style="cursor: pointer;"
+                                                                class="active"><a _ngcontent-xip-c91="">DESC</a></li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div _ngcontent-xip-c91="" class="search-adv-wrap">
+                                <form _ngcontent-xip-c91="" novalidate="" id="adv-search" action="" method="GET"
+                                    autocomplete="off" class="adv-search ng-valid ng-dirty ng-touched">
+                                    <div _ngcontent-xip-c91="" class="adv-search">
+                                        <div _ngcontent-xip-c91=""
+                                            class="row align-items-end guttar-20px guttar-vr-15px">
+                                            <div _ngcontent-xip-c91="" class="col-lg-6">
+                                                <div _ngcontent-xip-c91="" class="input-grp-wrap"><span
+                                                        _ngcontent-xip-c91=""
+                                                        class="input-item-label input-item-label-s2 text-exlight">Advanced
+                                                        Search</span>
+                                                    <div _ngcontent-xip-c91=""
+                                                        class="input-grp align-items-center bg-white">
+                                                        <div _ngcontent-xip-c91="" class="input-wrap flex-grow-1"><input
+                                                                _ngcontent-xip-c91="" value="" type="text"
+                                                                placeholder="Search by " name="search"
+                                                                class="input-solid input-solid-sm input-transparent ng-untouched ng-pristine ng-valid">
+                                                        </div>
+                                                        <ul _ngcontent-xip-c91="" class="search-type">
+                                                            <li _ngcontent-xip-c91=""
+                                                                class="input-wrap input-radio-wrap"><input
+                                                                    _ngcontent-xip-c91="" name="by" value="orderRef"
+                                                                    id="advs-by-name" type="radio" checked=""
+                                                                    class="input-radio-select ng-valid ng-dirty ng-touched"><label
+                                                                    _ngcontent-xip-c91="" for="advs-by-name">ORDER
+                                                                    #</label></li>
+                                                            <li _ngcontent-xip-c91=""
+                                                                class="input-wrap input-radio-wrap"><input
+                                                                    _ngcontent-xip-c91="" name="by" value="tracking"
+                                                                    id="advs-by-email" type="radio"
+                                                                    class="input-radio-select ng-valid ng-dirty ng-touched"><label
+                                                                    _ngcontent-xip-c91="" for="advs-by-email">TRACKING
+                                                                    #</label></li>
+                                                            <li _ngcontent-xip-c91=""
+                                                                class="input-wrap input-radio-wrap"><input
+                                                                    _ngcontent-xip-c91="" name="by" value="customerName"
+                                                                    id="advs-by-customerName" type="radio" checked=""
+                                                                    class="input-radio-select ng-valid ng-dirty ng-touched"><label
+                                                                    _ngcontent-xip-c91=""
+                                                                    for="advs-by-customerName">NAME</label></li>
+                                                            <li _ngcontent-xip-c91=""
+                                                                class="input-wrap input-radio-wrap"><input
+                                                                    _ngcontent-xip-c91="" name="by"
+                                                                    value="customerPhone" id="advs-by-customerPhone"
+                                                                    type="radio"
+                                                                    class="input-radio-select ng-valid ng-dirty ng-touched"><label
+                                                                    _ngcontent-xip-c91=""
+                                                                    for="advs-by-customerPhone">PHONE #</label></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-xip-c91="" class="col-lg-2 col-sm-4 col-mb-6">
+                                                <div _ngcontent-xip-c91="" class="row input-wrap"><label
+                                                        _ngcontent-xip-c91=""
+                                                        class="input-item-label input-item-label-s2 text-exlight">From</label>
+                                                    <form _ngcontent-xip-c91="" novalidate=""
+                                                        class="form-inline ng-untouched ng-pristine ng-invalid"
+                                                        style="height: 36px;">
+                                                        <div _ngcontent-xip-c91="" class="form-group">
+                                                            <div _ngcontent-xip-c91="" class="input-group"><input
+                                                                    _ngcontent-xip-c91="" placeholder="yyyy-mm-dd"
+                                                                    name="dp" ngbdatepicker=""
+                                                                    class="form-control smaller-text ng-untouched ng-pristine ng-invalid"
+                                                                    style="background: white; border: 1px solid #e6effb;"><!---->
+                                                                <div _ngcontent-xip-c91="" class="input-group-append">
+                                                                    <button _ngcontent-xip-c91="" type="button"
+                                                                        class="btn1 calendar"
+                                                                        style="background-color: white; border: 1px solid #e6effb;"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-xip-c91="" class="col-sm-4 col-lg-2 col-mb-6">
+                                                <div _ngcontent-xip-c91="" class="input-wrap input-with-label"><label
+                                                        _ngcontent-xip-c91=""
+                                                        class="input-item-label input-item-label-s2 text-exlight">To</label>
+                                                    <form _ngcontent-xip-c91="" novalidate=""
+                                                        class="form-inline ng-untouched ng-pristine ng-invalid"
+                                                        style="height: 36px;">
+                                                        <div _ngcontent-xip-c91="" class="form-group">
+                                                            <div _ngcontent-xip-c91="" class="input-group"><input
+                                                                    _ngcontent-xip-c91="" placeholder="yyyy-mm-dd"
+                                                                    name="dp1" ngbdatepicker=""
+                                                                    class="form-control smaller-text ng-untouched ng-pristine ng-invalid"
+                                                                    style="background: white; border: 1px solid #e6effb;"><!---->
+                                                                <div _ngcontent-xip-c91="" class="input-group-append">
+                                                                    <button _ngcontent-xip-c91="" type="button"
+                                                                        class="btn1 calendar"
+                                                                        style="background-color: white; border: 1px solid #e6effb;"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <form _ngcontent-xip-c91="" novalidate=""
+                                                class="ng-valid ng-dirty ng-touched">
+                                                <div _ngcontent-xip-c91="" class="row">
+                                                    <div _ngcontent-xip-c91="" class="col-sm-4 col-sm-2">
+                                                        <div _ngcontent-xip-c91="" _ngcontent-rml-c116=""
+                                                            class="input-wrap input-with-label"><label
+                                                                _ngcontent-xip-c91=""
+                                                                class="input-item-label input-item-label-s2 text-exlight">Status</label>
+                                                            <div _ngcontent-xip-c91=""><span _ngcontent-xip-c91=""
+                                                                    class="selectpicker"><select _ngcontent-xip-c91=""
+                                                                        name="state" data-dd-class="search-off"
+                                                                        tabindex="-1" aria-hidden="true"
+                                                                        class="dropdown button ng-valid ng-dirty ng-touched"
+                                                                        style="background-color: white; border: 1px solid #e6effb;">
+                                                                        <option _ngcontent-xip-c91="" value="All">All
+                                                                        </option>
+                                                                        <option _ngcontent-xip-c91="" value="Unbooked">
+                                                                            Unbooked</option>
+                                                                        <option _ngcontent-xip-c91="" value="Booked">
+                                                                            Booked</option>
+                                                                        <option _ngcontent-xip-c91="" value="In Stock">
+                                                                            PostEx Warehouse </option>
+                                                                        <option _ngcontent-xip-c91=""
+                                                                            value="Delivery En-Route"> Out For Delivery
+                                                                        </option>
+                                                                        <option _ngcontent-xip-c91="" value="Delivered">
+                                                                            Delivered</option>
+                                                                        <option _ngcontent-xip-c91="" value="Return">
+                                                                            Returned</option>
+                                                                        <option _ngcontent-xip-c91="" value="Cancelled">
+                                                                            Un-Assigned By Me </option>
+                                                                        <option _ngcontent-xip-c91="" value="Expired">
+                                                                            Expired</option>
+                                                                        <option _ngcontent-xip-c91=""
+                                                                            value="Under Verification"> Delivery Under
+                                                                            Review </option>
+                                                                        <option _ngcontent-xip-c91="" value="Picked">
+                                                                            Picked By PostEx </option>
+                                                                        <option _ngcontent-xip-c91=""
+                                                                            value="Return In-Transit"> Out For Return
+                                                                        </option>
+                                                                        <option _ngcontent-xip-c91="" value="Attempted">
+                                                                            Attempted</option>
+                                                                        <option _ngcontent-xip-c91=""
+                                                                            value="Transferred"> Transferred </option>
+                                                                    </select><span _ngcontent-xip-c91=""
+                                                                        role="presentation"
+                                                                        class="select2-selection__arrow"><b
+                                                                            _ngcontent-xip-c91=""
+                                                                            role="presentation"></b></span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div _ngcontent-xip-c91="" class="col-sm-3">
+                                                        <div _ngcontent-xip-c91="" _ngcontent-rml-c116=""
+                                                            class="input-wrap input-with-label"><label
+                                                                _ngcontent-xip-c91=""
+                                                                class="input-item-label input-item-label-s2 text-exlight">Order
+                                                                Date Type</label>
+                                                            <div _ngcontent-xip-c91=""><span _ngcontent-xip-c91=""
+                                                                    class="selectpicker"><select _ngcontent-xip-c91=""
+                                                                        name="state" data-dd-class="search-off"
+                                                                        tabindex="-1" aria-hidden="true"
+                                                                        class="dropdown button ng-valid ng-dirty ng-touched"
+                                                                        style="background-color: white; border: 1px solid #e6effb;">
+                                                                        <option _ngcontent-xip-c91=""
+                                                                            value="transactionDate"> Transaction Date
+                                                                        </option>
+                                                                        <option _ngcontent-xip-c91=""
+                                                                            value="orderPickupDate"> PickUp Date
+                                                                        </option>
+                                                                        <option _ngcontent-xip-c91=""
+                                                                            value="orderDeliveryDate"> Delivery Date
+                                                                        </option>
+                                                                    </select><span _ngcontent-xip-c91=""
+                                                                        role="presentation"
+                                                                        class="select2-selection__arrow"><b
+                                                                            _ngcontent-xip-c91=""
+                                                                            role="presentation"></b></span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div _ngcontent-xip-c91="" class="col-sm-3">
+                                                        <div _ngcontent-xip-c91="" _ngcontent-rml-c116=""
+                                                            class="input-wrap input-with-label"><label
+                                                                _ngcontent-xip-c91=""
+                                                                class="input-item-label input-item-label-s2 text-exlight">Pickup
+                                                                Address</label>
+                                                            <div _ngcontent-xip-c91=""><span _ngcontent-xip-c91=""
+                                                                    class="selectpicker"><select _ngcontent-xip-c91=""
+                                                                        name="state" data-dd-class="search-off"
+                                                                        tabindex="-1" aria-hidden="true"
+                                                                        class="dropdown button ng-valid ng-dirty ng-touched"
+                                                                        style="background-color: white; border: 1px solid #e6effb;"><!----></select><span
+                                                                        _ngcontent-xip-c91="" role="presentation"
+                                                                        class="select2-selection__arrow"><b
+                                                                            _ngcontent-xip-c91=""
+                                                                            role="presentation"></b></span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div _ngcontent-xip-c91="">
+                                                        <div _ngcontent-xip-c91="" class="row col-sm-5 col-sm-2"
+                                                            style="flex-flow: column-reverse; float: right;">
+                                                            <div _ngcontent-xip-c91="" class="input-wrap"
+                                                                style="display: block;"><input _ngcontent-xip-c91=""
+                                                                    type="hidden" name="filter" value="1"><button
+                                                                    _ngcontent-xip-c91=""
+                                                                    class="btn btn-sm btn-sm-s2 btn-auto"
+                                                                    style="background-color: #000; margin-bottom: 0px; border-color: #000;"><em
+                                                                        _ngcontent-xip-c91=""
+                                                                        class="ti ti-search width-auto padding-right"></em><span
+                                                                        _ngcontent-xip-c91="">
+                                                                        Search</span></button><button
+                                                                    _ngcontent-xip-c91=""
+                                                                    class="btn btn-sm btn-sm-s2 btn-auto btn-primaryblack"
+                                                                    style="margin-bottom: 0px;"><em
+                                                                        _ngcontent-xip-c91=""
+                                                                        class="fas fa-eraser width-auto padding-right"></em><span
+                                                                        _ngcontent-xip-c91="">Clear
+                                                                        Filter</span></button></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div _ngcontent-xip-c91="" id="content">
+                            <table _ngcontent-xip-c91="" id="excel-table" class="data-table user-list">
+                                <thead _ngcontent-xip-c91="">
+                                    <tr _ngcontent-xip-c91="" class="data-item data-head">
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd" style="width: 70px;">
+                                            Order Ref </th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd">Tracking #</th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd">Customer</th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd" style="width: 120px;">
+                                            Weight</th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd">Address</th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd">City</th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd">Details</th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd"
+                                            style="padding-right: 20px;"> Amount </th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd">Status</th>
+                                        <th _ngcontent-xip-c91="" class="data-col data-col-wd-sd">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody _ngcontent-xip-c91="" class="smaller-text"><!----></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div _ngcontent-xip-c91="" style="width: 30%; margin-bottom: 0.5%; margin-left: 4%;"><label
+                            _ngcontent-xip-c91=""
+                            style="font-size: 10px; margin-top: 0%; margin-bottom: 0%; color: #758698;">Showing
+                        </label><label _ngcontent-xip-c91=""
+                            style="font-size: 10px; margin-top: 0%; margin-left: 1.5%; margin-bottom: 0%; color: #758698;">
+                            of entries</label></div>
+                    <div _ngcontent-xip-c91="" class="ng-star-inserted">
+                        <div _ngcontent-xip-c91=""
+                            class="pagination-info guttar-10px justify-content-sm-end justify-content-mb-end">
+                            <div _ngcontent-xip-c91="" class="pagination-info-text ucap">Page</div>
+                            <div _ngcontent-xip-c91="" class="input-wrap w-80px"
+                                style="padding-right: 0px !important; padding-left: 0px !important;"><span
+                                    _ngcontent-xip-c91=""><select _ngcontent-xip-c91=""
+                                        style="-webkit-appearance: auto; border: 1px solid #d2dde9; padding-top: 0px; padding-bottom: 0px;"
+                                        class="ng-untouched ng-pristine ng-valid"><!----></select></span></div>
+                            <div _ngcontent-xip-c91="" class="pagination-info-text ucap">of </div>
+                            <div _ngcontent-xip-c91="">
+                                <ul _ngcontent-xip-c91="" class="btn-grp guttar-10px pagination-btn">
+                                    <li _ngcontent-xip-c91=""><button _ngcontent-xip-c91=""
+                                            class="btn ucap btn-auto btn-sm btn-primary1" disabled=""> Previous
+                                        </button><button _ngcontent-xip-c91=""
+                                            class="btn ucap btn-auto btn-sm btn-primary1"> Next </button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!---->
+                </div>
+            </div>
+        </div>
+        <div _ngcontent-xip-c91="" class="footer-bar">
+            <div _ngcontent-xip-c91="" class="container">
+                <div _ngcontent-xip-c91="" class="row align-items-center justify-content-center">
+                    <div _ngcontent-xip-c91="" class="col-md-12">
+                        <div _ngcontent-xip-c91="" class="copyright-text text-center pb-3"> © 2023 PostEx v2.0.0. All
+                            Rights Reserved. <br _ngcontent-xip-c91="" class="d-block d-md-none">Powered by <a
+                                _ngcontent-xip-c91="" href="https://postex.pk/" target="_blank">PostEx.Pk</a>. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form _ngcontent-xip-c91="" novalidate="" id="logout-form" method="POST" style="display: none;"
+            class="ng-untouched ng-pristine ng-valid"><input _ngcontent-xip-c91="" type="hidden" name="_token"
+                value="RYRPMvwNG9OmjHNJ8NQro4p9643St4RqTMHiRi1j"></form>
+        <div _ngcontent-xip-c91="" id="ajax-modal"></div>
+        <div _ngcontent-xip-c91="" id="exampleModal" tabindex="-1" class="modal fade modal-dialog-scrollable"
+            aria-labelledby="exampleModalLabel" aria-hidden="true"
+            style="background: rgba(0, 0, 0, 0.5); overflow: overlay; display: none;">
+            <div _ngcontent-xip-c91="" class="modal-dialog modal-dialog-md modal-dialog-centered ">
+                <div _ngcontent-xip-c91="" class="modal-content"><a _ngcontent-xip-c91="" data-bs-dismiss="modal"
+                        aria-label="Close" class="modal-close"><em _ngcontent-xip-c91="" class="ti ti-close"></em></a>
+                    <div _ngcontent-xip-c91="" class="popup-body popup-body-md">
+                        <h3 _ngcontent-xip-c91="" class="popup-title"> Create Order </h3>
+                        <form _ngcontent-xip-c91="" novalidate="novalidate" method="POST" id="addUser1Form"
+                            autocomplete="false"
+                            class="addUser1-form validate-modern ng-untouched ng-pristine ng-invalid">
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" _ngcontent-rml-c116=""
+                                        class="input-wrap input-with-label"><label _ngcontent-xip-c91=""
+                                            class="input-item-label">Order Type</label>
+                                        <div _ngcontent-xip-c91=""><span _ngcontent-xip-c91=""
+                                                class="selectpicker"><select _ngcontent-xip-c91="" name="state2"
+                                                    class="dropdown button ng-untouched ng-pristine ng-valid"
+                                                    style="background-color: white; border: 1px solid #e6effb;">
+                                                    <option value="option1">Normal</option>
+                                                    <option value="option2">Reversed</option>
+                                                    <option value="option3">Replacement</option>
+                                                </select>
+                                                <span _ngcontent-xip-c91="" role="presentation"
+                                                    class="select2-selection__arrow"><b _ngcontent-xip-c91=""
+                                                        role="presentation"></b></span>
+                                            </span></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Order Reference
+                                            Number</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                type="text" name="orderRef" maxlength="50" required=""
+                                                placeholder=" Order ref Number" ngmodel=""
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Order Amount</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                type="number" name=" orderAmount" required="" min="0" pattern="[0-9]*"
+                                                placeholder="Amount " ngmodel=""
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Order Date</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                disabled="" name="orderDate" type="value" placeholder="Order Date"
+                                                required="" class="input-bordered ng-untouched ng-pristine"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Customer Name</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                type="text" name="customerName" required="" maxlength="25" minlength="4"
+                                                placeholder=" Customer Name" ngmodel=""
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label">
+                                        <label _ngcontent-xip-c91="" class="input-item-label">Customer Contact</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap">
+                                            <input _ngcontent-xip-c91="" type="text" name="customerPhone" required=""
+                                                pattern="^(03|923|00923|0923)[0-9]{9}$" minlength="11" maxlength="14"
+                                                placeholder="03xxxxxxxxx" ngmodel=""
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" _ngcontent-rml-c116=""
+                                        class="input-wrap input-with-label">
+                                        <label _ngcontent-xip-c91="" class="input-item-label ng-star-inserted">Delivery
+                                            City</label>
+                                        <div _ngcontent-xip-c91="">
+                                            <span _ngcontent-xip-c91="" class="selectpicker">
+                                                <select _ngcontent-xip-c91="" name="state-cityName"
+                                                    data-dd-class="search-off"
+                                                    class="dropdown button ng-untouched ng-pristine ng-valid"
+                                                    style="background-color: white; border: 1px solid #e6effb;">
+                                                    <option _ngcontent-obp-c74="" value="">Select</option>
+                                                    <option _ngcontent-obp-c74="" value="Lahore"> Lahore </option>
+                                                    <option _ngcontent-obp-c74="" value="Islamabad"> Islamabad </option>
+                                                    <option _ngcontent-obp-c74="" value="Rawalpindi"> Rawalpindi
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="Karachi"> Karachi </option>
+                                                    <option _ngcontent-obp-c74="" value="Faisalabad"> Faisalabad
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SUKKUR"> SUKKUR </option>
+                                                    <option _ngcontent-obp-c74="" value="KASUR"> KASUR </option>
+                                                    <option _ngcontent-obp-c74="" value="SHEIKHUPURA"> SHEIKHUPURA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="PESHAWAR"> PESHAWAR </option>
+                                                    <option _ngcontent-obp-c74="" value="QUETTA"> QUETTA </option>
+                                                    <option _ngcontent-obp-c74="" value="HYDERABAD"> HYDERABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="SAHIWAL"> SAHIWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="MULTAN"> MULTAN </option>
+                                                    <option _ngcontent-obp-c74="" value="SARGODHA"> SARGODHA </option>
+                                                    <option _ngcontent-obp-c74="" value="SIALKOT"> SIALKOT </option>
+                                                    <option _ngcontent-obp-c74="" value="GUJRANWALA"> GUJRANWALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="JHELUM"> JHELUM </option>
+                                                    <option _ngcontent-obp-c74="" value="MIRPUR (AJK)"> MIRPUR (AJK)
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="ABBOTTABAD"> ABBOTTABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BAHAWALPUR"> BAHAWALPUR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="DERA ISMAIL KHAN"> DERA ISMAIL
+                                                        KHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="GWADAR"> GWADAR </option>
+                                                    <option _ngcontent-obp-c74="" value="TURBAT"> TURBAT </option>
+                                                    <option _ngcontent-obp-c74="" value="DERA GHAZI KHAN"> DERA GHAZI
+                                                        KHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="HAFIZABAD"> HAFIZABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="MANDI BAHAUDDIN"> MANDI
+                                                        BAHAUDDIN </option>
+                                                    <option _ngcontent-obp-c74="" value="PHOOL NAGAR"> PHOOL NAGAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="RAHIM YAR KHAN"> RAHIM YAR KHAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="OKARA"> OKARA </option>
+                                                    <option _ngcontent-obp-c74="" value="SADIQABAD"> SADIQABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="MIANWALI"> MIANWALI </option>
+                                                    <option _ngcontent-obp-c74="" value="LAYYAH"> LAYYAH </option>
+                                                    <option _ngcontent-obp-c74="" value="DEPALPUR"> DEPALPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="TOBA TEK SINGH"> TOBA TEK SINGH
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="VEHARI"> VEHARI </option>
+                                                    <option _ngcontent-obp-c74="" value="LALA MUSA"> LALA MUSA </option>
+                                                    <option _ngcontent-obp-c74="" value="KOHAT"> KOHAT </option>
+                                                    <option _ngcontent-obp-c74="" value="BAGH (AJK)"> BAGH (AJK)
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GUJRAT"> GUJRAT </option>
+                                                    <option _ngcontent-obp-c74="" value="KOT ADDU"> KOT ADDU </option>
+                                                    <option _ngcontent-obp-c74="" value="HASSAN ABDAL"> HASSAN ABDAL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="ATTOCK"> ATTOCK </option>
+                                                    <option _ngcontent-obp-c74="" value="WAH CANTT"> WAH CANTT </option>
+                                                    <option _ngcontent-obp-c74="" value="GILGIT"> GILGIT </option>
+                                                    <option _ngcontent-obp-c74="" value="JARANWALA"> JARANWALA </option>
+                                                    <option _ngcontent-obp-c74="" value="BAHAWALNAGAR"> BAHAWALNAGAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="FORT ABBAS"> FORT ABBAS
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MIAN CHANNU"> MIAN CHANNU
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GOJRA"> GOJRA </option>
+                                                    <option _ngcontent-obp-c74="" value="GUJAR KHAN"> GUJAR KHAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BHAI PHERU"> BHAI PHERU
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="JHANG"> JHANG </option>
+                                                    <option _ngcontent-obp-c74="" value="MIRPUR KHAS"> MIRPUR KHAS
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MURIDKE"> MURIDKE </option>
+                                                    <option _ngcontent-obp-c74="" value="MUZAFFARGARH"> MUZAFFARGARH
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="TANK"> TANK </option>
+                                                    <option _ngcontent-obp-c74="" value="KHANEWAL"> KHANEWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAKARGARH"> SHAKARGARH
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="PIND DADAN KHAN"> PIND DADAN
+                                                        KHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="NAROWAL"> NAROWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="MURREE"> MURREE </option>
+                                                    <option _ngcontent-obp-c74="" value="PAKPATTAN"> PAKPATTAN </option>
+                                                    <option _ngcontent-obp-c74="" value="BHAKKAR"> BHAKKAR </option>
+                                                    <option _ngcontent-obp-c74="" value="RAWALAKOT (AJK)"> RAWALAKOT
+                                                        (AJK) </option>
+                                                    <option _ngcontent-obp-c74="" value="BUREWALA"> BUREWALA </option>
+                                                    <option _ngcontent-obp-c74="" value="KAMOKE"> KAMOKE </option>
+                                                    <option _ngcontent-obp-c74="" value="HATTAR"> HATTAR </option>
+                                                    <option _ngcontent-obp-c74="" value="KHANPUR"> KHANPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="CHICHAWATNI"> CHICHAWATNI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="HARIPUR"> HARIPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="NAWABSHAH"> NAWABSHAH </option>
+                                                    <option _ngcontent-obp-c74="" value="SWABI"> SWABI </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAKWAL"> CHAKWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="MUZAFFARABAD (AJK)">
+                                                        MUZAFFARABAD (AJK) </option>
+                                                    <option _ngcontent-obp-c74="" value="DEHARKI"> DEHARKI </option>
+                                                    <option _ngcontent-obp-c74="" value="MARDAN"> MARDAN </option>
+                                                    <option _ngcontent-obp-c74="" value="TANDLIAWALA"> TANDLIAWALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NOWSHERA"> NOWSHERA </option>
+                                                    <option _ngcontent-obp-c74="" value="HAROONABAD"> HAROONABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="JACOBABAD"> JACOBABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="SHIKARPUR"> SHIKARPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="LARKANA"> LARKANA </option>
+                                                    <option _ngcontent-obp-c74="" value="KAMALIA"> KAMALIA </option>
+                                                    <option _ngcontent-obp-c74="" value="KHARIAN"> KHARIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="GHOTKI"> GHOTKI </option>
+                                                    <option _ngcontent-obp-c74="" value="THATTA"> THATTA </option>
+                                                    <option _ngcontent-obp-c74="" value="BANNU"> BANNU </option>
+                                                    <option _ngcontent-obp-c74="" value="NANKANA SAHIB"> NANKANA SAHIB
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KHUSHAB"> KHUSHAB </option>
+                                                    <option _ngcontent-obp-c74="" value="KOTLI (AJK)"> KOTLI (AJK)
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="ABDUL HAKEEM"> ABDUL HAKEEM
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="ADDA JOHAL"> ADDA JOHAL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="ADDA SHAIKH WAHAN"> ADDA SHAIKH
+                                                        WAHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="ADDA SIRAJ"> ADDA SIRAJ
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="AHMEDPUR EAST"> AHMEDPUR EAST
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="AHMEDPUR SIAL"> AHMEDPUR SIAL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="AJNIA WALA"> AJNIA WALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="AKHTAR ABAD"> AKHTAR ABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="AKORA KHATAK"> AKORA KHATAK
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="ALIPUR CHATHA"> ALIPUR CHATHA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="ALIPUR"> ALIPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="ALLAH ABAD"> ALLAH ABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="AMANGARH"> AMANGARH </option>
+                                                    <option _ngcontent-obp-c74="" value="ARIFWALA"> ARIFWALA </option>
+                                                    <option _ngcontent-obp-c74="" value="AYUBIA"> AYUBIA </option>
+                                                    <option _ngcontent-obp-c74="" value="BADIN"> BADIN </option>
+                                                    <option _ngcontent-obp-c74="" value="BADDOMALHI"> BADDOMALHI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BAFFA"> BAFFA </option>
+                                                    <option _ngcontent-obp-c74="" value="BHAGTANWALA"> BHAGTANWALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BAHTAR MORE"> BAHTAR MORE
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BAIG PUR"> BAIG PUR </option>
+                                                    <option _ngcontent-obp-c74="" value="BALAKOT"> BALAKOT </option>
+                                                    <option _ngcontent-obp-c74="" value="BALAMBAT"> BALAMBAT </option>
+                                                    <option _ngcontent-obp-c74="" value="BARA MARKET"> BARA MARKET
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BHARA KAHU"> BHARA KAHU
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BARIKOT"> BARIKOT </option>
+                                                    <option _ngcontent-obp-c74="" value="BASHARAT"> BASHARAT </option>
+                                                    <option _ngcontent-obp-c74="" value="BASIRPUR"> BASIRPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="BASTI MALOOK"> BASTI MALOOK
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BATTAGRAM"> BATTAGRAM </option>
+                                                    <option _ngcontent-obp-c74="" value="BATKHELA"> BATKHELA </option>
+                                                    <option _ngcontent-obp-c74="" value="BHALWAAL"> BHALWAAL </option>
+                                                    <option _ngcontent-obp-c74="" value="BHAN SAYEDABAD"> BHAN SAYEDABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BHERA"> BHERA </option>
+                                                    <option _ngcontent-obp-c74="" value="BHIKKI"> BHIKKI </option>
+                                                    <option _ngcontent-obp-c74="" value="BHIMBER (AJK)"> BHIMBER (AJK)
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BHOWANA"> BHOWANA </option>
+                                                    <option _ngcontent-obp-c74="" value="BHURBUN (P.C. HOTEL)"> BHURBUN
+                                                        (P.C. HOTEL) </option>
+                                                    <option _ngcontent-obp-c74="" value="BONGA HAYAT"> BONGA HAYAT
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BUCHEKE"> BUCHEKE </option>
+                                                    <option _ngcontent-obp-c74="" value="BUNER"> BUNER </option>
+                                                    <option _ngcontent-obp-c74="" value="CADET COLLEGE SUNNY BANK">
+                                                        CADET COLLEGE SUNNY BANK </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAK JHUMRA"> CHAK JHUMRA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAK PARANA"> CHAK PARANA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAKDARA"> CHAKDARA </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAKLALA"> CHAKLALA </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAKRI"> CHAKRI </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAMAN"> CHAMAN </option>
+                                                    <option _ngcontent-obp-c74="" value="CHANGA MANGA"> CHANGA MANGA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAR BAGH"> CHAR BAGH </option>
+                                                    <option _ngcontent-obp-c74="" value="CHARSADDA"> CHARSADDA </option>
+                                                    <option _ngcontent-obp-c74="" value="CHAWINDA"> CHAWINDA </option>
+                                                    <option _ngcontent-obp-c74="" value="CHINIOT"> CHINIOT </option>
+                                                    <option _ngcontent-obp-c74="" value="CHISTIAN"> CHISTIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="CHITRAL"> CHITRAL </option>
+                                                    <option _ngcontent-obp-c74="" value="CHOA SAIDAN SHAH"> CHOA SAIDAN
+                                                        SHAH </option>
+                                                    <option _ngcontent-obp-c74="" value="CHOBARA"> CHOBARA </option>
+                                                    <option _ngcontent-obp-c74="" value="CHOR"> CHOR </option>
+                                                    <option _ngcontent-obp-c74="" value="CHOTA LAHORE"> CHOTA LAHORE
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="CHOWK AZAM"> CHOWK AZAM
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="CHOWK PANDORI"> CHOWK PANDORI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="CHUNIAN"> CHUNIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="DADU"> DADU </option>
+                                                    <option _ngcontent-obp-c74="" value="DADYAL (AJK)"> DADYAL (AJK)
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="DAKWALA"> DAKWALA </option>
+                                                    <option _ngcontent-obp-c74="" value="DAOOD ZAI"> DAOOD ZAI </option>
+                                                    <option _ngcontent-obp-c74="" value="DARGAI"> DARGAI </option>
+                                                    <option _ngcontent-obp-c74="" value="DARYA KHAN"> DARYA KHAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="DASKA"> DASKA </option>
+                                                    <option _ngcontent-obp-c74="" value="DAUL TALA"> DAUL TALA </option>
+                                                    <option _ngcontent-obp-c74="" value="DAUR"> DAUR </option>
+                                                    <option _ngcontent-obp-c74="" value="DERA ALLAH YAR"> DERA ALLAH YAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="DERA MURAD JAMALI"> DERA MURAD
+                                                        JAMALI </option>
+                                                    <option _ngcontent-obp-c74="" value="DERA NAWAB"> DERA NAWAB
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="DEWALAY"> DEWALAY </option>
+                                                    <option _ngcontent-obp-c74="" value="DHABJEE"> DHABJEE </option>
+                                                    <option _ngcontent-obp-c74="" value="DHUDIAL"> DHUDIAL </option>
+                                                    <option _ngcontent-obp-c74="" value="DIGRI"> DIGRI </option>
+                                                    <option _ngcontent-obp-c74="" value="DIJKOT"> DIJKOT </option>
+                                                    <option _ngcontent-obp-c74="" value="DINA"> DINA </option>
+                                                    <option _ngcontent-obp-c74="" value="DINGA"> DINGA </option>
+                                                    <option _ngcontent-obp-c74="" value="DISTT. COMPLEX"> DISTT. COMPLEX
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="DOABA"> DOABA </option>
+                                                    <option _ngcontent-obp-c74="" value="DOKRI"> DOKRI </option>
+                                                    <option _ngcontent-obp-c74="" value="DONGA BONGA"> DONGA BONGA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="DAULATPUR"> DAULATPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="DULLE WALA"> DULLE WALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="DUNIAPUR"> DUNIAPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="F.F.C. PLANT"> F.F.C. PLANT
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="FAQIRWALI"> FAQIRWALI </option>
+                                                    <option _ngcontent-obp-c74="" value="FAROKA"> FAROKA </option>
+                                                    <option _ngcontent-obp-c74="" value="FAROOQABAD"> FAROOQABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="FATEH JANG"> FATEH JANG
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="FATEH PUR"> FATEH PUR </option>
+                                                    <option _ngcontent-obp-c74="" value="FATEH PUR KAMAL"> FATEH PUR
+                                                        KAMAL </option>
+                                                    <option _ngcontent-obp-c74="" value="FAZIL PUR"> FAZIL PUR </option>
+                                                    <option _ngcontent-obp-c74="" value="FEROZ WATWAN"> FEROZ WATWAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="FKPCL POWER PLANT"> FKPCL POWER
+                                                        PLANT </option>
+                                                    <option _ngcontent-obp-c74="" value="GAGGO MANDI"> GAGGO MANDI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GAMBAT"> GAMBAT </option>
+                                                    <option _ngcontent-obp-c74="" value="GAMBER"> GAMBER </option>
+                                                    <option _ngcontent-obp-c74="" value="GARHA MORE"> GARHA MORE
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GATWALA 199 / RB"> GATWALA 199
+                                                        / RB </option>
+                                                    <option _ngcontent-obp-c74="" value="GHAKKAR MANDI"> GHAKKAR MANDI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GHAR MORE"> GHAR MORE </option>
+                                                    <option _ngcontent-obp-c74="" value="GHARI HABIBULLAH"> GHARI
+                                                        HABIBULLAH </option>
+                                                    <option _ngcontent-obp-c74="" value="GHARIBWAL CEMENT"> GHARIBWAL
+                                                        CEMENT </option>
+                                                    <option _ngcontent-obp-c74="" value="GHARO"> GHARO </option>
+                                                    <option _ngcontent-obp-c74="" value="GHAZI"> GHAZI </option>
+                                                    <option _ngcontent-obp-c74="" value="GHAZIABAD"> GHAZIABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="GHIKA GALI"> GHIKA GALI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GHORA GALI"> GHORA GALI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GHOUR GHUSTI"> GHOUR GHUSTI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GHOUS PUR"> GHOUS PUR </option>
+                                                    <option _ngcontent-obp-c74="" value="GOLARCHI"> GOLARCHI </option>
+                                                    <option _ngcontent-obp-c74="" value="GOTH MACHI"> GOTH MACHI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GULYANA"> GULYANA </option>
+                                                    <option _ngcontent-obp-c74="" value="HAJEERA"> HAJEERA </option>
+                                                    <option _ngcontent-obp-c74="" value="HAKIM ABAD"> HAKIM ABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="HALA"> HALA </option>
+                                                    <option _ngcontent-obp-c74="" value="HANGU"> HANGU </option>
+                                                    <option _ngcontent-obp-c74="" value="HARAPPA"> HARAPPA </option>
+                                                    <option _ngcontent-obp-c74="" value="HARNAL"> HARNAL </option>
+                                                    <option _ngcontent-obp-c74="" value="HASEEB WAQAS MILLS"> HASEEB
+                                                        WAQAS MILLS </option>
+                                                    <option _ngcontent-obp-c74="" value="HASIL PUR"> HASIL PUR </option>
+                                                    <option _ngcontent-obp-c74="" value="HATIA BALA"> HATIA BALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="HAVELI LAKHA"> HAVELI LAKHA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="HAZARA UNIVERSITY"> HAZARA
+                                                        UNIVERSITY </option>
+                                                    <option _ngcontent-obp-c74="" value="HAZRO"> HAZRO </option>
+                                                    <option _ngcontent-obp-c74="" value="HEAD BALOKI ROAD"> HEAD BALOKI
+                                                        ROAD </option>
+                                                    <option _ngcontent-obp-c74="" value="HEADMARALA"> HEADMARALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="HUB CHOWKI"> HUB CHOWKI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="HUJRA SHAH MUKEEM"> HUJRA SHAH
+                                                        MUKEEM </option>
+                                                    <option _ngcontent-obp-c74="" value="HUNZA–NAGAR"> HUNZA–NAGAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="HUSRI"> HUSRI </option>
+                                                    <option _ngcontent-obp-c74="" value="IQBAL ABAD"> IQBAL ABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="IQBAL NAGAR"> IQBAL NAGAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="JAHANIAN"> JAHANIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="JALALPUR BHATTIAN"> JALALPUR
+                                                        BHATTIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="JALALPUR JATTAN"> JALALPUR
+                                                        JATTAN </option>
+                                                    <option _ngcontent-obp-c74="" value="JALALPURPIRWALA">
+                                                        JALALPURPIRWALA </option>
+                                                    <option _ngcontent-obp-c74="" value="JAMPUR"> JAMPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="JAMSHORO"> JAMSHORO </option>
+                                                    <option _ngcontent-obp-c74="" value="JANDIA SHER KHAN"> JANDIA SHER
+                                                        KHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="JATLAN (AJK)"> JATLAN (AJK)
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="JATOI"> JATOI </option>
+                                                    <option _ngcontent-obp-c74="" value="JEHANGIRA"> JEHANGIRA </option>
+                                                    <option _ngcontent-obp-c74="" value="JHABRAN MANDI"> JHABRAN MANDI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="JHOL"> JHOL </option>
+                                                    <option _ngcontent-obp-c74="" value="JHUDDO"> JHUDDO </option>
+                                                    <option _ngcontent-obp-c74="" value="JOHARABAD"> JOHARABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="JOHI"> JOHI </option>
+                                                    <option _ngcontent-obp-c74="" value="KABIRWALA"> KABIRWALA </option>
+                                                    <option _ngcontent-obp-c74="" value="KACHA KHOO"> KACHA KHOO
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KAHAUTA"> KAHAUTA </option>
+                                                    <option _ngcontent-obp-c74="" value="KAIRPUR NATHIN SHAH"> KAIRPUR
+                                                        NATHIN SHAH </option>
+                                                    <option _ngcontent-obp-c74="" value="KALAT"> KALAT </option>
+                                                    <option _ngcontent-obp-c74="" value="KALLAR KAHAR"> KALLAR KAHAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KALLAR SYEDDAN"> KALLAR SYEDDAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KALOR KOT"> KALOR KOT </option>
+                                                    <option _ngcontent-obp-c74="" value="KAMRA"> KAMRA </option>
+                                                    <option _ngcontent-obp-c74="" value="KAND KOT"> KAND KOT </option>
+                                                    <option _ngcontent-obp-c74="" value="KANDIARO"> KANDIARO </option>
+                                                    <option _ngcontent-obp-c74="" value="KANGAN PUR"> KANGAN PUR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KANGRA"> KANGRA </option>
+                                                    <option _ngcontent-obp-c74="" value="KANJU"> KANJU </option>
+                                                    <option _ngcontent-obp-c74="" value="KANYAL"> KANYAL </option>
+                                                    <option _ngcontent-obp-c74="" value="KAPCO POWER PLANT"> KAPCO POWER
+                                                        PLANT </option>
+                                                    <option _ngcontent-obp-c74="" value="KARAK"> KARAK </option>
+                                                    <option _ngcontent-obp-c74="" value="KARAM PUR"> KARAM PUR </option>
+                                                    <option _ngcontent-obp-c74="" value="KAROOR PAKA"> KAROOR PAKA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KAROR LAL EASAN"> KAROR LAL
+                                                        EASAN </option>
+                                                    <option _ngcontent-obp-c74="" value="KASHMORE"> KASHMORE </option>
+                                                    <option _ngcontent-obp-c74="" value="KASSOWAL"> KASSOWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="KHAIRPUR"> KHAIRPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="KHAIRPUR MEERUS"> KHAIRPUR
+                                                        MEERUS </option>
+                                                    <option _ngcontent-obp-c74="" value="KHAIRPUR TAMEWALI"> KHAIRPUR
+                                                        TAMEWALI </option>
+                                                    <option _ngcontent-obp-c74="" value="KHAN BELA"> KHAN BELA </option>
+                                                    <option _ngcontent-obp-c74="" value="KHAN GHAR"> KHAN GHAR </option>
+                                                    <option _ngcontent-obp-c74="" value="KHANKA DOGRAN"> KHANKA DOGRAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KHANPUR MAHAR"> KHANPUR MAHAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KHAS BEHAAL"> KHAS BEHAAL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KHOAZA KHAILA"> KHOAZA KHAILA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KHOSKI"> KHOSKI </option>
+                                                    <option _ngcontent-obp-c74="" value="KHUDIAN KHAS"> KHUDIAN KHAS
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KHURRIANWALA"> KHURRIANWALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KHUZDAR"> KHUZDAR </option>
+                                                    <option _ngcontent-obp-c74="" value="KHWERA"> KHWERA </option>
+                                                    <option _ngcontent-obp-c74="" value="KOT CHUTTA"> KOT CHUTTA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KOT GHULAM MUHAMMAD"> KOT
+                                                        GHULAM MUHAMMAD </option>
+                                                    <option _ngcontent-obp-c74="" value="KOT MITHAN"> KOT MITHAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KOT MOMIN"> KOT MOMIN </option>
+                                                    <option _ngcontent-obp-c74="" value="KOT PINDI DAS"> KOT PINDI DAS
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KOT RADHA KISHAN"> KOT RADHA
+                                                        KISHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="KOT SAMABAH"> KOT SAMABAH
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KOTLA ARAB ALI KHAN"> KOTLA
+                                                        ARAB ALI KHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="KOTLI BEHRAM"> KOTLI BEHRAM
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KOTLI LOHARAN"> KOTLI LOHARAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KOTRI"> KOTRI </option>
+                                                    <option _ngcontent-obp-c74="" value="KUCHLAK"> KUCHLAK </option>
+                                                    <option _ngcontent-obp-c74="" value="KULACHI"> KULACHI </option>
+                                                    <option _ngcontent-obp-c74="" value="KUNDIAN"> KUNDIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="KUNJAH"> KUNJAH </option>
+                                                    <option _ngcontent-obp-c74="" value="KUNRI"> KUNRI </option>
+                                                    <option _ngcontent-obp-c74="" value="LAKKI MARWAT"> LAKKI MARWAT
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="LALIAN"> LALIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="LALLIAN"> LALLIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="LALLIANI"> LALLIANI </option>
+                                                    <option _ngcontent-obp-c74="" value="LALPIR (THERMAL POWER)"> LALPIR
+                                                        (THERMAL POWER) </option>
+                                                    <option _ngcontent-obp-c74="" value="LAWRENCE PUR"> LAWRENCE PUR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="LIAQAT PUR"> LIAQAT PUR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="LODHRAN"> LODHRAN </option>
+                                                    <option _ngcontent-obp-c74="" value="LORALAI"> LORALAI </option>
+                                                    <option _ngcontent-obp-c74="" value="LOWER DIR"> LOWER DIR </option>
+                                                    <option _ngcontent-obp-c74="" value="LOWER TOPA"> LOWER TOPA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MACHIKEY"> MACHIKEY </option>
+                                                    <option _ngcontent-obp-c74="" value="MAILSI"> MAILSI </option>
+                                                    <option _ngcontent-obp-c74="" value="MALAKAND"> MALAKAND </option>
+                                                    <option _ngcontent-obp-c74="" value="MALAKWAL"> MALAKWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="MAMU KANJAN"> MAMU KANJAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MANA WLA"> MANA WLA </option>
+                                                    <option _ngcontent-obp-c74="" value="MANAWALA"> MANAWALA </option>
+                                                    <option _ngcontent-obp-c74="" value="MANDI SAFDAR ABAD"> MANDI
+                                                        SAFDAR ABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="MANDI USMAN WALA"> MANDI USMAN
+                                                        WALA </option>
+                                                    <option _ngcontent-obp-c74="" value="MANDIAN"> MANDIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="MANDRA"> MANDRA </option>
+                                                    <option _ngcontent-obp-c74="" value="MANGA MANDI"> MANGA MANDI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MANGLA (AJK)"> MANGLA (AJK)
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MANGLA CANTT (AJK)"> MANGLA
+                                                        CANTT (AJK) </option>
+                                                    <option _ngcontent-obp-c74="" value="MANKERA"> MANKERA </option>
+                                                    <option _ngcontent-obp-c74="" value="MANKYLA STATION"> MANKYLA
+                                                        STATION </option>
+                                                    <option _ngcontent-obp-c74="" value="MANSEHRA"> MANSEHRA </option>
+                                                    <option _ngcontent-obp-c74="" value="MARI"> MARI </option>
+                                                    <option _ngcontent-obp-c74="" value="MASAR CAMP"> MASAR CAMP
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MASTUNG"> MASTUNG </option>
+                                                    <option _ngcontent-obp-c74="" value="MATIARI"> MATIARI </option>
+                                                    <option _ngcontent-obp-c74="" value="MATLI"> MATLI </option>
+                                                    <option _ngcontent-obp-c74="" value="MATTA"> MATTA </option>
+                                                    <option _ngcontent-obp-c74="" value="MEHER"> MEHER </option>
+                                                    <option _ngcontent-obp-c74="" value="MEHRAB PUR"> MEHRAB PUR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MIAN WALI QURESHAIN"> MIAN WALI
+                                                        QURESHAIN </option>
+                                                    <option _ngcontent-obp-c74="" value="MIANI"> MIANI </option>
+                                                    <option _ngcontent-obp-c74="" value="MINCHINABAD"> MINCHINABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MINGORA"> MINGORA </option>
+                                                    <option _ngcontent-obp-c74="" value="MIR PUR METHELO"> MIR PUR
+                                                        METHELO </option>
+                                                    <option _ngcontent-obp-c74="" value="MITHA TIWANA"> MITHA TIWANA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MITTHI"> MITTHI </option>
+                                                    <option _ngcontent-obp-c74="" value="MORE AIMANABAD"> MORE AIMANABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MORE KHUNDA"> MORE KHUNDA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MORO"> MORO </option>
+                                                    <option _ngcontent-obp-c74="" value="MOTRA"> MOTRA </option>
+                                                    <option _ngcontent-obp-c74="" value="NARANG MANDI"> NARANG MANDI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NASIRABAD"> NASIRABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="NATHIA GALI"> NATHIA GALI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NUSHKI"> NUSHKI </option>
+                                                    <option _ngcontent-obp-c74="" value="NAWAN SHEHR"> NAWAN SHEHR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NAWAY KALI"> NAWAY KALI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NEW INDUSTRIAL AREA"> NEW
+                                                        INDUSTRIAL AREA </option>
+                                                    <option _ngcontent-obp-c74="" value="NIZAMABAD"> NIZAMABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="NOKHAR"> NOKHAR </option>
+                                                    <option _ngcontent-obp-c74="" value="NONAR"> NONAR </option>
+                                                    <option _ngcontent-obp-c74="" value="NOOR COLONY"> NOOR COLONY
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NOOR KOT"> NOOR KOT </option>
+                                                    <option _ngcontent-obp-c74="" value="NOORPUR"> NOORPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="NOORPUR THAL"> NOORPUR THAL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NORIABAD"> NORIABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="NOWSHERA KALAN"> NOWSHERA KALAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NOWSHERA VIRKAN"> NOWSHERA
+                                                        VIRKAN </option>
+                                                    <option _ngcontent-obp-c74="" value="NAUSHAHRO FEROZE"> NAUSHAHRO
+                                                        FEROZE </option>
+                                                    <option _ngcontent-obp-c74="" value="NRTC (TELECOM STAFF COLLEGE)">
+                                                        NRTC (TELECOM STAFF COLLEGE) </option>
+                                                    <option _ngcontent-obp-c74="" value="NUDEARO"> NUDEARO </option>
+                                                    <option _ngcontent-obp-c74="" value="OLD HALA"> OLD HALA </option>
+                                                    <option _ngcontent-obp-c74="" value="P.O.F. (FACTORY &amp; COLONY)">
+                                                        P.O.F. (FACTORY &amp; COLONY) </option>
+                                                    <option _ngcontent-obp-c74="" value="PABI"> PABI </option>
+                                                    <option _ngcontent-obp-c74="" value="PAHARPUR"> PAHARPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="PANOAQIL"> PANOAQIL </option>
+                                                    <option _ngcontent-obp-c74="" value="PAROA"> PAROA </option>
+                                                    <option _ngcontent-obp-c74="" value="PASROOR"> PASROOR </option>
+                                                    <option _ngcontent-obp-c74="" value="PASROOR ROAD AND VILLAGES">
+                                                        PASROOR ROAD AND VILLAGES </option>
+                                                    <option _ngcontent-obp-c74="" value="PATOKI"> PATOKI </option>
+                                                    <option _ngcontent-obp-c74="" value="PATRIATA"> PATRIATA </option>
+                                                    <option _ngcontent-obp-c74="" value="PEER MAHAL"> PEER MAHAL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="PEZU"> PEZU </option>
+                                                    <option _ngcontent-obp-c74="" value="PHALIA"> PHALIA </option>
+                                                    <option _ngcontent-obp-c74="" value="PINDI BHATIAN"> PINDI BHATIAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="PINDI GHEB"> PINDI GHEB
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="PINDI GUJRAN"> PINDI GUJRAN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="PIPLAN"> PIPLAN </option>
+                                                    <option _ngcontent-obp-c74="" value="PIR BABA"> PIR BABA </option>
+                                                    <option _ngcontent-obp-c74="" value="PISHIN"> PISHIN </option>
+                                                    <option _ngcontent-obp-c74="" value="PITARO"> PITARO </option>
+                                                    <option _ngcontent-obp-c74="" value="SUDHANOTI (AJK)"> SUDHANOTI
+                                                        (AJK) </option>
+                                                    <option _ngcontent-obp-c74="" value="PMA KAKUL"> PMA KAKUL </option>
+                                                    <option _ngcontent-obp-c74="" value="POONCH (AJK)"> POONCH (AJK)
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="PUNGIRAYIN"> PUNGIRAYIN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="PUNWAN"> PUNWAN </option>
+                                                    <option _ngcontent-obp-c74="" value="QABAL"> QABAL </option>
+                                                    <option _ngcontent-obp-c74="" value="QABOOLA SHARIF"> QABOOLA SHARIF
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="QADIR PUR RAWAN"> QADIR PUR
+                                                        RAWAN </option>
+                                                    <option _ngcontent-obp-c74="" value="QAIDABAD"> QAIDABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="QAMAR MASHANI"> QAMAR MASHANI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="QASBA GUJRAT."> QASBA GUJRAT.
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="QAZI AHMED"> QAZI AHMED
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="QILA DEEDAR SING"> QILA DEEDAR
+                                                        SING </option>
+                                                    <option _ngcontent-obp-c74="" value="QILA SAIB SINGH"> QILA SAIB
+                                                        SINGH </option>
+                                                    <option _ngcontent-obp-c74="" value="RADHAN"> RADHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="RAIWIND"> RAIWIND </option>
+                                                    <option _ngcontent-obp-c74="" value="RAJA JANG"> RAJA JANG </option>
+                                                    <option _ngcontent-obp-c74="" value="RAJANPUR"> RAJANPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="RAJANA"> RAJANA </option>
+                                                    <option _ngcontent-obp-c74="" value="RAJAR"> RAJAR </option>
+                                                    <option _ngcontent-obp-c74="" value="RAMAK"> RAMAK </option>
+                                                    <option _ngcontent-obp-c74="" value="RANI PUR"> RANI PUR </option>
+                                                    <option _ngcontent-obp-c74="" value="RAO KHAN WALA"> RAO KHAN WALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="RASHAKI"> RASHAKI </option>
+                                                    <option _ngcontent-obp-c74="" value="RATO DEARO"> RATO DEARO
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="RAWAT"> RAWAT </option>
+                                                    <option _ngcontent-obp-c74="" value="RENALA KHURD"> RENALA KHURD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="RISALPUR"> RISALPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="ROHRI"> ROHRI </option>
+                                                    <option _ngcontent-obp-c74="" value="RUBWA"> RUBWA </option>
+                                                    <option _ngcontent-obp-c74="" value="SAFDARABAD"> SAFDARABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SAIDU SHARIF"> SAIDU SHARIF
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SAJAWAL"> SAJAWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="SAKRAND"> SAKRAND </option>
+                                                    <option _ngcontent-obp-c74="" value="SAMANDARI"> SAMANDARI </option>
+                                                    <option _ngcontent-obp-c74="" value="SAMARO"> SAMARO </option>
+                                                    <option _ngcontent-obp-c74="" value="SANGHAR"> SANGHAR </option>
+                                                    <option _ngcontent-obp-c74="" value="SANGLA HILL"> SANGLA HILL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SANJHORO"> SANJHORO </option>
+                                                    <option _ngcontent-obp-c74="" value="SANJWAL"> SANJWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="SARAYE NORANG"> SARAYE NORANG
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SARDAR GARH"> SARDAR GARH
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SARDARYAB"> SARDARYAB </option>
+                                                    <option _ngcontent-obp-c74="" value="SARI ALAMGIR"> SARI ALAMGIR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SATYYANA"> SATYYANA </option>
+                                                    <option _ngcontent-obp-c74="" value="SAWABI"> SAWABI </option>
+                                                    <option _ngcontent-obp-c74="" value="SWAT"> SWAT </option>
+                                                    <option _ngcontent-obp-c74="" value="SEHWAN SHARIF"> SEHWAN SHARIF
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SHABQADAR"> SHABQADAR </option>
+                                                    <option _ngcontent-obp-c74="" value="SHADAD KOT"> SHADAD KOT
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SHADIWAL"> SHADIWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAH PUR CHAKAR"> SHAH PUR
+                                                        CHAKAR </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAHDAD PUR"> SHAHDAD PUR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAHKOT"> SHAHKOT </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAHPUR JAHANIA"> SHAHPUR
+                                                        JAHANIA </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAHPUR SADDAR"> SHAHPUR SADDAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAM KOT"> SHAM KOT </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAMS ABAD"> SHAMS ABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SHANGLA"> SHANGLA </option>
+                                                    <option _ngcontent-obp-c74="" value="SHEEDO"> SHEEDO </option>
+                                                    <option _ngcontent-obp-c74="" value="SHERGARH"> SHERGARH </option>
+                                                    <option _ngcontent-obp-c74="" value="SHEWA ADDA"> SHEWA ADDA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SHIMLA HILL"> SHIMLA HILL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SHORKOT"> SHORKOT </option>
+                                                    <option _ngcontent-obp-c74="" value="SHUJABAD"> SHUJABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="SIBI"> SIBI </option>
+                                                    <option _ngcontent-obp-c74="" value="SIHALA"> SIHALA </option>
+                                                    <option _ngcontent-obp-c74="" value="SIKANDARABAD"> SIKANDARABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SILANWALI"> SILANWALI </option>
+                                                    <option _ngcontent-obp-c74="" value="SIRAYE MUHAJIR"> SIRAYE MUHAJIR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SKARDU"> SKARDU </option>
+                                                    <option _ngcontent-obp-c74="" value="SMAAL IND ESTATE. DASKA"> SMAAL
+                                                        IND ESTATE. DASKA </option>
+                                                    <option _ngcontent-obp-c74="" value="SOHAWA ONLY MAIN GT ROAD">
+                                                        SOHAWA ONLY MAIN GT ROAD </option>
+                                                    <option _ngcontent-obp-c74="" value="SUMBRIAL"> SUMBRIAL </option>
+                                                    <option _ngcontent-obp-c74="" value="SUNDER ADDA"> SUNDER ADDA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SYED WALA"> SYED WALA </option>
+                                                    <option _ngcontent-obp-c74="" value="TAKHT-E-BHAI"> TAKHT-E-BHAI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="TALAGUNG"> TALAGUNG </option>
+                                                    <option _ngcontent-obp-c74="" value="TALHAR"> TALHAR </option>
+                                                    <option _ngcontent-obp-c74="" value="TALVANDI"> TALVANDI </option>
+                                                    <option _ngcontent-obp-c74="" value="TANDO ADAM"> TANDO ADAM
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="TANDO ALLAHYAR"> TANDO ALLAHYAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="TANDO BAGO"> TANDO BAGO
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="TANDO GHULAM ALI"> TANDO GHULAM
+                                                        ALI </option>
+                                                    <option _ngcontent-obp-c74="" value="TANDO JAM"> TANDO JAM </option>
+                                                    <option _ngcontent-obp-c74="" value="TANDO JAN MUHAMMAD"> TANDO JAN
+                                                        MUHAMMAD </option>
+                                                    <option _ngcontent-obp-c74="" value="TANDO MOHD KHAN"> TANDO MOHD
+                                                        KHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="TANGI"> TANGI </option>
+                                                    <option _ngcontent-obp-c74="" value="TARBELA DAM"> TARBELA DAM
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="TARNOL"> TARNOL </option>
+                                                    <option _ngcontent-obp-c74="" value="TAUNSA SHARIF"> TAUNSA SHARIF
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="TAXLA"> TAXLA </option>
+                                                    <option _ngcontent-obp-c74="" value="THEENG MORE (ALLAHABAD)">
+                                                        THEENG MORE (ALLAHABAD) </option>
+                                                    <option _ngcontent-obp-c74="" value="THULL"> THULL </option>
+                                                    <option _ngcontent-obp-c74="" value="TIBBA SULTANPURA"> TIBBA
+                                                        SULTANPURA </option>
+                                                    <option _ngcontent-obp-c74="" value="TIMARGARAH"> TIMARGARAH
+                                                    </option>
+                                                    <option _ngcontent-obp-c74=""
+                                                        value="TOPI (GIK UNIVERSITY AREA ONLY)*"> TOPI (GIK UNIVERSITY
+                                                        AREA ONLY)* </option>
+                                                    <option _ngcontent-obp-c74="" value="TRANDA SAWAY KHAN"> TRANDA
+                                                        SAWAY KHAN </option>
+                                                    <option _ngcontent-obp-c74="" value="TRANDA MOHAMMAD PANAH"> TRANDA
+                                                        MOHAMMAD PANAH </option>
+                                                    <option _ngcontent-obp-c74="" value="TULAMBA"> TULAMBA </option>
+                                                    <option _ngcontent-obp-c74="" value="UBARO"> UBARO </option>
+                                                    <option _ngcontent-obp-c74="" value="UCH SHRIF"> UCH SHRIF </option>
+                                                    <option _ngcontent-obp-c74="" value="UGGOKE"> UGGOKE </option>
+                                                    <option _ngcontent-obp-c74="" value="UMERKOT"> UMERKOT </option>
+                                                    <option _ngcontent-obp-c74="" value="USTA MUHAMMAD"> USTA MUHAMMAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="VILLAGE SIAL"> VILLAGE SIAL
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="WAN RAHDA RAM"> WAN RAHDA RAM
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="WAPDA COLONY (AJK)"> WAPDA
+                                                        COLONY (AJK) </option>
+                                                    <option _ngcontent-obp-c74="" value="WARBATTAN"> WARBATTAN </option>
+                                                    <option _ngcontent-obp-c74="" value="WAZIRABAD"> WAZIRABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="YAZMAN"> YAZMAN </option>
+                                                    <option _ngcontent-obp-c74="" value="ZAFARWAL"> ZAFARWAL </option>
+                                                    <option _ngcontent-obp-c74="" value="ZAHIR PIR"> ZAHIR PIR </option>
+                                                    <option _ngcontent-obp-c74="" value="ZHOB"> ZHOB </option>
+                                                    <option _ngcontent-obp-c74="" value="NASARPUR"> NASARPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="BANDHI"> BANDHI </option>
+                                                    <option _ngcontent-obp-c74="" value="MIRPUR SAKRO"> MIRPUR SAKRO
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MAKLI"> MAKLI </option>
+                                                    <option _ngcontent-obp-c74="" value="KATHORE"> KATHORE </option>
+                                                    <option _ngcontent-obp-c74="" value="MIRPUR BATHORO"> MIRPUR BATHORO
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="BELA"> BELA </option>
+                                                    <option _ngcontent-obp-c74="" value="UTHAL"> UTHAL </option>
+                                                    <option _ngcontent-obp-c74="" value="HAVELIAN"> HAVELIAN </option>
+                                                    <option _ngcontent-obp-c74="" value="JAFARABAD"> JAFARABAD </option>
+                                                    <option _ngcontent-obp-c74="" value="SHARAQPUR SHARIF"> SHARAQPUR
+                                                        SHARIF </option>
+                                                    <option _ngcontent-obp-c74="" value="WINDER"> WINDER </option>
+                                                    <option _ngcontent-obp-c74="" value="DARRO"> DARRO </option>
+                                                    <option _ngcontent-obp-c74="" value="CHUHAR JAMALI"> CHUHAR JAMALI
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="CHENAB NAGAR"> CHENAB NAGAR
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KHIDARWALA"> KHIDARWALA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="QAMAR ABAD"> QAMAR ABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="SINJHORO"> SINJHORO </option>
+                                                    <option _ngcontent-obp-c74="" value="BANGULDERO"> BANGULDERO
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="QAMBAR"> QAMBAR </option>
+                                                    <option _ngcontent-obp-c74="" value="SHAHDARA TOWN"> SHAHDARA TOWN
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="CHOWK MUNDA"> CHOWK MUNDA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="MEHMOOD KOT"> MEHMOOD KOT
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="GHOUSPUR"> GHOUSPUR </option>
+                                                    <option _ngcontent-obp-c74="" value="CHASHMA"> CHASHMA </option>
+                                                    <option _ngcontent-obp-c74="" value="DAUD KHEL"> DAUD KHEL </option>
+                                                    <option _ngcontent-obp-c74="" value="LIAQUATABAD"> LIAQUATABAD
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="NAYA LAHORE"> NAYA LAHORE
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="AMINPUR BANGLA"> AMINPUR BANGLA
+                                                    </option>
+                                                    <option _ngcontent-obp-c74="" value="KML via CCW"> KML via CCW
+                                                    </option><!---->
+                                                </select>
+                                                <span _ngcontent-xip-c91="" role="presentation"
+                                                    class="select2-selection__arrow">
+                                                    <b _ngcontent-xip-c91="" role="presentation"></b>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label ng-star-inserted">Delivery
+                                            Address</label><!----><!---->
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                type="text" name="address" required=""
+                                                placeholder=" Customer Address" ngmodel=""
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Airway Bill Copies</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                type="number" data-maxlength="5" max="5" min="1" name="invoiceDivision"
+                                                required="" placeholder="No. of Airway Bill copies" ngmodel=""
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Items</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                type="number" min="1" name="pieces" required="" placeholder="Pieces"
+                                                ngmodel="" class="input-bordered ng-untouched ng-pristine ng-invalid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6 mb-3">
+                                    <label _ngcontent-xip-c91="" class="input-item-label ng-star-inserted">Pickup
+                                        City</label>
+                                    <div _ngcontent-xip-c91="">
+                                        <span _ngcontent-xip-c91="" class="selectpicker">
+                                            <select _ngcontent-xip-c91="" name="cityName" data-dd-class="search-off"
+                                                required="" class="dropdown button ng-untouched ng-pristine ng-invalid"
+                                                style="background-color: white; border: 1px solid #E6EFFB;">
+                                                <option _ngcontent-xip-c91="" value="">Select</option>
+                                                <option _ngcontent-xip-c91="" value="Karachi">Karachi</option>
+                                            </select>
+                                            <span _ngcontent-xip-c91="" role="presentation"
+                                                class="select2-selection__arrow">
+                                                <b _ngcontent-xip-c91="" role="presentation"></b>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6 mb-3">
+                                    <label _ngcontent-xip-c91="" class="input-item-label ng-star-inserted">Pickup
+                                        Address</label>
+                                    <div _ngcontent-xip-c91="">
+                                        <span _ngcontent-xip-c91="" class="selectpicker">
+                                            <select _ngcontent-xip-c91="" name="state1" data-dd-class="search-off"
+                                                required="" class="dropdown button ng-untouched ng-pristine ng-invalid"
+                                                style="background-color: white; border: 1px solid #E6EFFB;">
+                                                <option _ngcontent-xip-c91="" value="">Select</option>
+                                                <option _ngcontent-xip-c91="" value="Address1">123 Main Street, City 1
+                                                </option>
+                                            </select>
+                                            <span _ngcontent-xip-c91="" role="presentation"
+                                                class="select2-selection__arrow">
+                                                <b _ngcontent-xip-c91="" role="presentation"></b>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="row">
+                                    <div _ngcontent-xip-c91="" class="col-sm-6">
+                                        <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                                _ngcontent-xip-c91="" class="input-item-label">Booking Weight <small
+                                                    _ngcontent-xip-c91="">(kg)</small></label>
+                                            <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                    type="text" data-maxlength="7" name="booking-weight"
+                                                    placeholder="Booking weight in Kg" ngmodel=""
+                                                    class="input-bordered ng-untouched ng-pristine ng-valid"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-12">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Order Detail <span
+                                                _ngcontent-xip-c91=""
+                                                style="font-size: x-small;">(optional)</span></label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                type="text" maxlength="500" name="wallet_address"
+                                                class="input-bordered ng-untouched ng-pristine ng-valid"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-12">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Notes <span
+                                                _ngcontent-xip-c91=""
+                                                style="font-size: x-small;">(optional)</span></label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                type="text" name="walletRemakrs" maxlength="200"
+                                                class="input-bordered ng-untouched ng-pristine ng-valid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div _ngcontent-xip-c91="" class="gaps-1x"></div>
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-4"><button _ngcontent-xip-c91=""
+                                        data-dismiss="modal" aria-label="Close" type="submit" id="saveButton"
+                                        class="btn btn-md btn-primary1"> Save </button></div>
+                                <div _ngcontent-xip-c91="" class="col-sm-4"><button _ngcontent-xip-c91="" type="button"
+                                        class="btn btn-md btn-primary"
+                                        style="background-color: #000; border-color: #000;"> Close </button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div _ngcontent-xip-c91="" id="cancelModal" tabindex="-1" class="modal fade"
+            style="background: rgba(0, 0, 0, 0.5); overflow: auto; display: none;">
+            <div _ngcontent-xip-c91="" class="modal-dialog modal-dialog-md modal-dialog-centered"
+                style="min-width: auto;">
+                <div _ngcontent-xip-c91="" class="modal-content"><a _ngcontent-xip-c91="" data-dismiss="modal"
+                        aria-label="Close" class="modal-close"><em _ngcontent-xip-c91="" class="ti ti-close"></em></a>
+                    <div _ngcontent-xip-c91="" class="popup-body popup-body-md">
+                        <h3 _ngcontent-xip-c91="" class="popup-title">Cancel Order</h3>
+                        <div _ngcontent-xip-c91="" class="msg-box"></div>
+                        <form _ngcontent-xip-c91="" novalidate="novalidate" id="emailToUser" action="" method="POST"
+                            autocomplete="off" class="validate-modern ng-untouched ng-pristine ng-valid"><input
+                                _ngcontent-xip-c91="" type="hidden" name="_token"
+                                value="RYRPMvwNG9OmjHNJ8NQro4p9643St4RqTMHiRi1j"><input _ngcontent-xip-c91=""
+                                type="hidden" name="user_id" id="user_id">
+                            <div _ngcontent-xip-c91="" class="input-item input-with-label"><label _ngcontent-xip-c91=""
+                                    class="clear input-item-label">Are you sure you want to cancel the order?</label>
+                            </div><button _ngcontent-xip-c91="" type="submit" class="btn btn-primaryblack"> Cancel
+                            </button><button _ngcontent-xip-c91="" type="submit" class="btn btn-primaryRed"
+                                style="float: right; margin-right: 0px;"> Confirm </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div _ngcontent-xip-c91="" id="viewRemarks" tabindex="-1" class="modal fade"
+            style="background: rgba(0, 0, 0, 0.5); overflow: auto; display: none;">
+            <div _ngcontent-xip-c91="" class="modal-dialog modal-dialog-md modal-dialog-centered">
+                <div _ngcontent-xip-c91="" class="modal-content"><a _ngcontent-xip-c91="" data-dismiss="modal"
+                        aria-label="Close" class="modal-close"><em _ngcontent-xip-c91="" class="ti ti-close"></em></a>
+                    <div _ngcontent-xip-c91="" class="popup-body popup-body-md">
+                        <h3 _ngcontent-xip-c91="" class="popup-title">View Remarks</h3>
+                        <form _ngcontent-xip-c91="" novalidate="novalidate" action="" method="POST" id="addUserForm"
+                            autocomplete="false" class="adduser-form validate-modern ng-untouched ng-pristine ng-valid">
+                            <input _ngcontent-xip-c91="" type="hidden" name="_token"
+                                value="RYRPMvwNG9OmjHNJ8NQro4p9643St4RqTMHiRi1j">
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-6"></div>
+                            </div>
+                            <table _ngcontent-xip-c91="" id="excel-table" class="data-table user-list">
+                                <thead _ngcontent-xip-c91="">
+                                    <tr _ngcontent-xip-c91="" class="data-item data-head">
+                                        <th _ngcontent-xip-c91=""
+                                            class="data-col data-col-wd-md filter-data dt-orderRefNum"> Remarks </th>
+                                        <th _ngcontent-xip-c91="" class="data-col dt-tracking">User Name</th>
+                                        <th _ngcontent-xip-c91="" class="data-col dt-type">Date</th>
+                                        <th _ngcontent-xip-c91="">Edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody _ngcontent-xip-c91="" class="smaller-text"><!----></tbody>
+                            </table>
+                            <div _ngcontent-xip-c91="" class="text-center text-muted p-3 ng-star-inserted">No Remarks
+                            </div><!---->
+                            <div _ngcontent-xip-c91="" class="gaps-1x"></div>
+                            <div _ngcontent-xip-c91="" class="row" style="justify-content: flex-end;"><button
+                                    _ngcontent-xip-c91="" data-dismiss="modal" aria-label="Close" type="Clear"
+                                    class="btn btn-md btn-primary" style="background-color: #000; border-color: #000;">
+                                    Close </button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div _ngcontent-xip-c91="" id="addRequest" tabindex="-1" class="modal fade"
+            style="background-color: rgba(0, 0, 0, 0); display: none;">
+            <div _ngcontent-xip-c91="" class="modal-dialog modal-dialog-md modal-dialog-centered">
+                <div _ngcontent-xip-c91="" class="modal-content"><a _ngcontent-xip-c91="" data-dismiss="modal"
+                        aria-label="Close" class="modal-close"><em _ngcontent-xip-c91="" class="ti ti-close"></em></a>
+                    <div _ngcontent-xip-c91="" class="popup-body popup-body-md">
+                        <h3 _ngcontent-xip-c91="" class="popup-title">Update Remarks</h3>
+                        <form _ngcontent-xip-c91="" novalidate="novalidate" method="POST" id="addUserForm"
+                            autocomplete="false"
+                            class="adduser-form validate-modern ng-untouched ng-pristine ng-invalid"><input
+                                _ngcontent-xip-c91="" type="hidden" name="_token"
+                                value="RYRPMvwNG9OmjHNJ8NQro4p9643St4RqTMHiRi1j">
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Remarks</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><textarea _ngcontent-xip-c91=""
+                                                minlength="7" required="" type="value" placeholder="Remarks"
+                                                name="remarks"
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-4"><button _ngcontent-xip-c91="" type="submit"
+                                        class="btn btn-md btn-primary1"> Save </button></div>
+                                <div _ngcontent-xip-c91="" class="col-sm-4"><button _ngcontent-xip-c91="" type="Clear"
+                                        class="btn btn-md btn-primary"
+                                        style="background-color: #000; border-color: #000;"> Close </button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div _ngcontent-xip-c91="" id="addRequest" tabindex="-1" class="modal fade"
+            style="background-color: rgba(0, 0, 0, 0); display: none;">
+            <div _ngcontent-xip-c91="" class="modal-dialog modal-dialog-md modal-dialog-centered">
+                <div _ngcontent-xip-c91="" class="modal-content"><a _ngcontent-xip-c91="" data-dismiss="modal"
+                        aria-label="Close" class="modal-close"><em _ngcontent-xip-c91="" class="ti ti-close"></em></a>
+                    <div _ngcontent-xip-c91="" class="popup-body popup-body-md">
+                        <h3 _ngcontent-xip-c91="" class="popup-title">Add Remarks</h3>
+                        <form _ngcontent-xip-c91="" novalidate="novalidate" method="POST" id="addUserForm"
+                            autocomplete="false"
+                            class="adduser-form validate-modern ng-untouched ng-pristine ng-invalid"><input
+                                _ngcontent-xip-c91="" type="hidden" name="_token"
+                                value="RYRPMvwNG9OmjHNJ8NQro4p9643St4RqTMHiRi1j">
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" _ngcontent-rml-c116=""
+                                        class="input-wrap input-with-label"><label _ngcontent-xip-c91=""
+                                            class="input-item-label">Merchant Name</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                minlength="7" required="" type="value" placeholder="Merchant Name"
+                                                disabled="" name="merchantName"
+                                                class="input-bordered ng-untouched ng-pristine"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Tracking Number</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                disabled="" required="" type="value" placeholder="Tracking Number"
+                                                name="quantity" class="input-bordered ng-untouched ng-pristine"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Remarks</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><textarea _ngcontent-xip-c91=""
+                                                minlength="7" required="" type="value" placeholder="Remarks"
+                                                name="remarks"
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-4"><button _ngcontent-xip-c91="" type="submit"
+                                        class="btn btn-md btn-primary1"> Save </button></div>
+                                <div _ngcontent-xip-c91="" class="col-sm-4"><button _ngcontent-xip-c91="" type="Clear"
+                                        class="btn btn-md btn-primary"
+                                        style="background-color: #000; border-color: #000;"> Close </button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div _ngcontent-xip-c91="" id="addRequest" tabindex="-1" class="modal fade"
+            style="background-color: rgba(0, 0, 0, 0); display: none;">
+            <div _ngcontent-xip-c91="" class="modal-dialog modal-dialog-md modal-dialog-centered">
+                <div _ngcontent-xip-c91="" class="modal-content"><a _ngcontent-xip-c91="" data-dismiss="modal"
+                        aria-label="Close" class="modal-close"><em _ngcontent-xip-c91="" class="ti ti-close"></em></a>
+                    <div _ngcontent-xip-c91="" class="popup-body popup-body-md">
+                        <h3 _ngcontent-xip-c91="" class="popup-title">Add Special Request</h3>
+                        <form _ngcontent-xip-c91="" novalidate="novalidate" method="POST" id="addUserForm"
+                            autocomplete="false"
+                            class="adduser-form validate-modern ng-untouched ng-pristine ng-invalid"><input
+                                _ngcontent-xip-c91="" type="hidden" name="_token"
+                                value="RYRPMvwNG9OmjHNJ8NQro4p9643St4RqTMHiRi1j">
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" _ngcontent-rml-c116=""
+                                        class="input-wrap input-with-label"><label _ngcontent-xip-c91=""
+                                            class="input-item-label">Merchant Name</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                minlength="7" required="" type="value" placeholder="Merchant Name"
+                                                disabled="" name="merchantName"
+                                                class="input-bordered ng-untouched ng-pristine"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Tracking Number</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><input _ngcontent-xip-c91=""
+                                                disabled="" required="" type="value" placeholder="Tracking Number"
+                                                name="quantity" class="input-bordered ng-untouched ng-pristine"></div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-xip-c91="" class="col-sm-6">
+                                    <div _ngcontent-xip-c91="" class="input-item input-with-label"><label
+                                            _ngcontent-xip-c91="" class="input-item-label">Remarks</label>
+                                        <div _ngcontent-xip-c91="" class="input-wrap"><textarea _ngcontent-xip-c91=""
+                                                minlength="7" required="" type="value" placeholder="Remarks"
+                                                name="remarks"
+                                                class="input-bordered ng-untouched ng-pristine ng-invalid"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div _ngcontent-xip-c91="" class="row">
+                                <div _ngcontent-xip-c91="" class="col-sm-4"><button _ngcontent-xip-c91="" type="submit"
+                                        class="btn btn-md btn-primary1"> Save </button></div>
+                                <div _ngcontent-xip-c91="" class="col-sm-4"><button _ngcontent-xip-c91="" type="Clear"
+                                        class="btn btn-md btn-primary"
+                                        style="background-color: #000; border-color: #000;"> Close </button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div _ngcontent-xip-c91="" class="page-overlay">
+            <div _ngcontent-xip-c91="" class="spinner"><span _ngcontent-xip-c91="" class="sp sp1"></span><span
+                    _ngcontent-xip-c91="" class="sp sp2"></span><span _ngcontent-xip-c91="" class="sp sp3"></span></div>
+        </div>
+
+    </body>
 </body>
 
 </html>

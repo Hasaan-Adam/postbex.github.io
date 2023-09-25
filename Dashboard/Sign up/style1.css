@@ -1,0 +1,29 @@
+.left-side,.right-side{
+    height: 100%;
+    width: 100%;
+}
+
+img{
+    margin-top: 40px;
+    /* margin-left: 20px; */
+}
+.main{
+    
+    margin-top: 20px;
+    
+}
+.social-media-icons {
+    font-size: 24px; 
+    margin: 10px; 
+  }
+  
+  .social-media-icons a {
+    text-decoration: none;
+    color: #333; 
+    margin: 0 10px; 
+  }
+  
+  .social-media-icons a:hover {
+    color: #007bff; 
+  }
+  
